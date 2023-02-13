@@ -9,9 +9,9 @@
 
 ## About
 
-<p>All the projects in this github profile are licensed under GPL License (aka GNU General Public License v3.0), feel free to clone and modify them as you please :).</p>
+<p>All of the public projects on this github profile are licensed under GPL License (aka GNU General Public License v3.0), feel free to clone and modify them as you please :).</p>
 
-<b>What am i doing right now?</b> <i>Im working on a project to get the bachelor degree in computational systems engineering, check it out [here](https://github.com/Raul-Lopez-Cruz/)!</i>
+<b>What am i doing right now?</b> <i>Im working on a project to get the bachelor degree in computational systems engineering, you can check it out [here](https://github.com/Raul-Lopez-Cruz/)!</i>
 
 ## My Skills
 
