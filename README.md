@@ -15,7 +15,7 @@
 
 ## My Skills
 
-There's a list of some of the skills or tools i have learned. Anyways it can be a little outdated, to see the full list check [My portfolio](https://github.com/ralo-dev/).
+Here's a list of some of the skills and tools i have learned. However it can be slightly out of date, to see the full list check [My portfolio](https://github.com/ralo-dev/).
 
 ### 🛠️ Languages
 
