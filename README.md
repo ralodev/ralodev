@@ -1,5 +1,9 @@
-<p align="center">
-<h1 align="center">Hello World</h1>
+<h1 align="center">Hi 👋, I'm Raúl</h1>
+<h3 align="center">A passionate developer from Mexico</h3>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=ralo-dev&label=Profile%20views&color=0e75b6&style=flat" alt="ralo-dev" /> </p>
+
+
+## Hello World
 
 <div align="center">
   <a href="https://github.com/ralo-dev/">
@@ -52,17 +56,7 @@ Here's a list of some of the skills and tools i have learned. However it can be 
 ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
-  
- ### 🔧 Software & Technologies
-![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white)
-![Blender](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white)
-![CLion](https://img.shields.io/badge/CLion-black?style=for-the-badge&logo=clion&logoColor=white)
-![CodePen](https://img.shields.io/badge/CodePen-white?style=for-the-badge&logo=codepen&logoColor=black)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
-![NetBeans IDE](https://img.shields.io/badge/NetBeansIDE-1B6AC6.svg?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white)
-![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
-![RStudio](https://img.shields.io/badge/RStudio-4285F4?style=for-the-badge&logo=rstudio&logoColor=white)
-![Sublime Text](https://img.shields.io/badge/sublime_text-%23575757.svg?style=for-the-badge&logo=sublime-text&logoColor=important)
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-<br/>
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=ralo-dev&theme=github-dark-blue&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&mode=weekly)](https://git.io/streak-stats)
+![Ralo's GitHub stats](https://github-readme-stats.vercel.app/api?username=ralo-dev&count_private=true&show_icons=true&theme=github_dark&hide_border=true)
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ralo-dev&show_icons=true&locale=en&layout=compact&theme=github_dark&hide_border=true" alt="ralo-dev" /></p>
