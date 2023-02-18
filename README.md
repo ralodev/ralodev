@@ -1,15 +1,11 @@
 <h1 align="center">Hi 👋, I'm Raúl</h1>
 <h3 align="center">A passionate developer from Mexico</h3>
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=ralo-dev&label=Profile%20views&color=0e75b6&style=flat" alt="ralo-dev" /> </p>
-
-
-## Hello World
-
 <div align="center">
   <a href="https://github.com/ralo-dev/">
   <img  src="https://github.com/1999AZZAR/1999AZZAR/blob/main/resources/img/grid-snake.svg"
        alt="snake" /></a>
 </div>
+
 
 ## About
 
@@ -57,6 +53,7 @@ Here's a list of some of the skills and tools i have learned. However it can be 
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=ralo-dev&theme=github-dark-blue&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&mode=weekly)](https://git.io/streak-stats)
+##
 ![Ralo's GitHub stats](https://github-readme-stats.vercel.app/api?username=ralo-dev&count_private=true&show_icons=true&theme=github_dark&hide_border=true)
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ralo-dev&show_icons=true&locale=en&layout=compact&theme=github_dark&hide_border=true" alt="ralo-dev" /></p>
+[![GitHub Language](https://github-readme-stats.vercel.app/api/top-langs?username=ralo-dev&show_icons=true&locale=en&layout=compact&theme=github_dark&hide_border=true)](https://git.io/streak-stats)
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=ralo-dev&theme=github-dark-blue&hide_border=true&date_format=M%20j%5B%2C%20Y%5D&mode=weekly)](https://git.io/streak-stats)
