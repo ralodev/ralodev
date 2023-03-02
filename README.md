@@ -32,6 +32,8 @@ Here's a list of some of the skills and tools i have learned. However it can be 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![R](https://img.shields.io/badge/r-%23276DC3.svg?style=for-the-badge&logo=r&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![ASM](https://img.shields.io/badge/ASM-8086-blue?style=for-the-badge&logo=assembly)
+
 
 ### ⚙️ Frameworks & tools
 ![Electron.js](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white)
