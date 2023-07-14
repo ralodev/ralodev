@@ -11,8 +11,6 @@
 
 <p>All of the public projects on this github profile are licensed under GPL License (aka GNU General Public License v3.0), feel free to clone and modify them as you please :).</p>
 
-<b>What am i doing right now?</b> <i>Im working on a project to get the bachelor degree in computational systems engineering, you can check it out [here](https://github.com/ralo-dev/HRIS)! _(currently private to protect testing keys)_</i>
-
 ## My Skills
 
 Here's a list of some of the skills and tools i have learned. However it can be slightly out of date, to see the full list check [My portfolio](https://github.com/ralo-dev/).
