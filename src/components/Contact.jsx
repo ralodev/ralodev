@@ -32,29 +32,32 @@ const Contact = () => {
                 name="name"
                 className="px-3 py-2 rounded-lg bg-[#0000000a] border border-[#ffffff1f] focus:border-teal-500 focus:outline-none  focus:text-gray-100"
                 autoComplete="contact_name"
+                required
               />
             </div>
             <div className="flex flex-col my-3">
               <label htmlFor="email">Email</label>
               <input
-                type="text"
+                type="email"
                 id="email"
                 name="email"
                 className="px-3 py-2 rounded-lg bg-[#0000000a] border border-[#ffffff1f] focus:border-teal-500 focus:outline-none  focus:text-gray-100"
                 autoComplete="contact_mail"
+                required
               />
             </div>
-            <div className="flex flex-col my-3">
+            <div className="flex flex-col">
               <label htmlFor="message">Message</label>
               <textarea
                 rows="4"
                 id="message"
                 name="message"
+                required
                 className="px-3 py-2 rounded-lg bg-[#0000000a] border border-[#ffffff1f] caret-teal-500 focus:border-teal-500 focus:outline-none  focus:text-gray-100"></textarea>
             </div>
           </div>
-          <div className="w-full pt-3 code">
-            Although I love robots, I prefer talking to humans. Please prove you are not a bot by checking the box below.
+          <div className="w-full">
+            <p className="code description py-3">Although I love robots, I prefer talking to humans. Please prove you are not a bot by checking the box below.</p>
             <ReCAPTCHA ref={recaptchaRef} sitekey="6Lf2JlgoAAAAAApyzcXXK-9WljZW1MgTrTsyKg99" onChange={onChange} theme="light" />
             <button
               type="submit"
@@ -66,17 +69,13 @@ const Contact = () => {
               disabled={!isValid}>
               {isValid ? (
                 <>
-                <span className="mr-2 code text-xl">
-                  Send
-                </span>
+                  <span className="mr-2 code text-xl">Send form</span>
                   <BiCheckShield size={20} />
                 </>
               ) : (
                 <>
-                <span className="mr-2 code text-xl">
-                    Are you a bot?
-                </span>
-                    <BiBot size={20} />
+                  <span className="mr-2 code text-lg">Prove you are not a bot</span>
+                  <BiBot size={20} />
                 </>
               )}
             </button>

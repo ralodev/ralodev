@@ -28,28 +28,26 @@ import {GrMysql} from 'react-icons/gr';
 
 const Skills = () => {
   return (
-    <div name="skills" className="w-full h-screen text-gray-300 pt-[20vh]">
+    <div name="skills" className="flex w-full h-auto min-h-screen text-gray-300 pt-[10vh]">
       {/* Container */}
-      <div className="max-w-[1000px] mx-auto md:px-16 p-4 flex flex-col justify-center w-full h-full">
+      <div className="max-w-[1000px] mx-auto md:px-16 p-4 flex flex-col justify-center w-full h-auto">
         <div>
           <p className="text-4xl font-bold inline border-b-4 border-[#60f7d4] ">Skills</p>
-          <p className="py-4">
-            <span className="text-gray-600 text-xl font-semibold"> {'<!--'} </span>
+          <p className="py-4 description">
             I'm a Full Stack Developer with 1 year of work experience. I'm a fast learner and I'm always looking to improve my skills.
-            <span className="text-gray-600 text-xl font-semibold"> {'-->'} </span>
           </p>
         </div>
 
           {/* Backend */}
-        <div className="block [&>div>div>p]:hidden [&>div>div>p]:md:flex">
+        <div className="block [&>div>div>p]:hidden [&>div>div>p]:md:flex [&>div>div]:w-[60px] [&>div>div]:sm:w-[120px] [&>div>div>svg]:h-[30px] [&>div>div>svg]:sm:h-[48px]">
           <p className="text-xl font-semibold inline divider">Backend</p>
-          <div className="flex flex-wrap [&>div>*]:m-2 [&>div>svg]:min-h-[48px] [&>div]:w-[120px] text-center justify-center">
+          <div className="flex flex-wrap [&>div>*]:m-2  text-center justify-center">
             <div className="flex flex-col items-center group transition-all">
-              <BiLogoJava className="text-5xl mx-2 my-2 group-hover:text-blue-500 transition-all duration-300" size={36}/>
+              <BiLogoJava className="text-5xl mx-2 my-2 group-hover:text-blue-500 transition-all duration-300"/>
               <p className="">Java</p>
             </div>
             <div className="flex flex-col items-center group transition-all">
-              <SiSpringboot className="text-5xl mx-2 my-2 group-hover:text-[#6DB33F] transition-all duration-300" size={36} />
+              <SiSpringboot className="text-5xl mx-2 my-2 group-hover:text-[#6DB33F] transition-all duration-300"/>
               <p className="">Spring Boot</p>
             </div>
             <div className="flex flex-col items-center group transition-all">
@@ -71,7 +69,7 @@ const Skills = () => {
           </div>
           {/* Frontend */}
           <p className="text-xl font-semibold inline divider">Frontend</p>
-          <div className="flex flex-wrap [&>div>*]:m-2 [&>div>svg]:min-h-[48px] [&>div]:w-[120px] text-center justify-center">
+          <div className="flex flex-wrap [&>div>*]:m-2 text-center justify-center">
             <div className="flex flex-col items-center group transition-all">
               <BiLogoJavascript className="text-5xl mx-2 my-2 group-hover:text-yellow-400 transition-all duration-300" />
               <p className="">JavaScript</p>
@@ -123,7 +121,7 @@ const Skills = () => {
           </div>
           {/* Database */}
           <p className="text-xl font-semibold inline divider">Databases</p>
-          <div className="flex flex-wrap [&>div>*]:m-2 [&>div>svg]:min-h-[48px] [&>div]:w-[120px] text-center justify-center">
+          <div className="flex flex-wrap [&>div>*]:m-2 text-center justify-center">
             <div className="flex flex-col items-center group transition-all">
               <GrMysql className="text-5xl mx-2 my-2 group-hover:text-blue-700 transition-all duration-300" size={36}/>
               <p className="">MySQL</p>
@@ -147,7 +145,7 @@ const Skills = () => {
           </div>
 
           <p className="text-xl font-semibold inline divider">Tools & Tech</p>
-          <div className="flex flex-wrap [&>div>*]:m-2 [&>div>svg]:min-h-[48px] [&>div]:w-[120px] text-center justify-center">
+          <div className="flex flex-wrap [&>div>*]:m-2 text-center justify-center">
             <div className="flex flex-col items-center group transition-all">
               <SiJsonwebtokens className="text-5xl mx-2 my-2 group-hover:text-rose-300 transition-all duration-300" size={36}/>
               <p className="">Json Web Tokens</p>

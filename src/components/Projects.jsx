@@ -13,19 +13,18 @@ import ProjectCard from './ProjectCard';
 const Projects = () => {
   const [open, setOpen] = React.useState(false);
   return (
-    <div name="projects" className="w-full min-h-screen text-gray-300 pt-[10vh]">
+    <div name="projects" className="w-full min-h-screen h-auto text-gray-300 pt-[10vh]">
       {/* Container */}
       <div className="flex max-w-[1000px] mx-auto md:px-16 p-4 flex-col justify-center w-full h-full">
         {/* Title */}
         <div className="mb-5">
           <p className="text-4xl font-bold inline border-b-4 border-[#60f7d4]">Projects</p>
-          <p className="py-4">
-            <span className="text-gray-600 text-xl font-semibold"> {'<!--'} </span> Here are some of the projects I've worked on. You can find more on my
+          <p className="py-4 description">
+            Here are some of the projects I've worked on. You can find more on my
             <a href="github.com/ralo-dev" className="text-[#60f7d4]">
               {' '}
               GitHub
             </a>
-            <span className="text-gray-600 text-xl font-semibold"> {'-->'} </span>
           </p>
         </div>
         {/* Projects */}

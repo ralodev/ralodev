@@ -16,6 +16,13 @@
     }
 }
 
+ul .link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
 .logo {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 1.5rem;
@@ -44,6 +51,27 @@
     font-size: 1.5rem;
     padding: 0rem 0rem 0rem 0.2rem;
 }
+
+.description::before {
+    font-family: 'Poppins';
+    content: '<!--';
+    font-weight: normal;
+    display: inline-flex;
+    color: #60f7d469;
+    font-size: 1rem;
+    padding: 0rem 0.3rem 0rem 0rem;
+}
+
+.description::after {
+    font-family: 'Poppins';
+    font-weight:normal;
+    content: '-->';
+    display: inline-flex;
+    color: #60f7d469;
+    font-size: 1rem;
+    padding: 0rem 0rem 0rem 0.3rem;
+}
+
 
 body {
     background-color: #0a192f;

@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { HiArrowNarrowRight, HiDocumentText, HiBriefcase} from 'react-icons/hi';
 import { TypeAnimation } from 'react-type-animation';
+import { Link } from 'react-scroll';
 
 
 const Home = () => {
@@ -42,11 +43,11 @@ const Home = () => {
             <span className="mr-2 code text-lg group-hover:font-semibold">Download Resume</span>
             <HiDocumentText className="transition-all ease-in-out duration-300" size={20} />
           </button>
-          <button className="group px-4 py-2 mt-4 rounded-md flex justify-center items-center border-2 text-[#60f7d4] border-[#60f7d4]
-          transition-all duration-500 hover:bg-[#60f7d41f]">
-            <span className="mr-2 code text-lg group-hover:font-semibold">See my projects</span>
+          <Link to='projects' className="cursor-pointer group px-4 py-2 mt-4 rounded-md flex justify-center items-center border-2 text-[#60f7d4] border-[#60f7d4]
+          transition-all duration-500 hover:bg-[#60f7d41f] mr-2 code text-lg group-hover:font-semibold" smooth={true} duration={500}>
+            See my projects
             <HiArrowNarrowRight className="group-hover:rotate-90 transition-all ease-in-out duration-300" size={20} />
-          </button>
+          </Link>
         </div>
       </article>
     </section>

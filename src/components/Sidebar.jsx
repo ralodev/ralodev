@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-
+import { Link } from 'react-scroll';
 const Sidebar = () => {
   return (
     <>
@@ -18,12 +18,12 @@ const Sidebar = () => {
           </a>
         </li>
         <li className="flex group hover:border-2 hover:border-[#60f7d4] border-2 border-transparent hover:rounded-e-3xl w-[160px] h-[60px] hover:ml-[90px] transition-all duration-300 2xl:hover:ml-[0px] 2xl:hover:rounded-e-sm">
-          <a href="mailto:mail" target="_blank" rel="noreferrer" className="flex justify-between items-center w-full text-gray-300 group-hover:text-[#60f7d4]">
+          <Link to='contact' smooth={true} duration={500} className="flex justify-between items-center w-full text-gray-300 group-hover:text-[#60f7d4]">
             Mail me <HiOutlineMail size={30} />
-          </a>
+          </Link>
         </li>
         <li className="flex group hover:border-2 hover:border-[#60f7d4] border-2 border-transparent hover:rounded-e-3xl w-[160px] h-[60px] hover:ml-[90px] transition-all duration-300 2xl:hover:ml-[0px] 2xl:hover:rounded-tr-sm 2xl:hover:rounded-br-lg ">
-          <a href="resume" target="_blank" rel="noreferrer" className="flex justify-between items-center w-full text-gray-300 group-hover:text-[#60f7d4]">
+          <a href="https://ralo-dev.me" target="_blank" rel="noreferrer" className="flex justify-between items-center w-full text-gray-300 group-hover:text-[#60f7d4]">
             Resume <BsFillPersonLinesFill size={30} />
           </a>
         </li>
