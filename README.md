@@ -1,10 +1,5 @@
 <h1 align="center">Hi 👋, I'm Raúl</h1>
 <h3 align="center">A passionate developer from Mexico</h3>
-<div align="center">
-  <a href="https://ralo-dev.me/">
-  <img  src="https://github.com/1999AZZAR/1999AZZAR/blob/main/resources/img/grid-snake.svg"
-       alt="snake" /></a>
-</div>
 
 ## About
 
