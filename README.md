@@ -3,7 +3,7 @@
 
 ## About
 
-<p>All of the public projects on this github profile are licensed under GPL License (aka GNU General Public License v3.0), feel free to clone and modify them as you please :).</p>
+<p>All of the public projects on this github profile are licensed under GPL License (aka GNU General Public License v3.0), feel free to clone and modify them 😁</p>
 
 ## My Skills
 Here's a list of some of the skills and tools i have learned. However it can be slightly out of date, to see the full list check [my portfolio](https://ralo-dev.me/).
