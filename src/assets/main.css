@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Lora';
+  src: url('@/assets/fonts/Lora-Regular.ttf');
+}
+
+.f-lora {
+  font-family: 'Lora', 'Times New Roman', Times, serif;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('@/assets/fonts/Montserrat-Regular.ttf');
+}
+
+.f-montserrat {
+  font-family: 'Montserrat', 'Times New Roman', Times, serif;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('@/assets/fonts/Montserrat-Bold.ttf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('@/assets/fonts/OpenSans-Regular.ttf');
+}
+
+.f-opensans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('@/assets/fonts/OpenSans-Bold.ttf');
+  font-weight: bold;
+}
+
+@layer base {
+  body {
+    @apply font-[Montserrat];
+  }
+}
+
+@layer components {
+  .sectionCard {
+    @apply m-16 rounded-3xl border-b border-[#ffffff1f] dark:bg-[#ffffff27] bg-[#00346b91] text-[#14142b] dark:text-gray-300 grid md:grid-cols-2 gap-y-11 md:gap-0 text-start shadow-2xl;
+  }
+  .card {
+    @apply rounded-2xl p-4 border-2 backdrop-blur-sm dark:border-dtext3 dark:border-opacity-30 shadow-sm bg-lsurface bg-opacity-70 md:bg-opacity-10 dark:bg-dsurface dark:text-dtext2 dark:hover:text-dtext1 hover:bg-opacity-90 duration-500;
+  }
+  .cards-bg {
+    @apply absolute rounded-3xl md:mx-36 -mx-16 inset-0 bg-transparent dark:opacity-0;
+  }
+  .surface {
+    @apply absolute rounded-3xl md:mx-36 -mx-16 inset-0 bg-transparent dark:opacity-0;
+  }
+}
+
+/*TEST CLASSES
+section {
+  border: 3px dashed green !important;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+article {
+  border: 2px dashed red !important;
+}
+* {
+  border: 2px solid rgba(0, 110, 255, 0.1) !important;
+}
+/*END TEST CLASSES*/
+
+body {
+  transition-property: background-color, color;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.bg-coil {
+  background-image: url('/cccoil.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    10%,
+    white,
+    90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    10%,
+    white,
+    90%,
+    transparent
+  );
+}
+
+.bg-blur {
+  background-image: url('/bbblurry.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.cards-bg {
+  background-image: url('/ccchaos.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    10%,
+    white,
+    90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    10%,
+    white,
+    90%,
+    transparent
+  );
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.landing::before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 0%;
+  bottom: 0%;
+  width: 150%;
+  left: -25%;
+  -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.45), transparent 70%);
+  mask-image: radial-gradient(rgba(0, 0, 0, 0.45), transparent 70%);
+}
+
+.dark .bg-grid {
+  background-image: url('/bg-grid.png');
+  z-index: -10;
+  background-repeat: repeat;
+  background-size: 360px 360px;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    10%,
+    white,
+    90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    10%,
+    white,
+    90%,
+    transparent
+  );
+}
+
+body {
+  /*background-image: url('/bg.svg');*/
+  font-family: 'Montserrat', 'Times New Roman', Times, serif;
+  background-position: fixed;
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: left top;
+  color: #14142b;
+}
+
+ul .link {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.logo {
+  font-family: 'Montserrat', 'Times New Roman', Times, serif;
+}
+
+.code {
+  font-family: 'Lora', 'Times New Roman', Times, serif;
+}
+
+nav a {
+  font-family: 'Montserrat', 'Times New Roman', Times, serif;
+}
+/*Divider will create a horizontal line that starts at the end of the text of the .divider element
+  Example:
+  Tools ---------------------
+  Where tools is the text of the .divider element and the line is the horizontal line with 100% width
+*/
+.divider {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-top: 1rem;
+}
+
+.divider::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: #ffffff34;
+  margin-left: 0.5rem;
+}
+
+.content-div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+
+.content-div:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(112, 157, 255, 0.8),
+    hsla(242, 74%, 61%, 0.8)
+  ) !important;
+}
