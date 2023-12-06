@@ -13,7 +13,7 @@ module.exports = {
         bgdark: '#24292d',
         pdark: '#4ca4a4',
         tdark: "#000000",
-        plight: "#49868a",
+        plight: "#447ffa",
         tlight: "#ffffff",
         //
         dbg: "#0d0f14",
@@ -22,7 +22,7 @@ module.exports = {
         dtext1: "#ffffff",
         dtext2: "#cdcdcd",
         dtext3: "#b7b7b7",
-        dprimary: "#3245ff",
+        dprimary: "#447ffa",
         dsecondary: "#fdae03",
         daccent: "#da5c49",
         //
@@ -31,7 +31,7 @@ module.exports = {
         ltext1: "#101010",
         ltext2: "#303030",
         ltext3: "#606060",
-        lprimary: "#49868a",
+        lprimary: "#3245ff",
         lsecondary: "#c5c7ca",
         laccent: "#ff4081",
       },
