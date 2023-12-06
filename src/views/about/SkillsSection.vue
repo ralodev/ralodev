@@ -2,9 +2,9 @@
   <section
     id="skills"
     name="skills"
-    className="w-full min-h-screen h-auto relative text-center justify-center max-w-[1200px] mx-auto"
+    className="w-full min-h-screen h-auto relative text-center justify-center max-w-[1200px] mx-auto py-[90px]"
   >
-    <h2 className="dark:text-gray-300 font-bold text-5xl mb-5 pt-[80px] block ">
+    <h2 className="dark:text-gray-300 font-bold text-5xl mb-5 block ">
       Skills
     </h2>
     <div class="grid grid-cols-3 divide-x w-full card [&>*]:px-3 px-0">

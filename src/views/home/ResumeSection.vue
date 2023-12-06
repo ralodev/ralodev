@@ -11,10 +11,20 @@
         <h1 className="dark:text-gray-300 font-bold text-5xl md:my-4">
           Take a look at my resume
         </h1>
-        <PrimaryButton
-          label="See full resume"
-          class="!w-[12rem] mt-4 md:!my-auto"
-        />
+        <RouterLink
+          class="rounded-full"
+          :to="{ name: 'About', hash: '#experience' }"
+          spy="{true}"
+          smooth="{true}"
+          offset="{0}"
+          duration="{500}"
+          isDynamic="{true}"
+        >
+          <PrimaryButton
+            label="See full resume"
+            class="!w-[12rem] mt-4 md:!my-auto"
+          />
+        </RouterLink>
       </header>
       <div
         class="relative px-2 text-[#14142b] my-10 dark:text-dtext2 grid md:grid-cols-2 md:gap-x-0 text-start py-10 gap-y-10"
@@ -32,9 +42,16 @@
             />
             <span class="my-auto px-2 w-full">
               <!--title-->
-              <a
+              <RouterLink
                 class="text-xl font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
-                >Last Job
+                :to="{ name: 'About', hash: '#experience' }"
+                spy="{true}"
+                smooth="{true}"
+                offset="{0}"
+                duration="{500}"
+                isDynamic="{true}"
+              >
+                Experience
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="inline group-hover:translate-x-1 group-hover:-translate-y-1 duration-300"
@@ -49,7 +66,11 @@
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M17 7l-10 10"></path>
-                  <path d="M8 7l9 0l0 9"></path></svg
+                  <path d="M8 7l9 0l0 9"></path>
+                </svg>
+              </RouterLink>
+              <a
+                class="text-xl font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
               ></a>
               <!--subtitle-->
               <p class="text-lg font-semibold">Full Stack Developer Intern</p>
@@ -73,9 +94,16 @@
             />
             <span class="my-auto px-2 w-full">
               <!--title-->
-              <a
+              <RouterLink
                 class="text-xl font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
-                >Education
+                :to="{ name: 'About', hash: '#education' }"
+                spy="{true}"
+                smooth="{true}"
+                offset="{0}"
+                duration="{500}"
+                isDynamic="{true}"
+              >
+                Education
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="inline group-hover:translate-x-1 group-hover:-translate-y-1 duration-300"
@@ -90,8 +118,9 @@
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M17 7l-10 10"></path>
-                  <path d="M8 7l9 0l0 9"></path></svg
-              ></a>
+                  <path d="M8 7l9 0l0 9"></path>
+                </svg>
+              </RouterLink>
               <!--subtitle-->
               <p class="text-lg font-semibold">Bachelor of Science Degree</p>
               <p class="font-medium">
@@ -122,9 +151,16 @@
             />
             <span class="my-auto px-2 w-full">
               <!--title-->
-              <a
+              <RouterLink
                 class="text-xl font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
-                >Certifications
+                :to="{ name: 'About', hash: '#experience' }"
+                spy="{true}"
+                smooth="{true}"
+                offset="{0}"
+                duration="{500}"
+                isDynamic="{true}"
+              >
+                Certifications
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="inline group-hover:translate-x-1 group-hover:-translate-y-1 duration-300"
@@ -139,8 +175,9 @@
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M17 7l-10 10"></path>
-                  <path d="M8 7l9 0l0 9"></path></svg
-              ></a>
+                  <path d="M8 7l9 0l0 9"></path>
+                </svg>
+              </RouterLink>
               <!--subtitle-->
               <p class="font-medium">Online & In-person</p>
             </span>
@@ -162,9 +199,16 @@
             />
             <span class="my-auto px-2 w-full">
               <!--title-->
-              <a
+              <RouterLink
                 class="text-xl font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
-                >Achievements
+                :to="{ name: 'About', hash: '#awards' }"
+                spy="{true}"
+                smooth="{true}"
+                offset="{0}"
+                duration="{500}"
+                isDynamic="{true}"
+              >
+                Achievements
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="inline group-hover:translate-x-1 group-hover:-translate-y-1 duration-300"
@@ -179,8 +223,9 @@
                 >
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                   <path d="M17 7l-10 10"></path>
-                  <path d="M8 7l9 0l0 9"></path></svg
-              ></a>
+                  <path d="M8 7l9 0l0 9"></path>
+                </svg>
+              </RouterLink>
               <!--subtitle-->
               <p class="font-medium">Online & In-person</p>
             </span>

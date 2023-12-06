@@ -1,10 +1,10 @@
 <template>
   <section
-    id="certifications"
-    name="certifications"
-    className="w-full min-h-screen h-auto relative text-center justify-center max-w-[1800px] mx-auto px-10 dark:text-dtext2"
+    id="education"
+    name="education"
+    className="w-full min-h-screen h-auto relative text-center justify-center max-w-[1800px] mx-auto px-10 dark:text-dtext2 py-[90px]"
   >
-    <h2 className="dark:text-gray-300 font-bold text-5xl mb-5 pt-[80px] block ">
+    <h2 className="dark:text-gray-300 font-bold text-5xl mb-5 block ">
       Education
     </h2>
     <div class="max-w-7xl mx-auto">

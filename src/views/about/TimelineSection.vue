@@ -1,6 +1,7 @@
 <template>
-  <section class="dark:text-gray-100">
-    <div class="container max-w-5xl px-4 py-12 mx-auto">
+  <section id="experience"
+    name="experience" class="dark:text-gray-100 py-[90px]">
+    <div class="container max-w-5xl px-4 mx-auto">
       <h3 class="text-5xl font-semibold text-center mb-5">Experience</h3>
       <div class="grid gap-4 mx-4 sm:grid-cols-12">
         <div class="col-span-12 sm:col-span-3">
@@ -9,6 +10,9 @@
           <span class="text-base font-bold  dark:text-gray-400">
             Take a look at my most recent jobs 💼
           </span>
+          <a href="./cv.pdf" target="_blank" rel="noopener noreferrer">
+                <PrimaryButton label="Download CV" class="mt-12" />
+          </a>
         </div>
         </div>
         <div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
@@ -80,11 +84,15 @@
               </p>
             </div>
           </div>
-          <PrimaryButton
+          <SecondaryButton
             v-if="!more"
             label="Show more"
             @click="more = true"
-            />
+            >
+            <svg class="w-6 h-6 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 8">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"/>
+  </svg>
+          </SecondaryButton>
         </div>
       </div>
     </div>
@@ -94,5 +102,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue';
+import SecondaryButton from '@/components/buttons/SecondaryButton.vue';
 const more = ref(false)
 </script>

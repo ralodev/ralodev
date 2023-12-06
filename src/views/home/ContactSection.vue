@@ -90,10 +90,10 @@
           >
           </vue-recaptcha>
           <PrimaryButton
-            :label="isHuman ? 'Send message' : 'Check the box!'"
+            :label="isHuman ? 'Send message' : 'Prove you are human'"
             class="self-center"
             :disabled="!isHuman"
-            :class="!isHuman ? '!bg-gray-500 pointer-events-none	' : ''"
+            :class="!isHuman ? '!bg-gray-500 pointer-events-none	w-64' : ''"
           />
         </form>
       </div>

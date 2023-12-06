@@ -44,13 +44,56 @@
             alt=""
           />
         </ProjectCard>
+
+        <div v-if="showMore">
+          <ProjectCard
+            v-for="project in projectsInfo2"
+            :key="project.id"
+            :title="project.title"
+            :description="project.description"
+            :image="project.image"
+            :gif="project.gif"
+            :source="project.source"
+            :reverse="project.id % 2 !== 0"
+          >
+            <img
+              v-for="tag in project.tags"
+              :key="tag"
+              :src="`https://img.shields.io/badge/${tag.replace(
+                / /g,
+                '%20'
+              )}-%23c7c7c7?style=for-the-badge&logo=${tag.replace(/ /g, '-')}`"
+              alt=""
+            />
+          </ProjectCard>
+        </div>
       </div>
-      <PrimaryButton label="See more" class="!w-[12rem] mb-12 mx-auto" />
+      <PrimaryButton
+        v-if="!showMore"
+        label="Load more"
+        class="!w-[12rem] mb-12 mx-auto"
+        @click="showMore = true"
+      />
+      <a
+        v-else
+        class="rounded-full"
+        href="https://github.com/ralodev"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <SecondaryButton
+          label="See more"
+          class="!w-[12rem] mb-12 mx-auto font-semibold"
+        >
+          <GitHub class="w-8 h-8" />
+        </SecondaryButton>
+      </a>
     </article>
   </section>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import GitHub from '@/components/icons/GitHub.vue'
@@ -69,6 +112,9 @@ import dinogif from '@/assets/img/projects/dino-gif.gif'
 import crossydesktop from '@/assets/img/projects/crossy-desktop.png'
 import asmdesktop from '@/assets/img/projects/asm-desktop.png'
 import asmgif from '@/assets/img/projects/asm-gif.gif'
+import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
+
+const showMore = ref(false)
 
 const projectsInfo = [
   {
@@ -121,8 +167,11 @@ const projectsInfo = [
     demo: '#',
     info: '#',
     tags: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap']
-  },
+  }
+]
+const projectsInfo2 = [
   {
+    id: 4,
     title: 'Crossy Road',
     description:
       'A 3D remake of the popular game Crossy Road. Made with C, C++, Glut, and OpenGL. Made for desktop computers.',
@@ -131,6 +180,7 @@ const projectsInfo = [
     tags: ['C', 'C%2B%2B', 'OpenGL', 'Visual Studio']
   },
   {
+    id: 5,
     title: 'DinoRun',
     description:
       'The classic DinoRun game, this application was made with the Swing and AWT libraries and incorporates a custom-made graphic tool that implements the Bresenham algorithm for rendering.',
@@ -140,6 +190,7 @@ const projectsInfo = [
     tags: ['Java', 'NetBeans', 'Swing', 'AWT', 'OpenJDK']
   },
   {
+    id: 6,
     title: 'Assembly Language Interactive Menu',
     description:
       'An assembly program demonstrating interactive menu navigation, arithmetic operations, and mouse interaction in x86 assembly (MASM).',

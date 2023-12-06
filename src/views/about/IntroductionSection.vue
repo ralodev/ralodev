@@ -34,7 +34,9 @@
               drive to learn and master new technologies.
             </p>
             <span class="flex justify-evenly md:justify-normal md:gap-5">
-              <PrimaryButton label="Download CV" @click="handleClick" />
+              <a href="./cv.pdf" target="_blank" rel="noopener noreferrer">
+                <PrimaryButton label="Download CV" />
+              </a>
             </span>
           </span>
         </div>

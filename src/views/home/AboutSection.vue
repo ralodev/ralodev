@@ -42,7 +42,17 @@
               drive to learn and master new technologies.
             </p>
             <span class="flex justify-evenly md:justify-normal md:gap-5">
-              <PrimaryButton label="More about me" @click="handleClick" />
+              <RouterLink
+                class="rounded-full"
+                :to="{ name: 'About' }"
+                spy="{true}"
+                smooth="{true}"
+                offset="{0}"
+                duration="{500}"
+                isDynamic="{true}"
+              >
+                <PrimaryButton label="More about me" />
+              </RouterLink>
             </span>
           </span>
         </div>

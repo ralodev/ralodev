@@ -1,17 +1,15 @@
 <template>
   <section
-    id="about"
-    name="about"
-    className="w-full min-h-[600px] h-auto flex  relative overflow-x-hidden"
+    id="awards"
+    name="awards"
+    className="w-full min-h-[600px] py-[90px] h-auto flex  relative overflow-x-hidden"
   >
     <div class="inset-0 absolute"></div>
     <div class="absolute inset-0 dark:opacity-50 opacity-30 bg-coil"></div>
     <article
       className="px-10 max-w-[1800px] mx-auto justify-center h-full text-center flex flex-col items-center"
     >
-      <h2
-        className="dark:text-gray-300 font-bold text-5xl mb-5 pt-[80px] block "
-      >
+      <h2 className="dark:text-gray-300 font-bold text-5xl mb-5 block ">
         Awards & Honors
       </h2>
 
