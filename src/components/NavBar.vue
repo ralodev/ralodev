@@ -320,7 +320,6 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import SwitchThemeButton from './buttons/SwitchThemeButton.vue'
-import ThemeSwitch from './buttons/ThemeSwitch.vue'
 const open = ref(false)
 
 type LinkInterface = {

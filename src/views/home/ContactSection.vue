@@ -105,10 +105,6 @@
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import vueRecaptcha from 'vue3-recaptcha2'
 import { useDark } from '@vueuse/core'
-import GitHub from '@/components/icons/GitHub.vue'
-import LinkedIn from '@/components/icons/LinkedIn.vue'
-import YouTube from '@/components/icons/YouTube.vue'
-import Twitter from '@/components/icons/TwitterIcon.vue'
 import { ref } from 'vue'
 
 const isHuman = ref(false)
@@ -117,12 +113,12 @@ const loadingTimeout = ref(10000)
 const ReCaptchaElement = ref(null)
 const isDark = useDark()
 
-function verify(token?: any) {
+function verify() {
   console.log('Recaptcha verified')
   isHuman.value = true
 }
-function recaptchaVerified(response: any) {
-  verify(response)
+function recaptchaVerified() {
+  verify()
 }
 function recaptchaExpired() {
   console.log('Recaptcha expired')

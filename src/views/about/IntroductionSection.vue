@@ -47,8 +47,4 @@
 
 <script lang="ts" setup>
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
-
-function handleClick() {
-  console.log('clicked')
-}
 </script>
