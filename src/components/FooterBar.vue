@@ -7,13 +7,25 @@
       <div class="flex flex-wrap -mx-4">
         <div class="w-full px-4 sm:w-2/3 lg:w-5/12">
           <div class="w-full mb-10">
-            <a
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-              @click="handleClick"
-              class="mb-6 inline-block max-w-[160px]"
-            >
-              <img src="/r_plain.svg" alt="logo" class="max-w-[64px]" />
-            </a>
+            <div class="max-w-[100px]">
+              <RouterLink
+                class="group relative"
+                :to="{ name: 'EasterEgg' }"
+                offset="{0}"
+                duration="{500}"
+                isDynamic="{true}"
+              >
+                <img
+                  src="/r_plain.svg"
+                  alt="logo"
+                  class="max-w-[64px] group-hover:animate-bounce"
+                />
+                <span
+                  class="absolute -top-8 w-full h-full group-hover:animate-bounce opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
+                  >Click me!</span
+                >
+              </RouterLink>
+            </div>
             <p class="text-base text-body-color dark:text-dark-6 mb-7">
               Made with ❤️ by Raúl López.
               <br />Thanks for visiting!
