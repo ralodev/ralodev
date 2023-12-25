@@ -7,9 +7,9 @@
     <article
       className="xl:px-0 px-10 max-w-[1200px] mx-auto h-full text-center "
     >
-      <h1 className="dark:text-dtext1 text-ltext1 font-bold text-5xl">
+      <h2 className="dark:text-dtext1 text-ltext1 font-bold text-5xl">
         My services
-      </h1>
+      </h2>
       <p
         className="dark:text-dtext2 pt-3 md:text-2xl font-extrabold text-2xl text-ltext2 mb-5"
       >
@@ -29,7 +29,7 @@
           <header class="">
             <!--icon-->
             <lottie-player
-              src="/src/assets/img/server.json"
+              :src="serverAnimation"
               background="transparent"
               speed="1"
               ref="player1"
@@ -42,9 +42,8 @@
             >
           </header>
           <p class="backface-hidden">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            libero autem qui maxime deleniti nesciunt enim numquam quae earum
-            rem.
+            I can build you a full stack application using the latest
+            technologies and frameworks for both the frontend and the backend e
           </p>
         </div>
         <div
@@ -55,7 +54,7 @@
           <header>
             <!--icon-->
             <lottie-player
-              src="/src/assets/img/dashboard.json"
+              :src="dashboardAnimation"
               background="transparent"
               speed="1"
               ref="player2"
@@ -66,9 +65,9 @@
             <span class="text-2xl font-bold">UI/UX Design</span>
           </header>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-            deleniti doloribus porro modi? Cumque minus corrupti ut! Eligendi,
-            voluptatibus quaerat?
+            If you need a website or an application, I can design it for you
+            using the latest design trends and tools, providing you with a
+            modern and responsive design.
           </p>
         </div>
         <div
@@ -79,7 +78,7 @@
           <header>
             <!--icon-->
             <lottie-player
-              src="/src/assets/img/seo.json"
+              :src="seoAnimation"
               background="transparent"
               speed="1"
               ref="player3"
@@ -90,8 +89,9 @@
             <span class="text-2xl font-bold">Data Analysis</span>
           </header>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quod.
-            Quisquam, voluptatum. Quisquam, voluptatum.
+            I can help you analyze and visualize your data using the latest
+            tools and technologies, providing you with a detailed report and
+            insights.
           </p>
         </div>
         <div
@@ -102,7 +102,7 @@
           <header>
             <!--icon-->
             <lottie-player
-              src="/src/assets/img/integration.json"
+              :src="integrationAnimation"
               background="transparent"
               speed="1"
               ref="player4"
@@ -113,9 +113,9 @@
             <span class="text-2xl font-bold">Technical Problem Solving </span>
           </header>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque ut
-            qui quis reiciendis architecto hic quasi itaque veniam ducimus
-            deleniti.
+            I can help you solve any technical problem you might have, whether
+            it's a bug in your code or a problem with your computer, I can help
+            you solve it.
           </p>
         </div>
       </div>
@@ -125,6 +125,10 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
+import serverAnimation from '@/assets/img/animations/server.json'
+import integrationAnimation from '@/assets/img/animations/integration.json'
+import seoAnimation from '@/assets/img/animations/seo.json'
+import dashboardAnimation from '@/assets/img/animations/dashboard.json'
 
 const player1 = ref(null)
 const player2 = ref(null)
