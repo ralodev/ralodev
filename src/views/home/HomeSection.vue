@@ -20,7 +20,7 @@
             Hello, I'm Raúl López
           </h1>
           <lottie-player
-            src="/src/assets/img/hand.json"
+            :src="handAnimation"
             background="transparent"
             speed="1"
             class="-rotate-[20deg] h-[30px] w-[30px] lg:w-[50px] lg:h-[50px] mx-1 rounded-full"
@@ -40,7 +40,17 @@
         <div
           className="flex gap-5 w-full mb-8 mt-3 justify-center md:justify-start"
         >
-          <PrimaryButton label="Get in touch" @click="clicked" />
+          <RouterLink
+            class="rounded-full"
+            :to="{ name: 'Home', hash: '#contact' }"
+            spy="{true}"
+            smooth="{true}"
+            offset="{0}"
+            duration="{500}"
+            isDynamic="{true}"
+          >
+            <PrimaryButton label="Get in touch" />
+          </RouterLink>
         </div>
         <span
           class="[&>*]:w-8 [&>*]:h-8 [&>*]:rounded-md [&>*]:text-ltext1 [&>*]:dark:text-dtext1 [&>*]:my-auto [&>*:not(:first-child)]:ml-3 flex"
@@ -79,7 +89,7 @@
         class="lg:col-span-3 md:col-span-3 col-span-7 flex content-center justify-end items-center h-full"
       >
         <lottie-player
-          src="/src/assets/img/home_animation.json"
+          :src="homeAnimation"
           background="transparent"
           speed="1"
           class="mx-auto my-auto max-w-[400px] max-h-[400px]"
@@ -90,7 +100,7 @@
     </article>
     <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2">
       <lottie-player
-        src="/src/assets/img/scroll.json"
+        :src="scrollAnimation"
         background="transparent"
         speed="1"
         class="w-[50px] h-[50px]"
@@ -103,12 +113,12 @@
 
 <script lang="ts" setup>
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
+import { RouterLink } from 'vue-router'
 import GitHub from '@/components/icons/GitHub.vue'
 import LinkedIn from '@/components/icons/LinkedIn.vue'
 import YouTube from '@/components/icons/YouTube.vue'
 import Twitter from '@/components/icons/TwitterIcon.vue'
-
-function clicked() {
-  console.log('clicked')
-}
+import handAnimation from '@/assets/img/animations/hand.json'
+import homeAnimation from '@/assets/img/animations/home_animation.json'
+import scrollAnimation from '@/assets/img/animations/scroll.json'
 </script>
