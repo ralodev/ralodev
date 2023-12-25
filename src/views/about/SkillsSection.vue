@@ -10,13 +10,12 @@
     <div class="grid grid-cols-3 divide-x w-full card [&>*]:px-3 px-0">
       <div>
         <lottie-player
-          src="/src/assets/img/animations/backend.json"
+          :src="serverAnimation"
           background="transparent"
           speed="1"
-          ref="player1"
-          class="w-[100px] h-[100px] rounded-xl overflow-hidden mx-auto"
-          loop
           autoplay
+          class="w-[100px] h-[100px] rounded-xl overflow-hidden mb-3 mx-auto bg-[#ebf8ff] dark:bg-gray-600"
+          loop
         />
         <h3 class="text-xl font-bold text-ltext1 dark:text-dtext1">
           Backend Developer
@@ -58,13 +57,12 @@
       </div>
       <div>
         <lottie-player
-          src="/src/assets/img/animations/frontend.json"
+          :src="dashboardAnimation"
           background="transparent"
           speed="1"
-          ref="player1"
-          class="w-[100px] h-[100px] rounded-xl overflow-hidden mx-auto"
-          loop
           autoplay
+          class="w-[100px] h-[100px] rounded-xl overflow-hidden mb-3 mx-auto bg-[#ffebf6] dark:bg-gray-600"
+          loop
         />
         <h3 class="text-xl font-bold text-ltext1 dark:text-dtext1">
           Frontend Developer
@@ -107,11 +105,10 @@
       </div>
       <div>
         <lottie-player
-          src="/src/assets/img/animations/brain.json"
+          :src="integrationAnimation"
           background="transparent"
           speed="1"
-          ref="player1"
-          class="w-[100px] h-[100px] rounded-xl overflow-hidden mx-auto"
+          class="w-[100px] h-[100px] rounded-xl overflow-hidden mb-3 mx-auto bg-[#f3eeff] dark:bg-gray-600"
           loop
           autoplay
         />
@@ -160,3 +157,9 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import serverAnimation from '@/assets/img/animations/server.json'
+import dashboardAnimation from '@/assets/img/animations/dashboard.json'
+import integrationAnimation from '@/assets/img/animations/integration.json'
+</script>
