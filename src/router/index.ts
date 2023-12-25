@@ -1,11 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import LandingView from '../views/HomeView.vue'
-import BlogView from '../views/BlogView.vue'
-import TestView from '../views/TestView.vue'
 import AboutView from '../views/AboutView.vue'
+import EasterEgg from '@/views/EasterEgg.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
@@ -13,23 +12,17 @@ const router = createRouter({
       component: LandingView
     },
     {
-      path: '/blog',
-      name: 'Blog',
-      component: BlogView
-    },
-    {
-      path: '/test',
-      name: 'test',
-      component: TestView
-    }
-    ,
-    {
       path: '/about',
       name: 'About',
       component: AboutView
+    },
+    {
+      path: '/easter-egg',
+      name: 'EasterEgg',
+      component: EasterEgg
     }
   ],
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to) {
     if (to.hash) {
       return {
         el: to.hash,
