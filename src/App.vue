@@ -28,10 +28,6 @@ const links = [
     name: 'Home',
     hash: '#contact',
     label: 'Contact'
-  },
-  {
-    name: 'Blog',
-    label: 'Blog'
   }
 ]
 </script>
