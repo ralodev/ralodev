@@ -9,9 +9,9 @@
     >
       <div class="text-start grid grid-cols-4">
         <header class="col-span-3">
-          <h1 className="dark:text-gray-300 font-bold text-5xl md:my-4">
+          <h2 className="dark:text-gray-300 font-bold text-5xl md:my-4">
             Projects
-          </h1>
+          </h2>
           <p
             className="dark:text-gray-400 pt-3 md:text-2xl text-xl text-gray-700"
           >
@@ -21,7 +21,7 @@
         </header>
       </div>
       <div class="mt-5 [&>*]:my-5 max-w-[1200px] text-start">
-        <ProjectCard
+        <LazyLoadedCard
           v-for="project in projectsInfo"
           :key="project.title"
           :title="project.title"
@@ -43,10 +43,14 @@
             )}-%23c7c7c7?style=for-the-badge&logo=${tag.replace(/ /g, '-')}`"
             alt=""
           />
-        </ProjectCard>
+        </LazyLoadedCard>
 
-        <div v-if="showMore">
-          <ProjectCard
+        <div
+          v-if="showMore"
+          name="showMore"
+          class="[&>*]:my-5 max-w-[1200px] text-start"
+        >
+          <LazyLoadedCard2
             v-for="project in projectsInfo2"
             :key="project.id"
             :title="project.title"
@@ -65,7 +69,7 @@
               )}-%23c7c7c7?style=for-the-badge&logo=${tag.replace(/ /g, '-')}`"
               alt=""
             />
-          </ProjectCard>
+          </LazyLoadedCard2>
         </div>
       </div>
       <PrimaryButton
@@ -94,7 +98,6 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import ProjectCard from '@/components/ProjectCard.vue'
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import GitHub from '@/components/icons/GitHub.vue'
 
@@ -111,8 +114,21 @@ import dinodesktop from '@/assets/img/projects/dino-desktop.png'
 import dinogif from '@/assets/img/projects/dino-gif.gif'
 import crossydesktop from '@/assets/img/projects/crossy-desktop.png'
 import asmdesktop from '@/assets/img/projects/asm-desktop.png'
-import asmgif from '@/assets/img/projects/asm-gif.gif'
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
+import LoadingCompoVue from '@/components/LoadingCompo.vue'
+import { lazyLoadComponentIfVisible } from '@/utils'
+
+const LazyLoadedCard = lazyLoadComponentIfVisible({
+  componentLoader: () => import('@/components/ProjectCard.vue'),
+  loadingComponent: LoadingCompoVue,
+  errorComponent: () => 'Error loading component'
+})
+
+const LazyLoadedCard2 = lazyLoadComponentIfVisible({
+  componentLoader: () => import('@/components/ProjectCard.vue'),
+  loadingComponent: LoadingCompoVue,
+  errorComponent: () => 'Error loading component'
+})
 
 const showMore = ref(false)
 
@@ -123,8 +139,9 @@ const projectsInfo = [
       'HRMS that allows the management of employees data, departments, positions, and more. Made for the HHRR  department at Technological Institute.',
     image: sgipdesktop,
     image2: sgipmobile,
+    //gif: 'src/assets/img/projects/sgip-gif.gif',
     gif: sgipgif,
-    demo: '#',
+    demo: 'https://ralodev.github.io/HRMS-Demo/#/',
     info: '#',
     tags: [
       'PostgreSQL',
@@ -144,8 +161,8 @@ const projectsInfo = [
     image: estoredesktop,
     image2: estoremobile,
     gif: estoregif,
-    source: '#',
-    demo: '#',
+    source: 'https://github.com/ralodev/react-ecommerce',
+    demo: 'https://develop--cosmic-lamington-bef4bd.netlify.app/',
     tags: [
       'React',
       'TypeScript',
@@ -163,8 +180,8 @@ const projectsInfo = [
     image: fsmdesktop,
     image2: fsmmobile,
     gif: fsmgif,
-    source: '#',
-    demo: '#',
+    source: 'https://github.com/ralodev/FSM-Generator',
+    demo: 'https://ralodev.github.io/FSM-Generator/',
     info: '#',
     tags: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap']
   }
@@ -176,7 +193,7 @@ const projectsInfo2 = [
     description:
       'A 3D remake of the popular game Crossy Road. Made with C, C++, Glut, and OpenGL. Made for desktop computers.',
     image: crossydesktop,
-    source: '#',
+    source: 'https://github.com/ralodev/CrossyRoad',
     tags: ['C', 'C%2B%2B', 'OpenGL', 'Visual Studio']
   },
   {
@@ -186,7 +203,7 @@ const projectsInfo2 = [
       'The classic DinoRun game, this application was made with the Swing and AWT libraries and incorporates a custom-made graphic tool that implements the Bresenham algorithm for rendering.',
     image: dinodesktop,
     gif: dinogif,
-    source: '#',
+    source: 'https://github.com/ralodev/DinoRun-2D',
     tags: ['Java', 'NetBeans', 'Swing', 'AWT', 'OpenJDK']
   },
   {
@@ -196,7 +213,7 @@ const projectsInfo2 = [
       'An assembly program demonstrating interactive menu navigation, arithmetic operations, and mouse interaction in x86 assembly (MASM).',
     image: asmdesktop,
     //gif: asmgif,
-    source: '#',
+    source: 'https://github.com/ralodev/ASM-Menu-Mouse',
     tags: ['Assembly', 'MASM', 'x86']
   }
 ]
