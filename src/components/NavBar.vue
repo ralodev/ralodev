@@ -14,7 +14,11 @@
           duration="{500}"
           isDynamic="{true}"
         >
-          <img class="w-12 h-12 z-20" src="/r_plain.svg" alt="Logo" />
+          <img
+            class="w-12 h-12 z-20 ms-8 xl:ms-0"
+            src="/r_plain.svg"
+            alt="Logo"
+          />
           <div class="absolute w-12 h-12 z-[19] rounded-full"></div>
           <div
             class="relative z-10 group-hover:translate-x-0 duration-300 transition-all ms- -translate-x-12 opacity-0 group-hover:opacity-100"
@@ -250,7 +254,7 @@
           >
         </div>
         <!-- ThemeButton -->
-        <SwitchThemeButton class="h-6 w-6 my-auto" />
+        <SwitchThemeButton class="h-6 w-6 my-auto me-8 xl:me-0" />
 
         <!-- Mobile menu button -->
         <div
