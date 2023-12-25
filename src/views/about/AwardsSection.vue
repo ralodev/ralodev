@@ -46,7 +46,7 @@
           title="3rd National Scientific Conference"
           description="Display and presentation of a manuscript about sustainability behaviors"
           date="Jun 2023"
-          image="/src/assets/img/awards/tehuacan.png"
+          :image="tehuacan"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 my-auto me-1 text-red-300"
@@ -99,7 +99,7 @@
           title="Programming Contest at La Salle Oaxaca 2022"
           description="Second place achieved with the project 'Goods for Good' which addresses the issue of distributing and donating goods to nonprofit charitable organizations."
           date="Sep 2022"
-          image="/src/assets/img/awards/salle.jpg"
+          :image="salle"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5 my-auto me-1 text-gray-300"
@@ -158,9 +158,7 @@
 </template>
 
 <script lang="ts" setup>
-import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import AwardCard from '@/components/AwardCard.vue'
-function handleClick() {
-  console.log('clicked')
-}
+import tehuacan from '@/assets/img/awards/tehuacan.png'
+import salle from '@/assets/img/awards/salle.jpg'
 </script>
