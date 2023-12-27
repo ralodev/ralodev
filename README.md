@@ -1,13 +1,22 @@
-<h1 align="center">Hi 👋, I'm Raúl</h1>
-<h3 align="center">A passionate developer from Mexico</h3>
+<h1 align="center">
+<img alt="ralodev logo" title="Go to my site" src="https://ralo.dev/favicon-32x32.png" href="https://ralo.dev/">
+  Hello, I'm Raúl López
+</h1>
+
+<div align="center">
+<img alt="decorative image" title="Ralodev" src="https://ralo.dev/img.png" href="https://ralo.dev/" width="200" height="auto">
+</div>
+
+
+
 
 ## About
 
-<p>All of the public projects on this github profile are licensed under GPL License (aka GNU General Public License v3.0), feel free to clone and modify them 😁</p>
+<p>Hey there! I'm a Full Stack Developer who's all about diving into new tech stuff. I've got this passion for games and web development that keeps me hooked. Always up for a challenge and ready to level up my tech skills! 🚀</p>
 
 ## My Skills
-Here's a list of some of the skills and tools i have learned. However it can be slightly out of date, to see the full list check [my portfolio](https://ralo-dev.me/).
-<details>
+Here's a list of some of the skills and tools i have learned. However it can be slightly out of date, to see the full list check [my portfolio](https://ralo.dev/#/about#skills).
+<details name="skills">
   <summary>🛠️ Languages</summary>
 <img src="https://img.shields.io/badge/ASM-8086-blue?style=for-the-badge&logo=assembly" alt="ASM">
 <img src="https://img.shields.io/badge/C-%2300599C?style=for-the-badge&logo=c&logoColor=white" alt="C">
@@ -24,7 +33,7 @@ Here's a list of some of the skills and tools i have learned. However it can be 
 <img src="https://img.shields.io/badge/R-%23276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R">
 <img src="https://img.shields.io/badge/TypeScript-%23007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
 </details>
-<details>
+<details name="skills">
   <summary>⚙️ Frameworks & tools</summary>
 <img src="https://img.shields.io/badge/Bootstrap-%23563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
 <img src="https://img.shields.io/badge/jQuery-%230769AD?style=for-the-badge&logo=jquery&logoColor=white" alt="jQuery">
@@ -38,7 +47,7 @@ Here's a list of some of the skills and tools i have learned. However it can be 
 <img src="https://img.shields.io/badge/Vue.js-%2335495e?style=for-the-badge&logo=vue.js&logoColor=%234FC08D" alt="Vue.js">
 <img src="https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=AEDDFF" alt="Vuetify">
 </details>
-<details>
+<details name="skills">
   <summary>☁️ Cloud services and DB</summary>
   <img src="https://img.shields.io/badge/AWS-%23FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS">
 <img src="https://img.shields.io/badge/Firebase-%23039BE5?style=for-the-badge&logo=firebase" alt="Firebase">
