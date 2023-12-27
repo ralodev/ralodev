@@ -1,10 +1,14 @@
 <h1 align="center">
+  <a href="https://ralo.dev/" target="_blank">
 <img alt="ralodev logo" title="Go to my site" src="https://ralo.dev/favicon-32x32.png" href="https://ralo.dev/">
+    </a>
   Hello, I'm Raúl López
 </h1>
 
 <div align="center">
+  <a href="https://ralo.dev/" target="_blank">
 <img alt="decorative image" title="Ralodev" src="https://ralo.dev/img.png" href="https://ralo.dev/" width="200" height="auto">
+    </a>
 </div>
 
 
