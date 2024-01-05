@@ -1,10 +1,10 @@
 <template>
   <!-- ====== Footer Section Start -->
   <footer
-    class="relative z-10 bg-lbg dark:bg-dbg dark:text-dtext1 pt-20 lg:pt-[120px] lg:pb-20 pb-10 overflow-hidden"
+    class="relative z-10 bg-lbg dark:bg-gradient-to-b dark:from-dbg dark:to-dsurface dark:text-dtext1 pt-5 mt-5 lg:pt-[120px] lg:pb-20 pb-10 overflow-hidden"
   >
     <div class="container mx-auto max-w-[1200px]">
-      <div class="flex flex-wrap -mx-4">
+      <div class="flex flex-wrap">
         <div class="w-full px-4 sm:w-2/3 lg:w-5/12">
           <div class="w-full mb-10">
             <div class="max-w-[100px]">
@@ -19,6 +19,7 @@
                   src="/r_plain.svg"
                   alt="logo"
                   class="max-w-[64px] group-hover:animate-bounce"
+                  style="width: 48px; height: 48px"
                 />
                 <span
                   class="absolute -top-8 w-full h-full group-hover:animate-bounce opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
@@ -35,19 +36,19 @@
             >
               <span>
                 This website is licensed under the GNU General Public License
-                v3.0 (open source 🚀). The source code is available
+                v3.0 (open source 🚀). The source code is available in
                 <a
                   href="https://github.com/ralodev/ralodev/tree/Vuejs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-lprimary hover:text-primary dark:text-dprimary dark:hover:text-primary"
-                  >here</a
+                  class="text-lprimary hover:text-primary dark:text-cyan-400 dark:hover:text-blue-400"
+                  >GitHub</a
                 >. Feel free to use it for your own projects. 🫡</span
               >
             </p>
           </div>
         </div>
-        <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+        <div v-if="!isMobile" class="w-full px-4 sm:w-1/2 lg:w-2/12">
           <div class="w-full mb-10">
             <h4 class="text-lg font-semibold text-dark dark:text-white mb-9">
               Home
@@ -108,7 +109,7 @@
             </ul>
           </div>
         </div>
-        <div class="w-full px-4 sm:w-1/2 lg:w-2/12">
+        <div v-if="!isMobile" class="w-full px-4 sm:w-1/2 lg:w-2/12">
           <div class="w-full mb-10">
             <h4 class="text-lg font-semibold text-dark dark:text-white mb-9">
               About me
@@ -182,7 +183,7 @@
             </ul>
           </div>
         </div>
-        <div class="w-full px-4 sm:w-1/2 lg:w-3/12">
+        <div v-if="!isMobile" class="w-full px-4 sm:w-1/2 lg:w-3/12">
           <div class="w-full mb-10">
             <h4 class="text-lg font-semibold text-dark dark:text-white mb-9">
               Contact
@@ -193,6 +194,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex items-center justify-center w-8 h-8 mr-3 border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary dark:text-white hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
+                aria-label="Linkedin"
+                title="Linkedin"
               >
                 <svg
                   class="w-3 h-3 text-gray-800 dark:text-white"
@@ -214,6 +217,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex items-center justify-center w-8 h-8 mr-3 border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary dark:text-white hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
+                aria-label="Twitter"
+                title="Twitter"
               >
                 <svg
                   class="w-3 h-3 text-gray-800 dark:text-white"
@@ -231,6 +236,8 @@
               <a
                 href="mailto:contact@ralo.dev"
                 class="flex items-center justify-center w-8 h-8 mr-3 border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary dark:text-white hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
+                aria-label="Email"
+                title="Email"
               >
                 <svg
                   class="w-3 h-3 text-gray-800 dark:text-white"
@@ -252,6 +259,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex items-center justify-center w-8 h-8 mr-3 border rounded-full text-dark hover:border-primary hover:bg-primary border-stroke dark:border-dark-3 dark:hover:border-primary dark:text-white hover:text-white sm:mr-4 lg:mr-3 xl:mr-4"
+                aria-label="Github"
+                title="Github"
               >
                 <svg
                   class="w-4 h-4 text-gray-800 dark:text-white"
@@ -276,7 +285,7 @@
       </div>
     </div>
     <div>
-      <span class="absolute top-10 right-10 z-[-1]">
+      <span v-if="!isMobile" class="absolute top-10 right-10 z-[-1]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
@@ -328,6 +337,9 @@
 
 <script lang="ts" setup>
 import { RouterLink } from 'vue-router'
+import { inject } from 'vue'
+
+const isMobile = inject<boolean>('isMobile')
 
 function handleClick() {
   alert('Is this an easter egg? 🥚')
