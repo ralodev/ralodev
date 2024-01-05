@@ -5,6 +5,7 @@
 @font-face {
   font-family: 'Lora';
   src: url('@/assets/fonts/Lora-Regular.ttf');
+  font-display: swap;
 }
 
 .f-lora {
@@ -14,6 +15,7 @@
 @font-face {
   font-family: 'Montserrat';
   src: url('@/assets/fonts/Montserrat-Regular.ttf');
+  font-display: swap;
 }
 
 .f-montserrat {
@@ -24,11 +26,13 @@
   font-family: 'Montserrat';
   src: url('@/assets/fonts/Montserrat-Bold.ttf');
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Open Sans';
   src: url('@/assets/fonts/OpenSans-Regular.ttf');
+  font-display: swap;
 }
 
 .f-opensans {
@@ -39,6 +43,7 @@
   font-family: 'Open Sans';
   src: url('@/assets/fonts/OpenSans-Bold.ttf');
   font-weight: bold;
+  font-display: swap;
 }
 
 @layer base {
@@ -87,7 +92,7 @@ body {
 }
 
 .bg-coil {
-  background-image: url('/cccoil.png');
+  background-image: url('/bg_coil.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -109,15 +114,8 @@ body {
   );
 }
 
-.bg-blur {
-  background-image: url('/bbblurry.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
 .cards-bg {
-  background-image: url('/ccchaos.png');
+  background-image: url('/bg_chaos.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -158,7 +156,7 @@ body {
 }
 
 .dark .bg-grid {
-  background-image: url('/bg-grid.png');
+  background-image: url('/bg_grid.webp');
   z-index: -10;
   background-repeat: repeat;
   background-size: 360px 360px;
