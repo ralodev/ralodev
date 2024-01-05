@@ -11,7 +11,7 @@
             Take a look at my most recent jobs 💼
           </span>
           <a href="./cv.pdf" target="_blank" rel="noopener noreferrer">
-                <PrimaryButton label="Download CV" class="mt-12" />
+                <PrimaryButton label="Download CV" class="mt-12 mx-auto" />
           </a>
         </div>
         </div>
@@ -19,13 +19,13 @@
           <div
             class="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300 dark:before:bg-gray-700">
             <div
-              class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-indigo-400">
+              class="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-indigo-400">
               <h3 class="text-xl font-semibold tracki">
                 Software Engineer Freelance
               </h3>
               <time class="text-xs tracki uppercase dark:text-gray-400">Aug 2023 - Present</time>
-              <p class="mt-3">
-                For the last 3 months, I’ve been working as a freelance software engineer. My tasks have included:
+              <p class="mt-3" v-if="!isMobile">
+                For the last 3 months, I've been working as a freelance software engineer. My tasks have included:
               <ul class="list-disc ps-5">
                 <li>Teaching several courses on web development.</li>
                 <li>Providing guidance on technologies and tools to use.</li>
@@ -35,7 +35,7 @@
               </p>
             </div>
             <div
-              class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-indigo-400">
+              class="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-indigo-400">
               <h3 class="text-xl font-semibold tracki">
                 Full Stack Developer Intern
               </h3>
@@ -43,7 +43,7 @@
               <h4 class="text-lg font-medium tracki dark:text-gray-400">
                 Technologial Institute of Oaxaca
               </h4>
-              <p class="mt-3">
+              <p class="mt-3" v-if="!isMobile">
                 In this job I was responsible for the development of a web application for the management of the company's
                 HR department. My tasks included:
               <ul class="list-disc ps-5">
@@ -67,7 +67,7 @@
             </div>
             <div
               v-if="more"
-              class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-indigo-400">
+              class="flex flex-col relative before:absolute before:top-2 before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-indigo-400">
               <h3 class="text-xl font-semibold tracki">
                 Touristic Ambassador
               </h3>
@@ -75,7 +75,7 @@
               <h4 class="text-lg font-medium tracki dark:text-gray-400">
                 SECTUR Oaxaca
               </h4>
-              <p class="mt-3">
+              <p class="mt-3" v-if="!isMobile">
                 Worked as Turistic Ambassador for the <a href="https://www.oaxaca.gob.mx/ageo/la-guelaguetza/" class="underline">Guelaguetza</a> 2019. Some of the tasks I was involved in included:
                 <ul class="list-disc ps-5">
                   <li>Multilingual Communication: Facilitating communication between visitors and locals, acting as an interpreter when necessary, and overcoming language barriers</li>
@@ -100,8 +100,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue';
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue';
 const more = ref(false)
+const isMobile = inject<boolean>('isMobile')
 </script>
