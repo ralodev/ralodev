@@ -7,12 +7,14 @@
     <article
       className="xl:px-0 px-10 max-w-[1200px] mx-auto justify-center h-full text-center"
     >
-      <header class="lg:flex lg:justify-between justify-center">
-        <h1 className="dark:text-gray-300 font-bold text-5xl md:my-4">
+      <header class="lg:flex lg:justify-between justify-center text-center">
+        <h2
+          className="dark:text-dtext1 text-ltext1 font-bold text-4xl text-center my-4"
+        >
           Take a look at my resume
-        </h1>
+        </h2>
         <RouterLink
-          class="rounded-full"
+          class="rounded-full my-auto"
           :to="{ name: 'About', hash: '#experience' }"
           spy="{true}"
           smooth="{true}"
@@ -22,23 +24,25 @@
         >
           <PrimaryButton
             label="See full resume"
-            class="!w-[12rem] mt-4 md:!my-auto"
+            class="!w-[12rem] md:!my-auto mx-auto md:mx-0"
           />
         </RouterLink>
       </header>
       <div
-        class="relative px-2 text-[#14142b] my-10 dark:text-dtext2 grid md:grid-cols-2 md:gap-x-0 text-start py-10 gap-y-10"
+        class="relative px-2 text-[#14142b] dark:text-dtext2 grid md:grid-cols-2 md:gap-x-0 text-start py-5 md:py-10 gap-y-10"
       >
         <!--background-->
         <div class="surface bg-coil"></div>
         <!--card 1 -->
         <div class="card md:-translate-x-6 hover:shadow-lg">
-          <header class="flex flex-initial mb-2 min-h-[100px]">
+          <header
+            class="flex md:flex-row flex-col flex-initial mb-2 min-h-[100px]"
+          >
             <!--icon-->
             <img
               :src="ito"
               alt="Technological Institute Of Oaxaca"
-              class="w-[90px] h-[90px] my-auto"
+              class="w-[90px] h-[90px] my-auto mx-auto"
             />
             <span class="my-auto px-2 w-full">
               <!--title-->
@@ -69,9 +73,6 @@
                   <path d="M8 7l9 0l0 9"></path>
                 </svg>
               </RouterLink>
-              <a
-                class="text-xl font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
-              ></a>
               <!--subtitle-->
               <p class="text-lg font-semibold">Full Stack Developer Intern</p>
               <p class="font-medium">Technological Institute Of Oaxaca</p>
@@ -85,12 +86,14 @@
         </div>
         <!--card 2 -->
         <div class="card md:translate-x-6 hover:shadow-lg">
-          <header class="flex flex-initial mb-2 min-h-[100px]">
+          <header
+            class="flex md:flex-row flex-col flex-initial mb-2 min-h-[100px]"
+          >
             <!--icon-->
             <img
               :src="tecnm"
               alt="National Technological Institute Of Mexico"
-              class="w-[100px] h-[100px] my-auto"
+              class="w-[100px] h-[100px] my-auto mx-auto"
             />
             <span class="my-auto px-2 w-full">
               <!--title-->
@@ -142,12 +145,14 @@
         </div>
         <!--card 3 -->
         <div class="card md:-translate-x-6 hover:shadow-lg">
-          <header class="flex flex-initial mb-2 min-h-[100px]">
+          <header
+            class="flex md:flex-row flex-col flex-initial mb-2 min-h-[100px]"
+          >
             <!--icon-->
             <img
               :src="toefl"
               alt="Test Of English as a Foreign Language"
-              class="w-[90px] h-[90px] my-auto rounded-full"
+              class="w-[90px] h-[90px] my-auto mx-auto rounded-full"
             />
             <span class="my-auto px-2 w-full">
               <!--title-->
@@ -190,12 +195,14 @@
         </div>
         <!--card 4 -->
         <div class="card md:translate-x-6 hover:shadow-lg">
-          <header class="flex flex-initial mb-2 min-h-[100px]">
+          <header
+            class="flex md:flex-row flex-col flex-initial mb-2 min-h-[100px]"
+          >
             <!--icon-->
             <img
               :src="trophy"
               alt="Trophy"
-              class="w-[100px] h-[100px] my-auto rounded-full"
+              class="w-[100px] h-[100px] my-auto mx-auto rounded-full"
             />
             <span class="my-auto px-2 w-full">
               <!--title-->
@@ -243,8 +250,8 @@
 
 <script lang="ts" setup>
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
-import tecnm from '/src/assets/img/tecnm.png'
-import ito from '/src/assets/img/ito-logo.svg'
-import trophy from '/src/assets/img/achievement.png'
-import toefl from '/src/assets/img/toefl.png'
+import tecnm from '/src/assets/img/tecnm.webp'
+import ito from '/src/assets/img/ito-logo.webp'
+import trophy from '/src/assets/img/achievement.webp'
+import toefl from '/src/assets/img/toefl.webp'
 </script>
