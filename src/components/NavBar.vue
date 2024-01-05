@@ -18,6 +18,7 @@
             class="w-12 h-12 z-20 ms-8 xl:ms-0"
             src="/r_plain.svg"
             alt="Logo"
+            style="width: 48px; height: 48px"
           />
           <div class="absolute w-12 h-12 z-[19] rounded-full"></div>
           <div
@@ -299,21 +300,21 @@
           class="absolute flex top-0 left-0 w-full h-screen dark:bg-dbg bg-lbg flex-col justify-center items-center transition-all duration-500"
           :class="[open ? 'opacity-100' : 'opacity-0 pointer-events-none']"
         >
-          <RouterLink
-            v-for="link in links"
-            :key="link.name"
-            :to="link"
-            exactActiveClass="border-b-2 border-[#60f7d4]"
-            spy="{true}"
-            smooth="{true}"
-            offset="{0}"
-            duration="{500}"
-            isDynamic="{true}"
-            class="text-2xl dark:text-dtext text-ltext my-4"
-            @click="handleClick"
-          >
-            {{ link.label }}
-          </RouterLink>
+          <li v-for="link in links" :key="link.name">
+            <RouterLink
+              :to="link"
+              exactActiveClass="border-b-2 border-[#60f7d4]"
+              spy="{true}"
+              smooth="{true}"
+              offset="{0}"
+              duration="{500}"
+              isDynamic="{true}"
+              class="text-2xl dark:text-dtext text-ltext my-4"
+              @click="handleClick"
+            >
+              {{ link.label }}
+            </RouterLink>
+          </li>
         </ul>
       </div>
     </div>
