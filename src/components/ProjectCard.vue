@@ -1,6 +1,9 @@
 <template>
   <!-- Card container -->
-  <article class="relative group w-full rounded-3xl group p-2 min-h-[300px]">
+  <article
+    class="relative w-full rounded-3xl p-2 min-h-[300px]"
+    :class="isMobile ? '' : 'group'"
+  >
     <!-- Background -->
     <span
       class="absolute rounded-3xl lg:mb-9 z-0 group-hover:-mb-0 inset-0 border-dtext-3 dark:bg-dsurface bg-[#c9c9c9] border-2 backdrop-blur-lg duration-500 dark:border-ltext3 opacity-50"
@@ -22,7 +25,7 @@
       >
         <!-- Gif: Position on bottom right corner of image container -->
         <img
-          v-if="gif"
+          v-if="gif && !isMobile"
           :src="gif"
           class="absolute z-[9] bottom-[-5px] right-[-5px] group-hover:opacity-100 opacity-0 transition-all duration-500 ease-in-out w-1/2 translate-y-80 group-hover:translate-y-0"
         />
@@ -33,7 +36,7 @@
           {{ description }}
         </span>
         <img
-          v-if="image2"
+          v-if="image2 && !isMobile"
           :src="image2"
           class="absolute z-[10] group-hover:opacity-100 opacity-0 transition-all duration-500 ease-in-out -translate-x-1/3 translate-y-80 group-hover:translate-y-12"
         />
@@ -100,8 +103,8 @@
               </svg>
             </SecondaryButton>
           </a>
-          <a target="_blank" v-if="info" :href="info">
-            <SecondaryButton label="Read case study">
+          <RouterLink v-if="info" :to="{ name: info }">
+            <SecondaryButton :label="isMobile ? 'Info' : 'Read case study'">
               <svg
                 class="w-6 h-6 text-white"
                 aria-hidden="true"
@@ -115,11 +118,12 @@
                 <path d="M6 5H5v1h1V5Z" />
               </svg>
             </SecondaryButton>
-          </a>
+          </RouterLink>
         </div>
       </div>
       <!-- Tags -->
       <div
+        v-if="!isMobile"
         class="flex flex-wrap overflow-hidden duration-500 lg:col-span-6 order-10 justify-center mt-2 text-xs font-medium gap-1 [&>img]:rounded-full [&>img]:group-hover:translate-y-0 [&>img]:lg:-translate-y-20 [&>img]:duration-500"
       >
         <slot />
@@ -130,6 +134,10 @@
 
 <script lang="ts" setup>
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
+import { inject } from 'vue'
+import { RouterLink } from 'vue-router'
+
+const isMobile = inject<boolean>('isMobile')
 
 defineProps({
   title: {
