@@ -7,9 +7,10 @@
     <h2 className="dark:text-gray-300 font-bold text-5xl mb-5 block ">
       Skills
     </h2>
-    <div class="grid grid-cols-3 divide-x w-full card [&>*]:px-3 px-0">
-      <div>
+    <div class="grid md:grid-cols-3 divide-x w-full card [&>*]:px-3 px-0">
+      <div class="border-b-2 md:border-0 mb-3 pb-3 md:mb-0 md:pb-0">
         <lottie-player
+          v-if="!isMobile"
           :src="serverAnimation"
           background="transparent"
           speed="1"
@@ -31,7 +32,7 @@
           <p>REST, Microservices, Serverless, Monolith, APIs, Unit Testing</p>
         </div>
         -->
-        <div class="min-h-[200px] flex flex-col mt-5">
+        <div class="md:min-h-[200px] flex flex-col mt-5">
           <h4 class="text-lg text-indigo-500 font-semibold">Frameworks</h4>
           <ul>
             <li>Spring Boot</li>
@@ -41,7 +42,7 @@
           </ul>
         </div>
 
-        <div class="min-h-[100px] flex flex-col mt-5">
+        <div class="md:min-h-[100px] flex flex-col mt-5">
           <h4 class="text-lg text-indigo-500 font-semibold">Languages</h4>
           <p>Java, JavaScript</p>
         </div>
@@ -55,8 +56,9 @@
           <li>Supabase*</li>
         </ul>
       </div>
-      <div>
+      <div class="border-b-2 md:border-0 mb-3 pb-3 md:mb-0 md:pb-0">
         <lottie-player
+          v-if="!isMobile"
           :src="dashboardAnimation"
           background="transparent"
           speed="1"
@@ -77,7 +79,7 @@
           <p>Responsive, Component-based, Accessible, SEO, UX/UI</p>
         </div>
         -->
-        <div class="min-h-[200px] flex flex-col mt-5">
+        <div class="md:min-h-[200px] flex flex-col mt-5">
           <h4 class="text-lg text-indigo-500 font-semibold">Frameworks</h4>
           <ul>
             <li>Vue.js</li>
@@ -90,7 +92,7 @@
           </ul>
         </div>
 
-        <div class="min-h-[100px] flex flex-col mt-5">
+        <div class="md:min-h-[100px] flex flex-col mt-5">
           <h4 class="text-lg text-indigo-500 font-semibold">Languages</h4>
           <p>JavaScript, TypeScript, HTML, CSS</p>
         </div>
@@ -105,6 +107,7 @@
       </div>
       <div>
         <lottie-player
+          v-if="!isMobile"
           :src="integrationAnimation"
           background="transparent"
           speed="1"
@@ -130,7 +133,7 @@
           </p>
         </div>
         -->
-        <div class="min-h-[200px] flex flex-col mt-5">
+        <div class="md:min-h-[200px] flex flex-col mt-5">
           <h4 class="text-lg text-indigo-500 font-semibold">Tools</h4>
           <ul>
             <li>Git, GitHub, GitLab</li>
@@ -140,7 +143,7 @@
             <li>VS Code, IntelliJ, Eclipse</li>
           </ul>
         </div>
-        <div class="min-h-[100px] flex flex-col mt-5">
+        <div class="md:min-h-[100px] flex flex-col mt-5">
           <h4 class="text-lg text-indigo-500 font-semibold">Languages</h4>
           <p>
             C, C++, Python, R, Assembly(x86), Matlab, Octave & Visual Basic.
@@ -162,4 +165,7 @@
 import serverAnimation from '@/assets/img/animations/server.json'
 import dashboardAnimation from '@/assets/img/animations/dashboard.json'
 import integrationAnimation from '@/assets/img/animations/integration.json'
+import { inject } from 'vue'
+
+const isMobile = inject<boolean>('isMobile')
 </script>
