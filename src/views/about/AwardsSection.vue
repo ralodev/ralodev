@@ -159,6 +159,6 @@
 
 <script lang="ts" setup>
 import AwardCard from '@/components/AwardCard.vue'
-import tehuacan from '@/assets/img/awards/tehuacan.png'
-import salle from '@/assets/img/awards/salle.jpg'
+import tehuacan from '@/assets/img/awards/tehuacan.webp'
+import salle from '@/assets/img/awards/salle.webp'
 </script>
