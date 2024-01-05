@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import LandingView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
+import SgipView from '@/views/projects/SgipView.vue'
 import EasterEgg from '@/views/EasterEgg.vue'
 
 const router = createRouter({
@@ -20,7 +21,12 @@ const router = createRouter({
       path: '/easter-egg',
       name: 'EasterEgg',
       component: EasterEgg
-    }
+    },
+    {
+      path: '/projects/SGIP',
+      name: 'SGIP',
+      component: SgipView
+    },
   ],
   scrollBehavior(to) {
     if (to.hash) {
