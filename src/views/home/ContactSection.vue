@@ -9,11 +9,11 @@
     >
       <div class="text-start">
         <header class="">
-          <h1
+          <h2
             className="dark:text-gray-300 font-bold text-5xl md:my-4 lg:px-0 text-center"
           >
             Contact
-          </h1>
+          </h2>
         </header>
       </div>
 
