@@ -7,13 +7,15 @@
     <article
       className="xl:px-0 py-10 max-w-[1200px] mx-auto justify-center h-full text-center"
     >
-      <div class="text-start grid grid-cols-4">
-        <header class="col-span-3">
-          <h2 className="dark:text-gray-300 font-bold text-5xl md:my-4">
+      <div class="text-start">
+        <header>
+          <h2
+            className="dark:text-dtext1 text-ltext1 font-bold text-4xl text-center md:text-start md:my-4"
+          >
             Projects
           </h2>
           <p
-            className="dark:text-gray-400 pt-3 md:text-2xl text-xl text-gray-700"
+            className="dark:text-gray-400 py-3 md:text-xl text-bold text-xl text-gray-700 text-center md:text-start w-full"
           >
             Here are some of my recent projects. You can find more on my GitHub
             profile.
@@ -44,33 +46,32 @@
             alt=""
           />
         </LazyLoadedCard>
-
-        <div
-          v-if="showMore"
-          name="showMore"
-          class="[&>*]:my-5 max-w-[1200px] text-start"
+      </div>
+      <div
+        v-if="showMore"
+        name="showMore"
+        class="[&>*]:my-5 max-w-[1200px] text-start"
+      >
+        <LazyLoadedCard2
+          v-for="project in projectsInfo2"
+          :key="project.id"
+          :title="project.title"
+          :description="project.description"
+          :image="project.image"
+          :gif="project.gif"
+          :source="project.source"
+          :reverse="project.id % 2 !== 0"
         >
-          <LazyLoadedCard2
-            v-for="project in projectsInfo2"
-            :key="project.id"
-            :title="project.title"
-            :description="project.description"
-            :image="project.image"
-            :gif="project.gif"
-            :source="project.source"
-            :reverse="project.id % 2 !== 0"
-          >
-            <img
-              v-for="tag in project.tags"
-              :key="tag"
-              :src="`https://img.shields.io/badge/${tag.replace(
-                / /g,
-                '%20'
-              )}-%23c7c7c7?style=for-the-badge&logo=${tag.replace(/ /g, '-')}`"
-              alt=""
-            />
-          </LazyLoadedCard2>
-        </div>
+          <img
+            v-for="tag in project.tags"
+            :key="tag"
+            :src="`https://img.shields.io/badge/${tag.replace(
+              / /g,
+              '%20'
+            )}-%23c7c7c7?style=for-the-badge&logo=${tag.replace(/ /g, '-')}`"
+            alt=""
+          />
+        </LazyLoadedCard2>
       </div>
       <PrimaryButton
         v-if="!showMore"
@@ -101,19 +102,19 @@ import { ref } from 'vue'
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import GitHub from '@/components/icons/GitHub.vue'
 
-import sgipdesktop from '@/assets/img/projects/sgip-desktop.png'
-import sgipmobile from '@/assets/img/projects/sgip-mobile.png'
+import sgipdesktop from '@/assets/img/projects/sgip-desktop.webp'
+import sgipmobile from '@/assets/img/projects/sgip-mobile.webp'
 import sgipgif from '@/assets/img/projects/sgip-gif.gif'
-import estoredesktop from '@/assets/img/projects/estore-desktop.png'
+import estoredesktop from '@/assets/img/projects/estore-desktop.webp'
 import estoregif from '@/assets/img/projects/estore-gif.gif'
-import estoremobile from '@/assets/img/projects/estore-mobile.png'
-import fsmdesktop from '@/assets/img/projects/fsm-desktop.png'
+import estoremobile from '@/assets/img/projects/estore-mobile.webp'
+import fsmdesktop from '@/assets/img/projects/fsm-desktop.webp'
 import fsmgif from '@/assets/img/projects/fsm-gif.gif'
-import fsmmobile from '@/assets/img/projects/fsm-mobile.png'
-import dinodesktop from '@/assets/img/projects/dino-desktop.png'
+import fsmmobile from '@/assets/img/projects/fsm-mobile.webp'
+import dinodesktop from '@/assets/img/projects/dino-desktop.webp'
 import dinogif from '@/assets/img/projects/dino-gif.gif'
-import crossydesktop from '@/assets/img/projects/crossy-desktop.png'
-import asmdesktop from '@/assets/img/projects/asm-desktop.png'
+import crossydesktop from '@/assets/img/projects/crossy-desktop.webp'
+import asmdesktop from '@/assets/img/projects/asm-desktop.webp'
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
 import LoadingCompoVue from '@/components/LoadingCompo.vue'
 import { lazyLoadComponentIfVisible } from '@/utils'
@@ -142,7 +143,7 @@ const projectsInfo = [
     //gif: 'src/assets/img/projects/sgip-gif.gif',
     gif: sgipgif,
     demo: 'https://ralodev.github.io/HRMS-Demo/#/',
-    info: '#',
+    info: 'SGIP',
     tags: [
       'PostgreSQL',
       'Spring',
@@ -182,7 +183,7 @@ const projectsInfo = [
     gif: fsmgif,
     source: 'https://github.com/ralodev/FSM-Generator',
     demo: 'https://ralodev.github.io/FSM-Generator/',
-    info: '#',
+    //info: '#',
     tags: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap']
   }
 ]
@@ -218,3 +219,23 @@ const projectsInfo2 = [
   }
 ]
 </script>
+
+<style>
+.list-move, /* apply transition to moving elements */
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* ensure leaving items are taken out of layout flow so that moving
+   animations can be calculated correctly. */
+.list-leave-active {
+  position: absolute;
+}
+</style>
