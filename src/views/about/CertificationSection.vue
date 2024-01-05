@@ -4,7 +4,9 @@
     name="education"
     className="w-full min-h-screen h-auto relative text-center justify-center max-w-[1800px] mx-auto px-10 dark:text-dtext2 py-[90px]"
   >
-    <h2 className="dark:text-gray-300 font-bold text-5xl mb-5 block ">
+    <h2
+      className="dark:text-gray-300 font-bold text-5xl mb-5 block text-start md:text-center"
+    >
       Education
     </h2>
     <div class="max-w-7xl mx-auto">
@@ -79,7 +81,7 @@
       </div>
     </div>
     <div
-      class="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 md:grid-cols-2 w-full text-start gap-5 max-w-7xl mx-auto"
+      class="grid 2xl:grid-cols-3 xl:grid-cols-3 grid-cols-1 md:grid-cols-2 w-full text-start gap-y-3 md:gap-5 max-w-7xl mx-auto"
     >
       <CredentialCard
         url="#"
@@ -87,6 +89,7 @@
         title="English level C1"
         subtitle="Inglés nivel C1"
         platform="TOEFL ITP"
+        class="md:col-span-2 xl:col-span-1"
       />
       <CredentialCard
         url="https://app.voxy.com/certificates/proficiency-test/62545608da6a440abedeb7ba/"
@@ -94,6 +97,7 @@
         title="Low Advanced English"
         subtitle="Inglés Avanzado Bajo"
         platform="Voxy"
+        class="md:col-span-2 xl:col-span-1"
       />
       <CredentialCard
         url="https://capacitateparaelempleo.org/verifica/c5acc254-e6c7-4afc-ad61-f1dd0fa73907/35d333fc-1821-4ccf-a025-34bcdb5e801a"
@@ -109,13 +113,14 @@
         title="Computer Security Technician (risk analysis)"
         subtitle="Técnico en seguridad informática (análisis de riesgos)"
         platform="Aprende.org"
-        class="col-span-2"
+        class="col-span-1 md:col-span-2"
       />
       <CredentialCard
         url="https://capacitateparaelempleo.org/verifica/c5acc254-e6c7-4afc-ad61-f1dd0fa73907/61e325ea-a725-44a3-bbb9-dc00b593e7f4"
         :logo="capacitate"
         title="Finder"
         platform="Aprende.org"
+        class="col-span-1"
       />
       <CredentialCard
         url="https://capacitateparaelempleo.org/verifica/c5acc254-e6c7-4afc-ad61-f1dd0fa73907/86d249cc-2f01-4606-96e5-bc95c7390610"
@@ -123,6 +128,7 @@
         title="Data Curator"
         subtitle="Curador de datos"
         platform="Aprende.org"
+        class="col-span-1"
       />
       <CredentialCard
         url="https://platzi.com/p/lopez.cruz.raul/curso/2881-avanzado-aumentada/diploma/detalle/"
@@ -130,7 +136,7 @@
         title="Advanced Augmented Reality Course"
         subtitle="Curso Avanzado de Realidad Aumentada"
         platform="Platzi"
-        class="col-span-2"
+        class="md:col-span-2"
       />
       <CredentialCard
         url="https://platzi.com/p/lopez.cruz.raul/curso/2789-blender/diploma/detalle/"
@@ -138,6 +144,7 @@
         title="3D Modeling Course"
         subtitle="Curso de Modelado 3D"
         platform="Platzi"
+        class="col-span-1"
       />
       <CredentialCard
         url="https://platzi.com/p/lopez.cruz.raul/curso/2667-spark-ar-3d/diploma/detalle/"
@@ -159,8 +166,8 @@
 
 <script setup lang="ts">
 import CredentialCard from '@/components/CredentialCard.vue'
-import toefl from '@/assets/img/toefl.png'
-import platzi from '@/assets/img/platzi.png'
-import capacitate from '@/assets/img/capacitate.png'
-import voxy from '@/assets/img/voxy.png'
+import toefl from '@/assets/img/toefl.webp'
+import platzi from '@/assets/img/platzi.webp'
+import capacitate from '@/assets/img/capacitate.webp'
+import voxy from '@/assets/img/voxy.webp'
 </script>
