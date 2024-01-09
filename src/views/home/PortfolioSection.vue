@@ -156,25 +156,6 @@ const projectsInfo = [
     ]
   },
   {
-    title: 'Ecommerce PWA',
-    description:
-      'Ecommerce web application made with React, Nextjs, and TailwindCSS. UI design inspired by ecommerce standard layouts.',
-    image: estoredesktop,
-    image2: estoremobile,
-    gif: estoregif,
-    source: 'https://github.com/ralodev/react-ecommerce',
-    demo: 'https://develop--cosmic-lamington-bef4bd.netlify.app/',
-    tags: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'webpack',
-      'eslint',
-      'prettier',
-      'Tailwind CSS'
-    ]
-  },
-  {
     title: 'FSM-Generator',
     description:
       'FSM Generator is a web application that allows you to generate finite state machines (FSM) / Deterministic Finite Automata (DFA) from regular expressions.',
