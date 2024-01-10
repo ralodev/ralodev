@@ -1,257 +1,422 @@
 <template>
-  <section
-    id="resume"
-    name="resume"
-    className="w-full min-h-screen h-auto flex items-center justify-center content-center overflow-x-hidden"
-  >
-    <article
-      className="xl:px-0 px-10 max-w-[1200px] mx-auto justify-center h-full text-center"
-    >
-      <header class="lg:flex lg:justify-between justify-center text-center">
-        <h2
-          className="dark:text-dtext1 text-ltext1 font-bold text-4xl text-center my-4"
-        >
-          Take a look at my resume
-        </h2>
-        <RouterLink
-          class="rounded-full my-auto"
-          :to="{ name: 'About', hash: '#experience' }"
-          spy="{true}"
-          smooth="{true}"
-          offset="{0}"
-          duration="{500}"
-          isDynamic="{true}"
-        >
-          <PrimaryButton
-            label="See full resume"
-            class="!w-[12rem] md:!my-auto mx-auto md:mx-0"
-          />
-        </RouterLink>
-      </header>
-      <div
-        class="relative px-2 text-[#14142b] dark:text-dtext2 grid md:grid-cols-2 md:gap-x-0 text-start py-5 md:py-10 gap-y-10"
+  <section id="resume" name="resume" className="w-full flex flex-col ">
+    <!-- Section header -->
+    <header class="">
+      <h2
+        className="dark:text-dtext1 text-ltext1 font-semibold text-4xl text-center my-4"
       >
-        <!--background-->
-        <div class="surface bg-coil"></div>
-        <!--card 1 -->
-        <div class="card md:-translate-x-6 hover:shadow-lg">
-          <header
-            class="flex md:flex-row flex-col flex-initial mb-2 min-h-[100px]"
-          >
-            <!--icon-->
-            <img
-              :src="ito"
-              alt="Technological Institute Of Oaxaca"
-              class="w-[90px] h-[90px] my-auto mx-auto"
-            />
-            <span class="my-auto px-2 w-full">
-              <!--title-->
-              <RouterLink
-                class="text-xl font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
-                :to="{ name: 'About', hash: '#experience' }"
-                spy="{true}"
-                smooth="{true}"
-                offset="{0}"
-                duration="{500}"
-                isDynamic="{true}"
-              >
-                Experience
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="inline group-hover:translate-x-1 group-hover:-translate-y-1 duration-300"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M17 7l-10 10"></path>
-                  <path d="M8 7l9 0l0 9"></path>
-                </svg>
-              </RouterLink>
-              <!--subtitle-->
-              <p class="text-lg font-semibold">Full Stack Developer Intern</p>
-              <p class="font-medium">Technological Institute Of Oaxaca</p>
-            </span>
-          </header>
-          <p class="hidden md:block">
-            Provided technical leadership and direction in the project to ensure
-            code quality, developed a fully functional HRMS, and optimized
-            report generation times by 90%.
-          </p>
-        </div>
-        <!--card 2 -->
-        <div class="card md:translate-x-6 hover:shadow-lg">
-          <header
-            class="flex md:flex-row flex-col flex-initial mb-2 min-h-[100px]"
-          >
-            <!--icon-->
+        More about me
+      </h2>
+    </header>
+    <!-- Education section -->
+    <section class="text-[#14142b] dark:text-dtext2">
+      <!-- Section Header -->
+      <header class="pb-3 text-2xl font-semibold dark:text-dtext1">
+        Education
+      </header>
+      <!--Section Body -->
+      <div class="">
+        <!--Section Description -->
+        <div
+          class="sticky top-20 z-[2] flex border-b-2 border-[#464646] bg-bg pb-2 dark:border-[#838383] dark:bg-bg_dark"
+        >
+          <span class="w-[90px]">
             <img
               :src="tecnm"
               alt="National Technological Institute Of Mexico"
-              class="w-[100px] h-[100px] my-auto mx-auto"
+              class="mx-auto my-auto h-[80px] w-[80px]"
             />
-            <span class="my-auto px-2 w-full">
-              <!--title-->
-              <RouterLink
-                class="text-xl font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
-                :to="{ name: 'About', hash: '#education' }"
-                spy="{true}"
-                smooth="{true}"
-                offset="{0}"
-                duration="{500}"
-                isDynamic="{true}"
-              >
-                Education
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="inline group-hover:translate-x-1 group-hover:-translate-y-1 duration-300"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M17 7l-10 10"></path>
-                  <path d="M8 7l9 0l0 9"></path>
-                </svg>
-              </RouterLink>
-              <!--subtitle-->
-              <p class="text-lg font-semibold">Bachelor of Science Degree</p>
-              <p class="font-medium">
-                <span class="hidden md:block"
-                  >National Technological Institute Of Mexico</span
-                ><abbr
-                  class="block md:hidden"
-                  title="National Technological Institute Of Mexico"
-                  >TECNM</abbr
-                >
-              </p>
-            </span>
-          </header>
-          <p class="hidden md:block">
-            Obtained a BSc in Computer Systems Engineering with a specialization
-            in Emerging Technologies. Currently pursuing a Master's degree in
-            Computer Science.
-          </p>
+          </span>
+          <span class="my-auto w-8/12 px-2">
+            <!--title-->
+            <p class="text-lg font-semibold">
+              Bachelor's Degree in Computer Systems Engineering
+            </p>
+            <!--date-->
+            <time class="text-sm uppercase dark:text-gray-400"
+              >Aug 2018 - Jul 2023</time
+            >
+            <!--site-->
+            <p class="h">National Technological Institute Of Mexico</p>
+          </span>
+          <PrimaryButton
+            :label="showCourses ? 'Show More' : 'Show Less'"
+            width="150"
+            class="my-auto ms-auto"
+            bg="bg-secondary"
+            @click="toggleCourses"
+          />
         </div>
-        <!--card 3 -->
-        <div class="card md:-translate-x-6 hover:shadow-lg">
-          <header
-            class="flex md:flex-row flex-col flex-initial mb-2 min-h-[100px]"
-          >
-            <!--icon-->
-            <img
-              :src="toefl"
-              alt="Test Of English as a Foreign Language"
-              class="w-[90px] h-[90px] my-auto mx-auto rounded-full"
-            />
-            <span class="my-auto px-2 w-full">
-              <!--title-->
-              <RouterLink
-                class="text-xl font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
-                :to="{ name: 'About', hash: '#experience' }"
-                spy="{true}"
-                smooth="{true}"
-                offset="{0}"
-                duration="{500}"
-                isDynamic="{true}"
-              >
-                Certifications
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="inline group-hover:translate-x-1 group-hover:-translate-y-1 duration-300"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M17 7l-10 10"></path>
-                  <path d="M8 7l9 0l0 9"></path>
-                </svg>
-              </RouterLink>
-              <!--subtitle-->
-              <p class="font-medium">Online & In-person</p>
-            </span>
-          </header>
-          <p class="hidden md:block">
-            I've completed several courses in web development, machine learning,
-            data science, and more. Additionally, I hold a TOEFL certification
-            at the C1 level.
-          </p>
-        </div>
-        <!--card 4 -->
-        <div class="card md:translate-x-6 hover:shadow-lg">
-          <header
-            class="flex md:flex-row flex-col flex-initial mb-2 min-h-[100px]"
-          >
-            <!--icon-->
-            <img
-              :src="trophy"
-              alt="Trophy"
-              class="w-[100px] h-[100px] my-auto mx-auto rounded-full"
-            />
-            <span class="my-auto px-2 w-full">
-              <!--title-->
-              <RouterLink
-                class="text-xl font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
-                :to="{ name: 'About', hash: '#awards' }"
-                spy="{true}"
-                smooth="{true}"
-                offset="{0}"
-                duration="{500}"
-                isDynamic="{true}"
-              >
-                Achievements
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="inline group-hover:translate-x-1 group-hover:-translate-y-1 duration-300"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  stroke-width="2"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                  <path d="M17 7l-10 10"></path>
-                  <path d="M8 7l9 0l0 9"></path>
-                </svg>
-              </RouterLink>
-              <!--subtitle-->
-              <p class="font-medium">Online & In-person</p>
-            </span>
-          </header>
-          <p class="hidden md:block">
-            I've earned accolades in programming, and research contests,
-            including a publication in a globally recognized scientific journal
-            indexed in the Harvard Library.
-          </p>
+        <!--Section Content-->
+        <div
+          class="overflow-hidden transition-all duration-500"
+          :class="showCourses ? 'h-0' : 'h-[1100px] lg:h-[600px]'"
+        >
+          <div class="bg-[#e9e9e9] p-3 dark:bg-[#1b1f2b]">
+            <p class="">
+              Obtained a BSc in Computer Systems Engineering with a
+              specialization in Emerging Technologies.
+            </p>
+            <p class="py-3 text-lg font-semibold text-ltext1 dark:text-dtext1">
+              Certifications and courses.
+            </p>
+            <div
+              class="gird-cols-1 grid w-full grid-flow-row-dense gap-3 py-3 text-start lg:grid-cols-12"
+            >
+              <CredentialCard
+                url="#"
+                :logo="toefl"
+                title="English level C1"
+                subtitle="Inglés nivel C1"
+                platform="TOEFL ITP"
+                class="lg:col-span-4"
+              />
+              <CredentialCard
+                url="https://capacitateparaelempleo.org/verifica/c5acc254-e6c7-4afc-ad61-f1dd0fa73907/35d333fc-1821-4ccf-a025-34bcdb5e801a"
+                :logo="capacitate"
+                title="Machine Learning Fundamentals"
+                subtitle="Fundamentos de Machine Learning"
+                platform="Aprende.org"
+                class="lg:col-span-6"
+              />
+              <CredentialCard
+                url="https://capacitateparaelempleo.org/verifica/c5acc254-e6c7-4afc-ad61-f1dd0fa73907/e736f7f1-5979-483f-b109-505c5125f023"
+                :logo="capacitate"
+                title="Computer Security (risk analysis)"
+                subtitle="Seguridad informática (análisis de riesgos)"
+                platform="Aprende.org"
+                class="lg:col-span-6"
+              />
+              <CredentialCard
+                url="https://capacitateparaelempleo.org/verifica/c5acc254-e6c7-4afc-ad61-f1dd0fa73907/61e325ea-a725-44a3-bbb9-dc00b593e7f4"
+                :logo="capacitate"
+                title="Finder"
+                platform="Aprende.org"
+                class="lg:col-span-3"
+              />
+              <CredentialCard
+                url="https://capacitateparaelempleo.org/verifica/c5acc254-e6c7-4afc-ad61-f1dd0fa73907/86d249cc-2f01-4606-96e5-bc95c7390610"
+                :logo="capacitate"
+                title="Data Curator"
+                subtitle="Curador de datos"
+                platform="Aprende.org"
+                class="lg:col-span-4"
+              />
+              <CredentialCard
+                url="https://platzi.com/p/lopez.cruz.raul/curso/2881-avanzado-aumentada/diploma/detalle/"
+                :logo="platzi"
+                title="Advanced Augmented Reality"
+                subtitle="Realidad Aumentada Avanzada"
+                platform="Platzi"
+                class="lg:col-span-5"
+              />
+              <CredentialCard
+                url="https://platzi.com/p/lopez.cruz.raul/curso/2789-blender/diploma/detalle/"
+                :logo="platzi"
+                title="3D Modeling"
+                subtitle="Modelado 3D"
+                platform="Platzi"
+                class="lg:col-span-3"
+              />
+              <CredentialCard
+                url="https://platzi.com/p/lopez.cruz.raul/curso/2667-spark-ar-3d/diploma/detalle/"
+                :logo="platzi"
+                title="3D Filters Creation"
+                subtitle="Creación de Filtros 3D"
+                platform="Platzi"
+                class="lg:col-span-4"
+              />
+              <CredentialCard
+                url="https://platzi.com/p/lopez.cruz.raul/curso/2647-filtros-spark-ar/diploma/detalle/"
+                :logo="platzi"
+                title="Facial Filter Creation"
+                subtitle="Creación de Filtros Faciales"
+                platform="Platzi"
+                class="lg:col-span-5"
+              />
+            </div>
+          </div>
         </div>
       </div>
-    </article>
+    </section>
+    <!-- END OF SECTION -->
+    <!-- Awards section -->
+    <section class="mt-5 text-[#14142b] dark:text-dtext2">
+      <!-- Section Header -->
+      <header class="pb-3 text-2xl font-semibold dark:text-dtext1">
+        Awards
+      </header>
+      <!--Section Body -->
+      <div class="">
+        <!--Section Description -->
+        <div
+          class="sticky top-20 z-[2] flex border-b-2 border-[#464646] bg-bg pb-2 dark:border-[#838383] dark:bg-bg_dark"
+        >
+          <span>
+            <img
+              :src="trophy"
+              alt="Awards"
+              class="mx-auto my-auto h-[80px] w-[80px] rounded-full"
+            />
+          </span>
+          <span class="my-auto w-8/12 px-2">
+            <!--title-->
+            <p class="text-lg font-semibold">Awards won during my career.</p>
+            <!--date-->
+            <time class="text-sm uppercase dark:text-gray-400"
+              >Mar 2022 - PRESENT</time
+            >
+          </span>
+          <PrimaryButton
+            :label="showAwards ? 'Show Awards' : 'Hide Awards'"
+            width="150"
+            class="my-auto ms-auto"
+            bg="bg-secondary"
+            @click="toggleAwards"
+          />
+        </div>
+        <!--Section Content-->
+        <div
+          class="overflow-hidden transition-all duration-500"
+          :class="showAwards ? 'h-0' : 'h-[2500px] sm:h-[1550px] md:h-[1050px]'"
+        >
+          <div class="bg bg-[#e9e9e9] p-3 dark:bg-[#1b1f2b]">
+            <p class="">
+              There are some of the awards I have won during my career. I am
+              proud of each of them, as they represent the effort and dedication
+              I have put into my studies and projects.
+            </p>
+            <p class="py-3 text-lg font-semibold text-ltext1 dark:text-dtext1">
+              Awards & Honors.
+            </p>
+            <div
+              class="mx-auto grid grid-cols-1 gap-3 pb-3 sm:grid-cols-2 md:grid-cols-3"
+            >
+              <!--card-->
+              <AwardCard
+                title="International Scientific Writing Competition"
+                description="Drafted the research article 'Sustainability Behaviors: An Application of VBN Theory in Engineering Students' achieving the publication of the article."
+                date="Sep 2023"
+                :image="ciencias"
+                object="object-contain"
+                bg="bg-gradient-to-br from-slate-700 to-indigo-500 dark:from-gray-800 dark:to-gray-900 px-3"
+                @clicked="visitCiencias()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="my-auto me-1 h-5 w-5"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M19.496 13.983l1.966 3.406a1.001 1.001 0 0 1 -.705 1.488l-.113 .011l-.112 -.001l-2.933 -.19l-1.303 2.636a1.001 1.001 0 0 1 -1.608 .26l-.082 -.094l-.072 -.11l-1.968 -3.407a8.994 8.994 0 0 0 6.93 -3.999z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.43 17.982l-1.966 3.408a1.001 1.001 0 0 1 -1.622 .157l-.076 -.1l-.064 -.114l-1.304 -2.635l-2.931 .19a1.001 1.001 0 0 1 -1.022 -1.29l.04 -.107l.05 -.1l1.968 -3.409a8.994 8.994 0 0 0 6.927 4.001z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M12 2l.24 .004a7 7 0 0 1 6.76 6.996l-.003 .193l-.007 .192l-.018 .245l-.026 .242l-.024 .178a6.985 6.985 0 0 1 -.317 1.268l-.116 .308l-.153 .348a7.001 7.001 0 0 1 -12.688 -.028l-.13 -.297l-.052 -.133l-.08 -.217l-.095 -.294a6.96 6.96 0 0 1 -.093 -.344l-.06 -.271l-.049 -.271l-.02 -.139l-.039 -.323l-.024 -.365l-.006 -.292a7 7 0 0 1 6.76 -6.996l.24 -.004z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  />
+                </svg>
+                Honor
+              </AwardCard>
+              <!--card end-->
+              <!--card-->
+              <AwardCard
+                title="Third National Scientific Conference"
+                description="Display and presentation of the research report 'Sustainability behaviors among students at the Technological Institute of Oaxaca'"
+                date="Jun 2023"
+                :image="tehuacan"
+                @clicked="visitTehuacan()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="my-auto me-1 h-5 w-5"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M19.496 13.983l1.966 3.406a1.001 1.001 0 0 1 -.705 1.488l-.113 .011l-.112 -.001l-2.933 -.19l-1.303 2.636a1.001 1.001 0 0 1 -1.608 .26l-.082 -.094l-.072 -.11l-1.968 -3.407a8.994 8.994 0 0 0 6.93 -3.999z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M11.43 17.982l-1.966 3.408a1.001 1.001 0 0 1 -1.622 .157l-.076 -.1l-.064 -.114l-1.304 -2.635l-2.931 .19a1.001 1.001 0 0 1 -1.022 -1.29l.04 -.107l.05 -.1l1.968 -3.409a8.994 8.994 0 0 0 6.927 4.001z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  />
+                  <path
+                    d="M12 2l.24 .004a7 7 0 0 1 6.76 6.996l-.003 .193l-.007 .192l-.018 .245l-.026 .242l-.024 .178a6.985 6.985 0 0 1 -.317 1.268l-.116 .308l-.153 .348a7.001 7.001 0 0 1 -12.688 -.028l-.13 -.297l-.052 -.133l-.08 -.217l-.095 -.294a6.96 6.96 0 0 1 -.093 -.344l-.06 -.271l-.049 -.271l-.02 -.139l-.039 -.323l-.024 -.365l-.006 -.292a7 7 0 0 1 6.76 -6.996l.24 -.004z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  />
+                </svg>
+                Honor
+              </AwardCard>
+              <!--card end-->
+              <!--card-->
+              <AwardCard
+                title="Competitive Programming Contest ITO"
+                date="Jun 2023"
+                description="First place achieved in the programming contest organized by the Technological Institute of Oaxaca, obtaining the highest score in the competition."
+                :image="omegaup"
+                object="object-contain"
+                bg="bg-gradient-to-tr from-blue-200 to-white dark:bg-gradient-to-r dark:from-gray-500 dark:to-gray-800 px-3"
+                @clicked="visitOmegaup()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="my-auto me-1 h-5 w-5"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M17 3a1 1 0 0 1 .993 .883l.007 .117v2.17a3 3 0 1 1 0 5.659v.171a6.002 6.002 0 0 1 -5 5.917v2.083h3a1 1 0 0 1 .117 1.993l-.117 .007h-8a1 1 0 0 1 -.117 -1.993l.117 -.007h3v-2.083a6.002 6.002 0 0 1 -4.996 -5.692l-.004 -.225v-.171a3 3 0 0 1 -3.996 -2.653l-.003 -.176l.005 -.176a3 3 0 0 1 3.995 -2.654l-.001 -2.17a1 1 0 0 1 1 -1h10zm-12 5a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm14 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  />
+                </svg>
+                First place
+              </AwardCard>
+              <!--card end-->
+              <!--card-->
+              <AwardCard
+                title="Programming Contest at La Salle Oaxaca 2022"
+                description="Second place achieved with the project 'Goods for Good' which addresses the issue of distributing and donating goods to nonprofit charitable organizations."
+                date="Sep 2022"
+                :image="salle"
+                @clicked="visitSalle()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="my-auto me-1 h-5 w-5"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M17 3a1 1 0 0 1 .993 .883l.007 .117v2.17a3 3 0 1 1 0 5.659v.171a6.002 6.002 0 0 1 -5 5.917v2.083h3a1 1 0 0 1 .117 1.993l-.117 .007h-8a1 1 0 0 1 -.117 -1.993l.117 -.007h3v-2.083a6.002 6.002 0 0 1 -4.996 -5.692l-.004 -.225v-.171a3 3 0 0 1 -3.996 -2.653l-.003 -.176l.005 -.176a3 3 0 0 1 3.995 -2.654l-.001 -2.17a1 1 0 0 1 1 -1h10zm-12 5a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm14 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  />
+                </svg>
+                Second place
+              </AwardCard>
+              <!--card end-->
+              <!--card-->
+              <AwardCard
+                title="Second National Scientific Conference"
+                description="Draft and presentation of the research article 'Analysis of Access to Internet Services in Oaxaca during the period 2013-2021'"
+                date="Mar 2023"
+                @clicked="visitIto()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="my-auto me-1 h-5 w-5"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M17 3a1 1 0 0 1 .993 .883l.007 .117v2.17a3 3 0 1 1 0 5.659v.171a6.002 6.002 0 0 1 -5 5.917v2.083h3a1 1 0 0 1 .117 1.993l-.117 .007h-8a1 1 0 0 1 -.117 -1.993l.117 -.007h3v-2.083a6.002 6.002 0 0 1 -4.996 -5.692l-.004 -.225v-.171a3 3 0 0 1 -3.996 -2.653l-.003 -.176l.005 -.176a3 3 0 0 1 3.995 -2.654l-.001 -2.17a1 1 0 0 1 1 -1h10zm-12 5a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm14 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z"
+                    stroke-width="0"
+                    fill="currentColor"
+                  />
+                </svg>
+                Second place
+              </AwardCard>
+              <!--card end-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END OF SECTION -->
   </section>
 </template>
 
 <script lang="ts" setup>
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import tecnm from '/src/assets/img/tecnm.webp'
-import ito from '/src/assets/img/ito-logo.webp'
 import trophy from '/src/assets/img/achievement.webp'
-import toefl from '/src/assets/img/toefl.webp'
+import toefl from '@/assets/img/toefl.webp'
+import platzi from '@/assets/img/platzi.webp'
+import CredentialCard from '@/components/CredentialCard.vue'
+import capacitate from '@/assets/img/capacitate.webp'
+import { ref } from 'vue'
+import AwardCard from '@/components/AwardCard.vue'
+import tehuacan from '@/assets/img/awards/tehuacan.webp'
+import salle from '@/assets/img/awards/salle.webp'
+import ciencias from '@/assets/img/awards/ciencia-sas.webp'
+import omegaup from '@/assets/img/awards/omegaup.webp'
+
+function visitCiencias() {
+  window.open('https://rc.cienciasas.org/index.php/rc/Indexacion', '_blank')
+}
+function visitTehuacan() {
+  window.open('https://www.buap.mx/', '_blank')
+}
+function visitOmegaup() {
+  window.open('https://omegaup.com/profile/ralo-dev/#contests', '_blank')
+}
+function visitSalle() {
+  window.open(
+    'https://www.instagram.com/dakota_danonino/p/Cigo0eLsOlk/',
+    '_blank'
+  )
+}
+function visitIto() {
+  window.open(
+    'http://201.132.162.254:17000/noticias/img/2022/CONVOCATORIA_ABRIL.pdf',
+    '_blank'
+  )
+}
+const showCourses = ref(false)
+const showAwards = ref(false)
+
+function toggleCourses() {
+  showCourses.value = !showCourses.value
+}
+function toggleAwards() {
+  showAwards.value = !showAwards.value
+}
 </script>

@@ -2,117 +2,111 @@
   <section
     id="services"
     name="services"
-    className="w-full min-h-screen h-auto flex items-center justify-center content-center overflow-x-hidden"
+    className="w-full  h-auto flex items-center justify-center content-center py-40"
   >
-    <article
-      className="relative xl:px-0 px-10 max-w-[1200px] mx-auto h-full text-center "
-    >
-      <!--background-->
-      <div
-        :class="
-          isMobile
-            ? 'absolute inset-0 dark:opacity-50 opacity-30 bg-coil'
-            : 'cards-bg'
-        "
-      />
-      <h2 className="dark:text-dtext1 text-ltext1 font-bold text-4xl">
+    <article className="relative xl:px-0 px-10  mx-auto h-full text-center ">
+      <h2 className="dark:text-dtext1 text-ltext1 font-semibold text-4xl ">
         My services
       </h2>
       <p
-        className="dark:text-dtext2 pt-3 md:text-2xl font-extrabold text-xl text-ltext2 mb-5"
+        className="dark:text-dtext2 pt-3 md:text-2xl  text-xl text-ltext2 mb-5"
       >
         I can provide you with a wide range of services, here are some of them:
       </p>
       <div
-        class="relative md:px-2 text-ltext2 dark:text-dtext2 grid md:grid-cols-2 md:gap-x-0 text-start gap-y-10 cursor-default"
-        :class="isMobile ? '[&>*]:text-center' : ''"
+        class="relative grid cursor-default gap-y-10 text-start text-ltext2 dark:text-dtext2 md:grid-cols-2 md:gap-x-0 md:px-2"
+        :class="'[&>*]:text-center'"
       >
         <!--card-->
         <div
-          class="card md:-translate-x-6 hover:shadow-lg"
-          :class="isMobile ? '' : 'hover:-translate-y-1'"
-          @mouseenter="mouseenter(player1)"
-          @mouseleave="mouseleave(player1)"
+          class="card group hover:shadow-lg md:-translate-x-6"
+          :class="'hover:-translate-y-1'"
         >
-          <header>
-            <!--icon-->
-            <lottie-player
-              v-if="!isMobile"
-              :src="serverAnimation"
-              background="transparent"
-              speed="1"
-              ref="player1"
-              class="bg-[#ebf8ff] dark:bg-gray-600 rounded-xl overflow-hidden"
-              :class="
-                isMobile ? 'w-[80px] h-[80px] mx-auto' : 'w-[100px] h-[100px]'
-              "
-              loop
-              :autoplay="isMobile"
-            />
+          <header class="flex h-16">
             <!--title-->
-            <span class="text-2xl font-bold backface-hidden"
-              >Full Stack Development</span
-            >
+            <span class="my-auto">
+              <svg
+                class="h-10 w-10 text-primary"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 16"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 4 1 8l4 4m10-8 4 4-4 4M11 1 9 15"
+                />
+              </svg>
+            </span>
+            <p class="my-auto ms-3 inline text-2xl font-bold">
+              Full Stack Development
+            </p>
           </header>
-          <p class="backface-hidden">
+
+          <p class="">
             I can build you a full stack application using the latest
-            technologies and frameworks for both the frontend and the backend
-            ensuring a fast and responsive application.
+            technologies and frameworks, providing you with a highly scalable
+            and performant application.
           </p>
         </div>
         <div
-          class="card md:translate-x-6 hover:shadow-lg"
-          :class="isMobile ? '' : 'hover:-translate-y-1'"
-          @mouseenter="mouseenter(player2)"
-          @mouseleave="mouseleave(player2)"
+          class="card hover:shadow-lg md:translate-x-6"
+          :class="'hover:-translate-y-1'"
         >
-          <header>
-            <!--icon-->
-            <lottie-player
-              v-if="!isMobile"
-              :src="dashboardAnimation"
-              background="transparent"
-              speed="1"
-              ref="player2"
-              class="rounded-xl overflow-hidden bg-[#ffebf6] dark:bg-gray-600"
-              :class="
-                isMobile ? 'w-[80px] h-[80px] mx-auto' : 'w-[100px] h-[100px]'
-              "
-              loop
-              :autoplay="isMobile"
-            />
+          <header class="flex h-16">
             <!--title-->
-            <span class="text-2xl font-bold">UI/UX Design</span>
+            <span class="my-auto">
+              <svg
+                class="h-10 w-10 text-primary"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                  d="M4.5 19A3.5 3.5 0 0 1 1 15.5V2a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v13.5A3.5 3.5 0 0 1 4.5 19Zm0 0H18a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1h-4.938a1 1 0 0 0-.697.283l-4.238 4.124a1.046 1.046 0 0 0-.164.208C6.986 18.228 6.184 18.705 4.5 19Zm0-4h.01m8.925-12.293 3.536 3.536a1 1 0 0 1 0 1.414L8 16.627v-9.9l4.02-4.02a1 1 0 0 1 1.415 0Z"
+                />
+              </svg>
+            </span>
+            <p class="my-auto ms-3 inline text-2xl font-bold">UI/UX Design</p>
           </header>
-          <p>
-            If you need a website or an application, I can design it for you
-            using the latest design trends and tools, providing you with a
-            modern and responsive design.
+          <p class="text-pretty pro" style="text-wrap: pretty">
+            I can design you a modern and responsive UI/UX for your web
+            application based on your needs and requirements.
           </p>
         </div>
         <div
-          class="card md:-translate-x-6 hover:shadow-lg"
-          :class="isMobile ? '' : 'hover:-translate-y-1'"
-          @mouseenter="mouseenter(player3)"
-          @mouseleave="mouseleave(player3)"
+          class="card group hover:shadow-lg md:-translate-x-6"
+          :class="'hover:-translate-y-1'"
         >
-          <header>
-            <!--icon-->
-            <lottie-player
-              v-if="!isMobile"
-              :src="seoAnimation"
-              background="transparent"
-              speed="1"
-              ref="player3"
-              class="rounded-xl overflow-hidden bg-[#fff5d2] dark:bg-gray-600"
-              :class="
-                isMobile ? 'w-[80px] h-[80px] mx-auto' : 'w-[100px] h-[100px]'
-              "
-              loop
-              :autoplay="isMobile"
-            />
+          <header class="flex h-16">
             <!--title-->
-            <span class="text-2xl font-bold">Data Analysis</span>
+            <span class="my-auto">
+              <svg
+                class="h-10 w-10 text-primary"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 18"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 12v5m5-9v9m5-5v5m5-9v9M1 7l5-6 5 6 5-6"
+                />
+              </svg>
+            </span>
+            <p class="my-auto ms-3 inline text-2xl font-bold">Data Analysis</p>
           </header>
           <p>
             I can help you analyze and visualize your data using the latest
@@ -121,28 +115,31 @@
           </p>
         </div>
         <div
-          class="card md:translate-x-6 hover:shadow-lg"
-          :class="isMobile ? '' : 'hover:-translate-y-1'"
-          @mouseenter="mouseenter(player4)"
-          @mouseleave="mouseleave(player4)"
+          class="card hover:shadow-lg md:translate-x-6"
+          :class="'hover:-translate-y-1'"
         >
-          <header>
-            <!--icon-->
-            <lottie-player
-              v-if="!isMobile"
-              :src="integrationAnimation"
-              background="transparent"
-              speed="1"
-              ref="player4"
-              class="rounded-xl overflow-hidden bg-[#f3eeff] dark:bg-gray-600"
-              :class="
-                isMobile ? 'w-[80px] h-[80px] mx-auto' : 'w-[100px] h-[100px]'
-              "
-              loop
-              :autoplay="isMobile"
-            />
+          <header class="flex h-16">
             <!--title-->
-            <span class="text-2xl font-bold">Technical Problem Solving </span>
+            <span class="my-auto">
+              <svg
+                class="h-10 w-10 text-primary"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 19 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 3 6 2V1m5 2 1-1V1M9 7v11M9 7a5 5 0 0 1 5 5M9 7a5 5 0 0 0-5 5m5-5a4.959 4.959 0 0 1 2.973 1H12V6a3 3 0 0 0-6 0v2h.027A4.959 4.959 0 0 1 9 7Zm-5 5H1m3 0v2a5 5 0 0 0 10 0v-2m3 0h-3m-9.975 4H2a1 1 0 0 0-1 1v2m13-3h2.025a1 1 0 0 1 1 1v2M13 9h2.025a1 1 0 0 0 1-1V6m-11 3H3a1 1 0 0 1-1-1V6"
+                />
+              </svg>
+            </span>
+            <p class="my-auto ms-3 inline text-2xl font-bold">
+              Technical Support
+            </p>
           </header>
           <p>
             I can help you solve any technical problem you might have, whether
@@ -155,29 +152,4 @@
   </section>
 </template>
 
-<script lang="ts" setup>
-import { ref, inject } from 'vue'
-import serverAnimation from '@/assets/img/animations/server.json'
-import integrationAnimation from '@/assets/img/animations/integration.json'
-import seoAnimation from '@/assets/img/animations/seo.json'
-import dashboardAnimation from '@/assets/img/animations/dashboard.json'
-
-const isMobile = inject<boolean>('isMobile')
-
-const player1 = ref(null)
-const player2 = ref(null)
-const player3 = ref(null)
-const player4 = ref(null)
-
-function mouseenter(player?: any) {
-  if (player && !isMobile) {
-    player.play()
-  }
-}
-
-function mouseleave(player?: any) {
-  if (player && !isMobile) {
-    player.stop()
-  }
-}
-</script>
+<script lang="ts" setup></script>

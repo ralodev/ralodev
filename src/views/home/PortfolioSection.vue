@@ -5,7 +5,7 @@
     className="w-full min-h-screen h-auto overflow-x-hidden pt-[80px]"
   >
     <article
-      className="xl:px-0 py-10 max-w-[1200px] mx-auto justify-center h-full text-center"
+      className="xl:px-0 py-10 mx-auto justify-center h-full text-center"
     >
       <div class="text-start">
         <header>
@@ -22,15 +22,15 @@
           </p>
         </header>
       </div>
-      <div class="mt-5 [&>*]:my-5 max-w-[1200px] text-start">
-        <LazyLoadedCard
+      <div class="mt-5 text-start [&>*]:my-5">
+        <ProjectCard
           v-for="project in projectsInfo"
           :key="project.title"
           :title="project.title"
           :description="project.description"
           :image="project.image"
           :image2="project.image2"
-          :gif="project.gif"
+          :live="project.live ? project.live : ''"
           :source="project.source ? project.source : ''"
           :demo="project.demo"
           :info="project.info"
@@ -45,20 +45,19 @@
             )}-%23c7c7c7?style=for-the-badge&logo=${tag.replace(/ /g, '-')}`"
             alt=""
           />
-        </LazyLoadedCard>
+        </ProjectCard>
       </div>
       <div
         v-if="showMore"
         name="showMore"
-        class="[&>*]:my-5 max-w-[1200px] text-start"
+        class="max-w-[1200px] text-start [&>*]:my-5"
       >
-        <LazyLoadedCard2
+        <ProjectCard
           v-for="project in projectsInfo2"
           :key="project.id"
           :title="project.title"
           :description="project.description"
           :image="project.image"
-          :gif="project.gif"
           :source="project.source"
           :reverse="project.id % 2 !== 0"
         >
@@ -71,12 +70,12 @@
             )}-%23c7c7c7?style=for-the-badge&logo=${tag.replace(/ /g, '-')}`"
             alt=""
           />
-        </LazyLoadedCard2>
+        </ProjectCard>
       </div>
       <PrimaryButton
         v-if="!showMore"
         label="Load more"
-        class="!w-[12rem] mb-12 mx-auto"
+        class="mx-auto mb-12 !w-[12rem]"
         @click="showMore = true"
       />
       <a
@@ -88,9 +87,9 @@
       >
         <SecondaryButton
           label="See more"
-          class="!w-[12rem] mb-12 mx-auto font-semibold"
+          class="mx-auto mb-12 !w-[12rem] font-semibold"
         >
-          <GitHub class="w-8 h-8" />
+          <GitHub class="h-8 w-8" />
         </SecondaryButton>
       </a>
     </article>
@@ -104,44 +103,23 @@ import GitHub from '@/components/icons/GitHub.vue'
 
 import sgipdesktop from '@/assets/img/projects/sgip-desktop.webp'
 import sgipmobile from '@/assets/img/projects/sgip-mobile.webp'
-import sgipgif from '@/assets/img/projects/sgip-gif.gif'
-import estoredesktop from '@/assets/img/projects/estore-desktop.webp'
-import estoregif from '@/assets/img/projects/estore-gif.gif'
-import estoremobile from '@/assets/img/projects/estore-mobile.webp'
 import fsmdesktop from '@/assets/img/projects/fsm-desktop.webp'
-import fsmgif from '@/assets/img/projects/fsm-gif.gif'
 import fsmmobile from '@/assets/img/projects/fsm-mobile.webp'
 import dinodesktop from '@/assets/img/projects/dino-desktop.webp'
-import dinogif from '@/assets/img/projects/dino-gif.gif'
 import crossydesktop from '@/assets/img/projects/crossy-desktop.webp'
 import asmdesktop from '@/assets/img/projects/asm-desktop.webp'
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
-import LoadingCompoVue from '@/components/LoadingCompo.vue'
-import { lazyLoadComponentIfVisible } from '@/utils'
-
-const LazyLoadedCard = lazyLoadComponentIfVisible({
-  componentLoader: () => import('@/components/ProjectCard.vue'),
-  loadingComponent: LoadingCompoVue,
-  errorComponent: () => 'Error loading component'
-})
-
-const LazyLoadedCard2 = lazyLoadComponentIfVisible({
-  componentLoader: () => import('@/components/ProjectCard.vue'),
-  loadingComponent: LoadingCompoVue,
-  errorComponent: () => 'Error loading component'
-})
+import ProjectCard from '@/components/ProjectCard.vue'
 
 const showMore = ref(false)
 
 const projectsInfo = [
   {
-    title: 'Human Resources Management System',
+    title: 'SGIP (Sistema de Gestión de Información de Personal)',
     description:
-      'HRMS that allows the management of employees data, departments, positions, and more. Made for the HHRR  department at Technological Institute.',
+      'SGIP is an HRMS (Human Resources Management System) Full-Stack web application that allows you to manage the information of the personnel of a company/institution. It was developed for the Human Resources department of the Technological Institute of Oaxaca (ITO). The application is currently in production, hosted on a private server. The source code, however, is not available due to security reasons.',
     image: sgipdesktop,
     image2: sgipmobile,
-    //gif: 'src/assets/img/projects/sgip-gif.gif',
-    gif: sgipgif,
     demo: 'https://ralodev.github.io/HRMS-Demo/#/',
     info: 'SGIP',
     tags: [
@@ -156,33 +134,13 @@ const projectsInfo = [
     ]
   },
   {
-    title: 'Ecommerce PWA',
-    description:
-      'Ecommerce web application made with React, Nextjs, and TailwindCSS. UI design inspired by ecommerce standard layouts.',
-    image: estoredesktop,
-    image2: estoremobile,
-    gif: estoregif,
-    source: 'https://github.com/ralodev/react-ecommerce',
-    demo: 'https://develop--cosmic-lamington-bef4bd.netlify.app/',
-    tags: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'webpack',
-      'eslint',
-      'prettier',
-      'Tailwind CSS'
-    ]
-  },
-  {
     title: 'FSM-Generator',
     description:
       'FSM Generator is a web application that allows you to generate finite state machines (FSM) / Deterministic Finite Automata (DFA) from regular expressions.',
     image: fsmdesktop,
     image2: fsmmobile,
-    gif: fsmgif,
     source: 'https://github.com/ralodev/FSM-Generator',
-    demo: 'https://ralodev.github.io/FSM-Generator/',
+    live: 'https://ralodev.github.io/FSM-Generator/',
     //info: '#',
     tags: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap']
   }
@@ -203,7 +161,6 @@ const projectsInfo2 = [
     description:
       'The classic DinoRun game, this application was made with the Swing and AWT libraries and incorporates a custom-made graphic tool that implements the Bresenham algorithm for rendering.',
     image: dinodesktop,
-    gif: dinogif,
     source: 'https://github.com/ralodev/DinoRun-2D',
     tags: ['Java', 'NetBeans', 'Swing', 'AWT', 'OpenJDK']
   },
@@ -219,23 +176,3 @@ const projectsInfo2 = [
   }
 ]
 </script>
-
-<style>
-.list-move, /* apply transition to moving elements */
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s ease;
-}
-
-.list-enter-from,
-.list-leave-to {
-  opacity: 0;
-  transform: translateX(30px);
-}
-
-/* ensure leaving items are taken out of layout flow so that moving
-   animations can be calculated correctly. */
-.list-leave-active {
-  position: absolute;
-}
-</style>

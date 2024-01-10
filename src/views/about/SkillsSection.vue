@@ -7,17 +7,8 @@
     <h2 className="dark:text-gray-300 font-bold text-5xl mb-5 block ">
       Skills
     </h2>
-    <div class="grid md:grid-cols-3 divide-x w-full card [&>*]:px-3 px-0">
-      <div class="border-b-2 md:border-0 mb-3 pb-3 md:mb-0 md:pb-0">
-        <lottie-player
-          v-if="!isMobile"
-          :src="serverAnimation"
-          background="transparent"
-          speed="1"
-          autoplay
-          class="w-[100px] h-[100px] rounded-xl overflow-hidden mb-3 mx-auto bg-[#ebf8ff] dark:bg-gray-600"
-          loop
-        />
+    <div class="grid w-full divide-x px-0 md:grid-cols-3 [&>*]:px-3">
+      <div class="mb-3 border-b-2 pb-3 md:mb-0 md:border-0 md:pb-0">
         <h3 class="text-xl font-bold text-ltext1 dark:text-dtext1">
           Backend Developer
         </h3>
@@ -32,8 +23,8 @@
           <p>REST, Microservices, Serverless, Monolith, APIs, Unit Testing</p>
         </div>
         -->
-        <div class="md:min-h-[200px] flex flex-col mt-5">
-          <h4 class="text-lg text-indigo-500 font-semibold">Frameworks</h4>
+        <div class="mt-5 flex flex-col md:min-h-[200px]">
+          <h4 class="text-lg font-semibold text-indigo-500">Frameworks</h4>
           <ul>
             <li>Spring Boot</li>
             <li>Micronaut</li>
@@ -42,12 +33,12 @@
           </ul>
         </div>
 
-        <div class="md:min-h-[100px] flex flex-col mt-5">
-          <h4 class="text-lg text-indigo-500 font-semibold">Languages</h4>
+        <div class="mt-5 flex flex-col md:min-h-[100px]">
+          <h4 class="text-lg font-semibold text-indigo-500">Languages</h4>
           <p>Java, JavaScript</p>
         </div>
 
-        <h4 class="text-lg text-indigo-500 font-semibold">Databases</h4>
+        <h4 class="text-lg font-semibold text-indigo-500">Databases</h4>
         <ul>
           <li>MySQL</li>
           <li>PostgreSQL</li>
@@ -56,16 +47,7 @@
           <li>Supabase*</li>
         </ul>
       </div>
-      <div class="border-b-2 md:border-0 mb-3 pb-3 md:mb-0 md:pb-0">
-        <lottie-player
-          v-if="!isMobile"
-          :src="dashboardAnimation"
-          background="transparent"
-          speed="1"
-          autoplay
-          class="w-[100px] h-[100px] rounded-xl overflow-hidden mb-3 mx-auto bg-[#ffebf6] dark:bg-gray-600"
-          loop
-        />
+      <div class="mb-3 border-b-2 pb-3 md:mb-0 md:border-0 md:pb-0">
         <h3 class="text-xl font-bold text-ltext1 dark:text-dtext1">
           Frontend Developer
         </h3>
@@ -79,8 +61,8 @@
           <p>Responsive, Component-based, Accessible, SEO, UX/UI</p>
         </div>
         -->
-        <div class="md:min-h-[200px] flex flex-col mt-5">
-          <h4 class="text-lg text-indigo-500 font-semibold">Frameworks</h4>
+        <div class="mt-5 flex flex-col md:min-h-[200px]">
+          <h4 class="text-lg font-semibold text-indigo-500">Frameworks</h4>
           <ul>
             <li>Vue.js</li>
             <li>React</li>
@@ -92,12 +74,12 @@
           </ul>
         </div>
 
-        <div class="md:min-h-[100px] flex flex-col mt-5">
-          <h4 class="text-lg text-indigo-500 font-semibold">Languages</h4>
+        <div class="mt-5 flex flex-col md:min-h-[100px]">
+          <h4 class="text-lg font-semibold text-indigo-500">Languages</h4>
           <p>JavaScript, TypeScript, HTML, CSS</p>
         </div>
 
-        <h4 class="text-lg text-indigo-500 font-semibold">Design</h4>
+        <h4 class="text-lg font-semibold text-indigo-500">Design</h4>
         <ul>
           <li>Adobe XD</li>
           <li>Figma</li>
@@ -106,15 +88,6 @@
         </ul>
       </div>
       <div>
-        <lottie-player
-          v-if="!isMobile"
-          :src="integrationAnimation"
-          background="transparent"
-          speed="1"
-          class="w-[100px] h-[100px] rounded-xl overflow-hidden mb-3 mx-auto bg-[#f3eeff] dark:bg-gray-600"
-          loop
-          autoplay
-        />
         <h3 class="text-xl font-bold text-ltext1 dark:text-dtext1">
           Other Skills
         </h3>
@@ -133,8 +106,8 @@
           </p>
         </div>
         -->
-        <div class="md:min-h-[200px] flex flex-col mt-5">
-          <h4 class="text-lg text-indigo-500 font-semibold">Tools</h4>
+        <div class="mt-5 flex flex-col md:min-h-[200px]">
+          <h4 class="text-lg font-semibold text-indigo-500">Tools</h4>
           <ul>
             <li>Git, GitHub, GitLab</li>
             <li>Heroku, Netlify, Google Cloud, AWS, Azure</li>
@@ -143,13 +116,13 @@
             <li>VS Code, IntelliJ, Eclipse</li>
           </ul>
         </div>
-        <div class="md:min-h-[100px] flex flex-col mt-5">
-          <h4 class="text-lg text-indigo-500 font-semibold">Languages</h4>
+        <div class="mt-5 flex flex-col md:min-h-[100px]">
+          <h4 class="text-lg font-semibold text-indigo-500">Languages</h4>
           <p>
             C, C++, Python, R, Assembly(x86), Matlab, Octave & Visual Basic.
           </p>
         </div>
-        <h4 class="text-lg text-indigo-500 font-semibold">Other</h4>
+        <h4 class="text-lg font-semibold text-indigo-500">Other</h4>
         <ul>
           <li>Agile (Scrum, Kanban, XP)</li>
           <li>Operative Systems (Windows, Linux, FreeBSD)</li>
@@ -161,11 +134,4 @@
   </section>
 </template>
 
-<script setup lang="ts">
-import serverAnimation from '@/assets/img/animations/server.json'
-import dashboardAnimation from '@/assets/img/animations/dashboard.json'
-import integrationAnimation from '@/assets/img/animations/integration.json'
-import { inject } from 'vue'
-
-const isMobile = inject<boolean>('isMobile')
-</script>
+<script setup lang="ts"></script>
