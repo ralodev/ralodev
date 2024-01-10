@@ -1,44 +1,71 @@
 <template>
   <!-- Card container -->
-  <article class="relative min-h-[300px] w-full rounded-3xl p-2">
+  <article class="group relative min-h-[300px] w-full rounded-3xl p-2">
     <!-- Background -->
-    <span class="" />
+    <span
+      class="border-dtext-3 absolute inset-0 z-0 rounded-3xl border-2 bg-[#c9c9c9] opacity-50 backdrop-blur-lg duration-500 group-hover:-mb-0 dark:border-ltext3 dark:bg-dsurface lg:mb-9"
+    />
+    <!-- Layout: Vertical on mobile, Horizontal for wider viewports -->
+    <!-- Mobile: Image > Info > Buttons > Tags -->
+    <!-- Desktop: Left: Image, Right: Info & Buttons, Bottom: tags -->
 
     <!-- Image, Info & Buttons Container-->
-    <div class="relative flex flex-col-reverse">
+    <div class="relative flex flex-col lg:grid lg:grid-cols-6">
       <!-- Image 620 x 350 -->
       <div
-        class="group relative col-span-4 overflow-hidden rounded-2xl duration-500 ease-in-out"
+        class="relative col-span-4 overflow-hidden rounded-2xl duration-500 ease-in-out lg:col-span-3"
+        :class="
+          reverse
+            ? 'group-hover:rounded-t-none lg:order-2 lg:group-hover:rounded-l-none lg:group-hover:rounded-r-2xl'
+            : ' group-hover:rounded-b-none lg:group-hover:rounded-l-2xl lg:group-hover:rounded-r-none '
+        "
       >
+        <!-- Gif: Position on bottom right corner of image container -->
+        <img
+          v-if="gif"
+          :src="gif"
+          class="absolute bottom-[-5px] right-[-5px] z-[9] w-1/2 translate-y-80 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100"
+        />
+        <span
+          v-else
+          class="absolute right-0 top-0 z-[9] flex h-full w-1/2 items-center justify-center text-xl font-bold text-gray-100 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100"
+        >
+          {{ description }}
+        </span>
         <img
           v-if="image2"
           :src="image2"
-          class="absolute z-[10] max-h-[400px] w-full translate-y-80 object-contain opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-12 group-hover:opacity-100"
+          class="absolute z-[10] -translate-x-1/3 translate-y-80 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-y-12 group-hover:opacity-100"
         />
+        <span
+          class="absolute left-0 top-0 z-[10] flex h-full w-1/2 items-center justify-center px-3 text-3xl font-bold text-gray-100 opacity-0 transition-all duration-500 ease-in-out group-hover:opacity-100"
+          v-else
+        >
+          {{ title }}
+        </span>
         <img
           :src="image"
-          class="mx-auto max-h-[400px] min-h-[260px] transition-all duration-500 ease-in-out group-hover:brightness-50"
+          class="min-h-[260px] transition-all duration-500 ease-in-out group-hover:scale-150 group-hover:brightness-50"
         />
-      </div>
-      <!-- Tags -->
-      <div
-        class="mt-2 flex flex-wrap justify-center gap-1 font-medium [&>img]:rounded-full"
-      >
-        <slot />
       </div>
       <!-- Title and description -->
       <div
-        class="col-span-2 flex flex-col justify-center rounded-2xl px-4 py-1 shadow-sm backdrop-blur-sm duration-500 lg:col-span-3"
+        class="col-span-2 flex flex-col justify-center rounded-2xl border-2 border-white border-opacity-20 bg-white bg-opacity-20 px-4 py-1 shadow-sm backdrop-blur-sm duration-500 group-hover:!bg-opacity-100 dark:border-ltext2 dark:bg-transparent lg:col-span-3"
+        :class="
+          reverse
+            ? 'group-hover:rounded-b-none lg:order-1 lg:group-hover:rounded-l-2xl lg:group-hover:rounded-r-none'
+            : 'group-hover:rounded-t-none lg:group-hover:rounded-l-none lg:group-hover:rounded-r-2xl'
+        "
       >
-        <h2 class="text-2xl font-semibold text-ltext1 dark:text-dtext1">
+        <h2 class="text-2xl font-bold text-ltext1 dark:text-dtext1">
           {{ title }}
         </h2>
-        <p class="py-3 text-lg text-ltext2 dark:text-dtext2">
+        <p class="py-3 text-ltext2 dark:text-dtext2">
           {{ description }}
         </p>
         <div class="flex justify-evenly">
           <a target="_blank" v-if="source" :href="source">
-            <PrimaryButton label="Source code" bg="bg-primary">
+            <SecondaryButton label="Source">
               <svg
                 class="h-6 w-6 text-white"
                 aria-hidden="true"
@@ -52,10 +79,10 @@
                   clip-rule="evenodd"
                 />
               </svg>
-            </PrimaryButton>
+            </SecondaryButton>
           </a>
           <a target="_blank" v-if="demo" :href="demo">
-            <PrimaryButton label="Demo site" bg="bg-primary">
+            <SecondaryButton label="Demo">
               <svg
                 class="h-6 w-6 text-white"
                 aria-hidden="true"
@@ -71,29 +98,10 @@
                   d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
                 />
               </svg>
-            </PrimaryButton>
-          </a>
-          <a target="_blank" v-if="props.live" :href="props.live">
-            <PrimaryButton label="Live site" bg="bg-primary">
-              <svg
-                class="h-6 w-6 text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 18 18"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"
-                />
-              </svg>
-            </PrimaryButton>
+            </SecondaryButton>
           </a>
           <RouterLink v-if="info" :to="{ name: info }">
-            <PrimaryButton :label="'Read case study'" bg="bg-primary">
+            <SecondaryButton :label="'Read case study'">
               <svg
                 class="h-6 w-6 text-white"
                 aria-hidden="true"
@@ -106,9 +114,15 @@
                 />
                 <path d="M6 5H5v1h1V5Z" />
               </svg>
-            </PrimaryButton>
+            </SecondaryButton>
           </RouterLink>
         </div>
+      </div>
+      <!-- Tags -->
+      <div
+        class="order-10 mt-2 flex flex-wrap justify-center gap-1 overflow-hidden text-xs font-medium duration-500 lg:col-span-6 [&>img]:rounded-full [&>img]:duration-500 [&>img]:group-hover:translate-y-0 [&>img]:lg:-translate-y-20"
+      >
+        <slot />
       </div>
     </div>
   </article>
@@ -116,11 +130,10 @@
 
 <script lang="ts" setup>
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
-import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 
 import { RouterLink } from 'vue-router'
 
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     required: true
@@ -141,11 +154,11 @@ const props = defineProps({
     type: String,
     required: false
   },
-  demo: {
+  gif: {
     type: String,
     required: false
   },
-  live: {
+  demo: {
     type: String,
     required: false
   },

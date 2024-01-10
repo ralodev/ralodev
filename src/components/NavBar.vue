@@ -1,12 +1,14 @@
 <template>
   <nav
-    class="!fixed top-0 w-full h-[80px] flex justify-center items-center border-b dark:border-[#ffffff1f] border-[#0000001f] dark:bg-dbg bg-lsurface text-[#14142b] dark:text-gray-300 z-20"
+    class="fixed top-0 z-20 flex h-[80px] w-full items-center justify-center border-b border-[#0000001f] bg-lsurface !bg-opacity-90 text-[#14142b] backdrop-blur-lg dark:border-[#ffffff1f] dark:bg-dbg dark:text-gray-300"
   >
-    <div class="flex max-w-[1200px] w-full items-center justify-between">
+    <div
+      class="flex w-full max-w-[1000px] items-center justify-between px-4 lg:px-0"
+    >
       <!-- Logo -->
       <header role="banner">
         <RouterLink
-          class="flex text-ltext1 dark:text-dtext1 font-bold text-2xl relative group h-12"
+          class="group relative flex h-12 text-2xl font-bold text-ltext1 dark:text-dtext1"
           :to="{ name: 'Home' }"
           spy="{true}"
           smooth="{true}"
@@ -14,257 +16,121 @@
           duration="{500}"
           isDynamic="{true}"
         >
-          <img
-            class="w-12 h-12 z-20 ms-8 xl:ms-0"
-            src="/r_plain.svg"
-            alt="Logo"
-            style="width: 48px; height: 48px"
-          />
-          <div class="absolute w-12 h-12 z-[19] rounded-full"></div>
+          <RaloDev class="z-20 h-12 w-12 transition-all duration-500" />
           <div
-            class="relative z-10 group-hover:translate-x-0 duration-300 transition-all ms- -translate-x-12 opacity-0 group-hover:opacity-100"
+            class="ms- pointer-events-none relative z-10 -translate-x-12 opacity-0 transition-all delay-100 duration-300 group-hover:translate-x-0 group-hover:opacity-100"
           >
             <span
-              class="bg-gradient-to-br from-[#447ffa] to-[#2e57ac] inline-block text-transparent bg-clip-text font-semibold -top-0 absolute f-opensans"
+              class="absolute -top-1 inline-block bg-gradient-to-br from-[#447ffa] to-[#2e57ac] bg-clip-text font-display font-bold text-transparent"
               >alo</span
             >
-            <span
-              class="text-ltext3 font-normal -bottom-0 absolute f-opensans text-xl"
-              >>Dev</span
-            >
+            <span class="absolute -bottom-1 text-xl font-normal text-[#af39cc]">
+              /Dev
+            </span>
           </div>
         </RouterLink>
       </header>
       <!-- Content -->
       <div class="flex flex-row">
         <!-- Desktop menu -->
-        <div className="hidden md:flex code text-lg me-8">
+        <div className="hidden md:flex code text-lg pe-8">
           <!-- TailwindCSS Dropdown HOME -->
-          <div class="relative group w-full">
-            <RouterLink
-              class="dark:hover:text-dprimary hover:text-lprimary border-b-2 border-transparent text-ltext3 dark:text-dtext1 mx-4 flex items-center"
-              :to="{ name: 'Home' }"
-              active-class="dark:border-b-dprimary border-b-lprimary text-lprimary dark:text-dprimary"
-              spy="{true}"
-              smooth="{true}"
-              offset="{0}"
-              duration="{500}"
-              isDynamic="{true}"
-            >
-              Home
-              <svg
-                class="w-3 h-3 mx-1"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 8"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
-                />
-              </svg>
-            </RouterLink>
+          <div class="relative flex w-full flex-row">
+            <ul class="flex gap-3">
+              <li class="hover:text-lprimary dark:hover:text-dprimary">
+                <RouterLink
+                  class="border-b-2 text-ltext1 hover:text-primary dark:text-dtext1"
+                  :to="{ name: 'Home' }"
+                  active-class="border-b-2 border-primary dark:border-dprimary"
+                  spy="{true}"
+                  smooth="{true}"
+                  offset="{0}"
+                  duration="{500}"
+                  isDynamic="{true}"
+                >
+                  Home
+                </RouterLink>
+              </li>
+              <li class="hover:text-lprimary dark:hover:text-dprimary">
+                <RouterLink
+                  class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
+                  :to="{ name: 'Home', hash: '#experience' }"
+                  spy="{true}"
+                  smooth="{true}"
+                  offset="{0}"
+                  duration="{500}"
+                  isDynamic="{true}"
+                >
+                  Experience
+                </RouterLink>
+              </li>
+              <li class="hover:text-lprimary dark:hover:text-dprimary">
+                <RouterLink
+                  class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
+                  :to="{ name: 'Home', hash: '#services' }"
+                  spy="{true}"
+                  smooth="{true}"
+                  offset="{0}"
+                  duration="{500}"
+                  isDynamic="{true}"
+                >
+                  Services
+                </RouterLink>
+              </li>
 
-            <div
-              class="absolute hidden group-hover:block bg-white dark:bg-dbg backdrop-blur-sm dark:bg-opacity-90 bg-opacity-90 rounded-md shadow-md w-40 py-2 text-base font-normal text-ltext1 dark:text-dtext1"
-            >
-              <ul class="space-y-2 ps-4">
-                <li class="hover:text-lprimary dark:hover:text-dprimary">
-                  <RouterLink
-                    class="dark:hover:text-dprimary hover:text-lprimary hover:border-b-2 dark:border-b-dprimary border-b-lprimary text-ltext1 dark:text-dtext1"
-                    :to="{ name: 'Home', hash: '#services' }"
-                    spy="{true}"
-                    smooth="{true}"
-                    offset="{0}"
-                    duration="{500}"
-                    isDynamic="{true}"
-                  >
-                    Services
-                  </RouterLink>
-                </li>
-                <li class="hover:text-lprimary dark:hover:text-dprimary">
-                  <RouterLink
-                    class="dark:hover:text-dprimary hover:text-lprimary hover:border-b-2 dark:border-b-dprimary border-b-lprimary text-ltext1 dark:text-dtext1"
-                    :to="{ name: 'Home', hash: '#about' }"
-                    spy="{true}"
-                    smooth="{true}"
-                    offset="{0}"
-                    duration="{500}"
-                    isDynamic="{true}"
-                  >
-                    Info
-                  </RouterLink>
-                </li>
-                <li class="hover:text-lprimary dark:hover:text-dprimary">
-                  <RouterLink
-                    class="dark:hover:text-dprimary hover:text-lprimary hover:border-b-2 dark:border-b-dprimary border-b-lprimary text-ltext1 dark:text-dtext1"
-                    :to="{ name: 'Home', hash: '#resume' }"
-                    spy="{true}"
-                    smooth="{true}"
-                    offset="{0}"
-                    duration="{500}"
-                    isDynamic="{true}"
-                  >
-                    Resume
-                  </RouterLink>
-                </li>
-                <li class="hover:text-lprimary dark:hover:text-dprimary">
-                  <RouterLink
-                    class="dark:hover:text-dprimary hover:text-lprimary hover:border-b-2 dark:border-b-dprimary border-b-lprimary text-ltext1 dark:text-dtext1"
-                    :to="{ name: 'Home', hash: '#projects' }"
-                    spy="{true}"
-                    smooth="{true}"
-                    offset="{0}"
-                    duration="{500}"
-                    isDynamic="{true}"
-                  >
-                    Projects
-                  </RouterLink>
-                </li>
-                <li class="hover:text-lprimary dark:hover:text-dprimary">
-                  <RouterLink
-                    class="dark:hover:text-dprimary hover:text-lprimary hover:border-b-2 dark:border-b-dprimary border-b-lprimary text-ltext1 dark:text-dtext1"
-                    :to="{ name: 'Home', hash: '#contact' }"
-                    spy="{true}"
-                    smooth="{true}"
-                    offset="{0}"
-                    duration="{500}"
-                    isDynamic="{true}"
-                  >
-                    Contact
-                  </RouterLink>
-                </li>
-              </ul>
-            </div>
+              <li class="hover:text-lprimary dark:hover:text-dprimary">
+                <RouterLink
+                  class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
+                  :to="{ name: 'Home', hash: '#resume' }"
+                  spy="{true}"
+                  smooth="{true}"
+                  offset="{0}"
+                  duration="{500}"
+                  isDynamic="{true}"
+                >
+                  About
+                </RouterLink>
+              </li>
+              <li class="hover:text-lprimary dark:hover:text-dprimary">
+                <RouterLink
+                  class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
+                  :to="{ name: 'Home', hash: '#projects' }"
+                  spy="{true}"
+                  smooth="{true}"
+                  offset="{0}"
+                  duration="{500}"
+                  isDynamic="{true}"
+                >
+                  Projects
+                </RouterLink>
+              </li>
+              <li class="hover:text-lprimary dark:hover:text-dprimary">
+                <RouterLink
+                  class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
+                  :to="{ name: 'Home', hash: '#contact' }"
+                  spy="{true}"
+                  smooth="{true}"
+                  offset="{0}"
+                  duration="{500}"
+                  isDynamic="{true}"
+                >
+                  Contact
+                </RouterLink>
+              </li>
+            </ul>
           </div>
-          <!-- TailwindCSS Dropdown ABOUT -->
-          <div class="relative group w-full">
-            <RouterLink
-              class="dark:hover:text-dprimary hover:text-lprimary border-b-2 border-transparent text-ltext3 dark:text-dtext1 mx-4 flex items-center"
-              :to="{ name: 'About' }"
-              active-class="dark:border-b-dprimary border-b-lprimary text-lprimary dark:text-dprimary"
-              spy="{true}"
-              smooth="{true}"
-              offset="{0}"
-              duration="{500}"
-              isDynamic="{true}"
-            >
-              About
-              <svg
-                class="w-3 h-3 mx-1"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 8"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 5.326 5.7a.909.909 0 0 0 1.348 0L13 1"
-                />
-              </svg>
-            </RouterLink>
-
-            <div
-              class="absolute hidden group-hover:block bg-white dark:bg-dbg backdrop-blur-sm dark:bg-opacity-90 bg-opacity-90 rounded-md shadow-md w-40 py-2 text-base font-normal text-ltext1 dark:text-dtext1"
-            >
-              <ul class="space-y-2 ps-4">
-                <li class="hover:text-lprimary dark:hover:text-dprimary">
-                  <RouterLink
-                    class="dark:hover:text-dprimary hover:text-lprimary hover:border-b-2 dark:border-b-dprimary border-b-lprimary text-ltext1 dark:text-dtext1"
-                    :to="{ name: 'About', hash: '#experience' }"
-                    spy="{true}"
-                    smooth="{true}"
-                    offset="{0}"
-                    duration="{500}"
-                    isDynamic="{true}"
-                  >
-                    Experience
-                  </RouterLink>
-                </li>
-                <li class="hover:text-lprimary dark:hover:text-dprimary">
-                  <RouterLink
-                    class="dark:hover:text-dprimary hover:text-lprimary hover:border-b-2 dark:border-b-dprimary border-b-lprimary text-ltext1 dark:text-dtext1"
-                    :to="{ name: 'About', hash: '#awards' }"
-                    spy="{true}"
-                    smooth="{true}"
-                    offset="{0}"
-                    duration="{500}"
-                    isDynamic="{true}"
-                  >
-                    Awards
-                  </RouterLink>
-                </li>
-                <li class="hover:text-lprimary dark:hover:text-dprimary">
-                  <RouterLink
-                    class="dark:hover:text-dprimary hover:text-lprimary hover:border-b-2 dark:border-b-dprimary border-b-lprimary text-ltext1 dark:text-dtext1"
-                    :to="{ name: 'About', hash: '#skills' }"
-                    spy="{true}"
-                    smooth="{true}"
-                    offset="{0}"
-                    duration="{500}"
-                    isDynamic="{true}"
-                  >
-                    Skills
-                  </RouterLink>
-                </li>
-                <li class="hover:text-lprimary dark:hover:text-dprimary">
-                  <RouterLink
-                    class="dark:hover:text-dprimary hover:text-lprimary hover:border-b-2 dark:border-b-dprimary border-b-lprimary text-ltext1 dark:text-dtext1"
-                    :to="{ name: 'About', hash: '#education' }"
-                    spy="{true}"
-                    smooth="{true}"
-                    offset="{0}"
-                    duration="{500}"
-                    isDynamic="{true}"
-                  >
-                    Education
-                  </RouterLink>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- End TailwindCSS Dropdown test -->
-
-          <a
-            href="mailto:contact@ralo.dev"
-            class="flex dark:hover:text-dprimary hover:text-lprimary dark:border-b-dprimary border-b-lprimary text-ltext3 dark:text-dtext1 mx-1"
-          >
-            <svg
-              class="w-4 h-4 me-1 my-auto"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 20 16"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                d="m19 2-8.4 7.05a1 1 0 0 1-1.2 0L1 2m18 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m18 0v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2"
-              />
-            </svg>
-            contact@ralo.dev</a
-          >
         </div>
         <!-- ThemeButton -->
-        <SwitchThemeButton class="h-6 w-6 my-auto me-8 xl:me-0" />
+        <SwitchThemeButton class="my-auto h-6 w-6 xl:me-0" />
 
         <!-- Mobile menu button -->
         <div
           @click="handleClick"
-          class="md:hidden z-10 cursor-pointer ms-8 me-8 my-auto"
+          class="z-10 my-auto ms-8 cursor-pointer md:hidden"
         >
           <svg
             v-if="open"
-            class="w-6 h-6 text-ltext dark:text-dtext"
+            class="text-ltext dark:text-dtext h-6 w-6"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -280,7 +146,7 @@
           </svg>
           <svg
             v-else
-            class="w-6 h-6 text-ltext dark:text-dtext"
+            class="text-ltext dark:text-dtext h-6 w-6"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -297,8 +163,8 @@
         </div>
         <!-- Mobile menu -->
         <ul
-          class="absolute flex top-0 left-0 w-full h-screen dark:bg-dbg bg-lbg flex-col justify-center items-center transition-all duration-500"
-          :class="[open ? 'opacity-100' : 'opacity-0 pointer-events-none']"
+          class="bg-lbg absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center transition-all duration-500 dark:bg-dbg"
+          :class="[open ? 'opacity-100' : 'pointer-events-none opacity-0']"
         >
           <li v-for="link in links" :key="link.name">
             <RouterLink
@@ -309,7 +175,7 @@
               offset="{0}"
               duration="{500}"
               isDynamic="{true}"
-              class="text-2xl dark:text-dtext text-ltext my-4"
+              class="dark:text-dtext text-ltext my-4 text-2xl"
               @click="handleClick"
             >
               {{ link.label }}
@@ -325,6 +191,7 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import SwitchThemeButton from './buttons/SwitchThemeButton.vue'
+import RaloDev from './icons/RaloDev.vue'
 const open = ref(false)
 
 type LinkInterface = {

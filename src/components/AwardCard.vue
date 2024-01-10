@@ -1,33 +1,55 @@
 <template>
-  <div class="relative col-span-2 md:col-span-1 w-full flex">
-    <div
-      class="relative backdrop-blur-sm rounded-3xl bg-lsurface dark:bg-dsurface text-ltext2 dark:text-dtext2 bg-opacity-80 p-3 overflow-hidden shadow-lg"
-    >
-      <img
-        :src="
-          image || 'https://placehold.co/260x220?text=Will+be+added+soon+:)'
-        "
-        alt=""
-        class="relative rounded-3xl shadow-sm hidden md:block overflow-hidden object-cover h-[220px] w-full mx-auto"
-        loading="lazy"
+  <div
+    class="relative col-span-1 mx-auto flex max-w-[350px] overflow-hidden rounded-3xl border-2 p-3 shadow-lg md:w-full"
+  >
+    <div class="">
+      <div
+        class="absolute inset-0 rounded-3xl bg-lsurface bg-opacity-80 dark:bg-dsurface"
       />
-      <div class="relative">
+      <div class="relative text-ltext2 dark:text-dtext2">
+        <img
+          :src="
+            image || 'https://placehold.co/260x220?text=Will+be+added+soon+:)'
+          "
+          alt=""
+          class="block h-[220px] w-full overflow-hidden rounded-2xl shadow-sm"
+          :class="object + ' ' + bg"
+          loading="lazy"
+        />
         <div
-          class="absolute top-2 left-0 bg-indigo-500 text-dtext1 flex rounded-md px-1 pointer-events-none"
+          class="pointer-events-none absolute bottom-2 left-2 flex rounded-md bg-slate-900 bg-opacity-70 p-1 font-display text-dtext1"
         >
           <slot />
         </div>
-        <span
-          class="uppercase text-xs text-ltext2 absolute top-2 right-0 px-2 pt-1 pointer-events-none dark:text-dtext2"
-          >{{ date }}</span
+      </div>
+      <div class="relative pt-3">
+        <div
+          class="flex h-[12rem] flex-col justify-between sm:min-h-[9rem] lg:h-[12rem]"
         >
-        <div class="flex flex-col w-full h-full justify-between">
-          <h3 class="text-base text-start font-semibold pt-8 min-h-[5rem]">
+          <h3
+            class="text-start text-base font-semibold text-ltext2 dark:text-dtext2"
+          >
             {{ title }}
           </h3>
-          <p class="text-start text-sm text-ltext3 dark:text-dtext3">
+          <p
+            class="text-start text-sm text-ltext3 dark:text-dtext3"
+            style="text-wrap: pretty"
+          >
             {{ description }}
           </p>
+          <div class="mt-1">
+            <PrimaryButton
+              label="Read More"
+              bg="bg-gray-500 inline"
+              class="text-sm"
+              height="35"
+              @click="$emit('clicked')"
+            />
+            <span
+              class="pointer-events-none absolute bottom-0 right-0 text-xs uppercase text-ltext2 dark:text-dtext2"
+              >{{ date }}</span
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -35,12 +57,21 @@
 </template>
 
 <script setup lang="ts">
-//set a random number between 1 and 10
-const random = Math.floor(Math.random() * 10) + 1
+import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 defineProps({
   title: String,
   description: String,
   date: String,
-  image: String
+  image: String,
+  bg: {
+    type: String,
+    required: false,
+    default: `bg-gray-100 dark:bg-gray-800`
+  },
+  object: {
+    type: String,
+    required: false,
+    default: `cover`
+  }
 })
 </script>

@@ -1,35 +1,46 @@
+<template>
+  <a
+    class="Btn"
+    :class="icon.toLocaleLowerCase()"
+    :href="href"
+    target="_blank"
+    rel="noopener noreferrer"
+    role="link"
+    :title="icon"
+  >
+    <span class="svgContainer">
+      <GitHub
+        v-if="icon.toLocaleLowerCase() === 'github'"
+        class="text-white m-auto w-6 h-6"
+      />
+      <LinkedIn
+        v-if="icon.toLocaleLowerCase() === 'linkedin'"
+        class="text-white m-auto w-5 h-5"
+      />
+    </span>
+    <span class="BG"></span>
+  </a>
+</template>
+
 <script lang="ts" setup>
-const props = defineProps({
-  label: {
+import GitHub from '@/components/icons/GitHub.vue'
+import LinkedIn from '../icons/LinkedIn.vue'
+defineProps({
+  href: {
     type: String,
     required: true
   },
-  bg: {
+  icon: {
     type: String,
-    default: null
-  },
-  height: {
-    type: String,
-    default: '45'
-  },
-  btnClass: {
-    type: String,
-    default: ''
+    required: true
   }
 })
 </script>
 
-<template>
-  <button class="Btn" :class="btnClass" :style="`height: ${props.height}px`">
-    <span class="labelContainer">
-      <span class="px-3 font-medium text-dtext1">{{ label }}</span>
-    </span>
-    <span class="BG" :class="props.bg ?? 'BG-default-color'"></span>
-  </button>
-</template>
-
 <style scoped>
 .Btn {
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,11 +50,10 @@ const props = defineProps({
   /* overflow: hidden; */
   border-radius: 7px;
   cursor: pointer;
-  z-index: 1;
   transition: all 0.3s;
 }
 
-.labelContainer {
+.svgContainer {
   width: 100%;
   height: 100%;
   display: flex;
@@ -54,7 +64,6 @@ const props = defineProps({
   letter-spacing: 0.8px;
   border-radius: 10px;
   transition: all 0.3s;
-  z-index: 1;
   border: 1px solid rgba(156, 156, 156, 0.466);
 }
 
@@ -63,21 +72,25 @@ const props = defineProps({
   content: '';
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: -1;
   border-radius: 10px;
   pointer-events: none;
   transition: all 0.3s;
 }
 
-.BG-default-color {
-  background: #12809e;
+.linkedin .BG {
+  background: #0077b5;
+}
+.github .BG {
+  background: #313131;
 }
 
 .Btn:hover .BG {
-  transform: rotate(3deg) translate(10px, 5px);
+  transform: rotate(35deg);
+  transform-origin: bottom;
 }
 
-.Btn:hover .labelContainer {
+.Btn:hover .svgContainer {
   background-color: rgba(156, 156, 156, 0.466);
   backdrop-filter: blur(4px);
 }
