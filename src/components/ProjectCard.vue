@@ -115,7 +115,6 @@
 </template>
 
 <script lang="ts" setup>
-import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 
 import { RouterLink } from 'vue-router'

@@ -68,61 +68,7 @@
 
 <script lang="ts" setup>
 import { RouterLink } from 'vue-router'
-
-function handleClick() {
-  alert('Is this an easter egg? 🥚')
-}
 </script>
-
-<style>
-@keyframes float1 {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-10px, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.triangle-float1 {
-  animation: float1 5s infinite;
-}
-
-@keyframes float2 {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-5px, -5px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.triangle-float2 {
-  animation: float2 4s infinite;
-}
-
-@keyframes float3 {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(0, -10px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-.triangle-float3 {
-  animation: float3 6s infinite;
-}
-</style>
 
 <style scoped>
 .custom-shape-divider-top-1704854337 {

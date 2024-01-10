@@ -146,8 +146,6 @@
 </template>
 
 <script lang="ts" setup>
-import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import sgipdesktop from '@/assets/img/projects/sgip-desktop.webp'
 import sgipmobile from '@/assets/img/projects/sgip-mobile-crop.webp'
-import sgipgif from '@/assets/img/projects/sgip-gif.gif'
 </script>

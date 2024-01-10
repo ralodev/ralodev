@@ -99,9 +99,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, inject } from 'vue'
+import { ref } from 'vue'
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue';
-import SecondaryButton from '@/components/buttons/SecondaryButton.vue';
 const more = ref(false)
 
 function gotoCV() {

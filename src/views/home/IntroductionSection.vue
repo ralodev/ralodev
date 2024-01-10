@@ -21,13 +21,13 @@
             -->
             <div class="absolute inset-0 z-[-1]">
               <img
-                :src="landing"
+                :src="placeholderSrc"
                 alt="Ralodev's profile picture"
                 class="absolute inset-0 left-0 right-0 z-0 mx-auto h-[210px] rounded-full blur-md sm:h-[310px] lg:h-[300px]"
               />
             </div>
             <img
-              :src="landing"
+              :src="placeholderSrc"
               alt="Ralodev's profile picture"
               class="z-1 mx-auto h-[200px] rounded-full p-1 sm:h-[300px] lg:h-[300px]"
             />
@@ -73,7 +73,7 @@ import SocialButton from '@/components/buttons/SocialButton.vue'
 import landing from '@/assets/img/landing.webp'
 
 import { useRouter } from 'vue-router'
-
+const placeholderSrc = 'https://placehold.co/600x600?text=Will+be+added+soon+:)'
 const router = useRouter()
 function goToContact() {
   router.push({ name: 'Home', hash: '#contact' })

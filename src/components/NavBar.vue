@@ -81,7 +81,7 @@
               <li class="hover:text-lprimary dark:hover:text-dprimary">
                 <RouterLink
                   class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
-                  :to="{ name: 'Home', hash: '#resume' }"
+                  :to="{ name: 'Home', hash: '#about' }"
                   spy="{true}"
                   smooth="{true}"
                   offset="{0}"
