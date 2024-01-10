@@ -10,6 +10,11 @@ module.exports = {
     extend: {
       colors: {
         //
+        primary: '#32689a',
+        secondary: '#6b7280',
+        bg_dark: '#0c1323',
+        bg: "#ffffff",
+        //
         bgdark: '#24292d',
         pdark: '#4ca4a4',
         tdark: "#000000",
@@ -26,7 +31,7 @@ module.exports = {
         dsecondary: "#fdae03",
         daccent: "#da5c49",
         //
-        lbg: "#ffffff",
+
         lsurface: "#fafbfb",
         ltext1: "#101010",
         ltext2: "#303030",
@@ -34,6 +39,10 @@ module.exports = {
         lprimary: "#3245ff",
         lsecondary: "#c5c7ca",
         laccent: "#ff4081",
+      },
+      fontFamily: {
+        display: ['Expletus Sans Variable', 'sans-serif'],
+        mono: ['Source Code Pro Variable', 'monospace'],
       },
     },
   },
