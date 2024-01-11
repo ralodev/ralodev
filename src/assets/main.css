@@ -11,10 +11,10 @@
 
 @layer components {
   .card {
-    @apply rounded-2xl p-3 border-2 backdrop-blur-lg dark:border-dtext3 dark:border-opacity-30 shadow-md bg-lsurface bg-opacity-20  dark:bg-dsurface dark:text-dtext2 dark:hover:text-dtext1 hover:bg-opacity-60 duration-500;
+    @apply rounded-2xl border-2 bg-lsurface p-3 shadow-md backdrop-blur-lg duration-500 hover:bg-opacity-60    dark:border-slate-900  dark:bg-slate-800 dark:text-dtext2 dark:hover:text-dtext1;
   }
   .time {
-    @apply uppercase font-mono select-all;
+    @apply select-all font-mono uppercase;
   }
 }
 
@@ -34,49 +34,3 @@ article {
 }
 
 /*END TEST CLASSES*/
-
-.bg-coil {
-  background-image: url('/bg_coil.webp');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    10%,
-    white,
-    90%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    10%,
-    white,
-    90%,
-    transparent
-  );
-}
-
-.dark .bg-grid {
-  background-image: url('/bg_grid.webp');
-  z-index: -10;
-  background-repeat: repeat;
-  background-size: 360px 360px;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    10%,
-    white,
-    90%,
-    transparent
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent,
-    10%,
-    white,
-    90%,
-    transparent
-  );
-}
