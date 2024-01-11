@@ -1,50 +1,49 @@
 <template>
-  <div class="card hover:shadow-lg">
+  <a
+    class="card group cursor-pointer font-bold text-ltext2 hover:shadow-lg dark:text-dtext2"
+    :href="url"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <header class="flex flex-initial">
       <!--icon-->
       <img
         :src="logo"
         alt="Certification icon"
-        class="w-[50px] h-[50px] my-auto rounded-lg"
+        class="my-auto h-[50px] w-[50px] rounded-lg"
       />
-      <span class="my-auto px-2 w-full">
+      <span class="my-auto w-full px-2">
         <!--title-->
-        <a
-          class="font-bold text-ltext2 dark:text-dtext2 cursor-pointer group"
-          :href="url"
-          target="_blank"
-          rel="noopener noreferrer"
+        {{ title }}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="inline duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
-          {{ title }}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="inline group-hover:translate-x-1 group-hover:-translate-y-1 duration-300"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M17 7l-10 10"></path>
-            <path d="M8 7l9 0l0 9"></path></svg
-        ></a>
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M17 7l-10 10"></path>
+          <path d="M8 7l9 0l0 9"></path>
+        </svg>
         <!--subtitle-->
         <p v-if="subtitle" class="italic">
           {{ subtitle }}
         </p>
-        <p v-if="platform" class="font-medium text-sm">
+        <p v-if="platform" class="text-sm font-medium">
           {{ platform }}
         </p>
       </span>
     </header>
-    <p v-if="description" class="hidden md:block text-ltext3 dark:text-dtext3">
+    <p v-if="description" class="hidden text-ltext3 dark:text-dtext3 md:block">
       {{ description }}
     </p>
-  </div>
+  </a>
 </template>
 
 <script lang="ts" setup>

@@ -11,23 +11,15 @@
         <!--card-->
         <div class="relative p-4 duration-500 md:grid md:grid-cols-2">
           <span class="relative col-span-2 lg:col-span-1">
-            <!--
-
-              <img
-              src="https://placehold.co/600x600?text=Will+be+added+soon+:)"
-              alt="Ralodev's profile picture"
-              class="rounded-full mx-auto mb-3 h-[200px] sm:h-[300px] lg:h-[400px]"
-              />
-            -->
             <div class="absolute inset-0 z-[-1]">
               <img
-                :src="placeholderSrc"
+                :src="placeholder"
                 alt="Ralodev's profile picture"
                 class="absolute inset-0 left-0 right-0 z-0 mx-auto h-[210px] rounded-full blur-md sm:h-[310px] lg:h-[300px]"
               />
             </div>
             <img
-              :src="placeholderSrc"
+              :src="placeholder"
               alt="Ralodev's profile picture"
               class="z-1 mx-auto h-[200px] rounded-full p-1 sm:h-[300px] lg:h-[300px]"
             />
@@ -70,10 +62,9 @@
 <script lang="ts" setup>
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import SocialButton from '@/components/buttons/SocialButton.vue'
-import landing from '@/assets/img/landing.webp'
+import placeholder from '@/assets/img/placeholder.svg'
 
 import { useRouter } from 'vue-router'
-const placeholderSrc = 'https://placehold.co/600x600?text=Will+be+added+soon+:)'
 const router = useRouter()
 function goToContact() {
   router.push({ name: 'Home', hash: '#contact' })
