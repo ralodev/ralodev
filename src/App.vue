@@ -11,8 +11,12 @@ onMounted(() => {
 const links = [
   {
     name: 'Home',
-    hash: '#home',
     label: 'Home'
+  },
+  {
+    name: 'Home',
+    hash: '#experience',
+    label: 'Experience'
   },
   {
     name: 'Home',

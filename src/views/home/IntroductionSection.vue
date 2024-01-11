@@ -1,11 +1,11 @@
 <template>
   <section
-    id="about"
-    name="about"
-    className="w-full min-h-[600px] h-auto flex items-center justify-center content-center "
+    id="introduction"
+    name="introduction"
+    className="w-full min-h-screen h-auto flex items-center justify-center content-center -mt-[80px]"
   >
     <article
-      className="xl:px-0 md:px-10 max-w-[1200px] mx-auto justify-center h-full text-center grid-cols-2"
+      className="xl:px-0 md:px-10 mx-auto justify-center h-full text-center grid-cols-2"
     >
       <div class="relative text-start dark:text-gray-300 md:gap-x-0">
         <!--card-->
@@ -33,7 +33,7 @@
             />
           </span>
           <span
-            class="col-span-2 my-auto block items-center justify-center text-center md:text-start lg:col-span-1"
+            class="col-span-2 my-auto block items-center justify-center pt-10 text-center md:text-start lg:col-span-1 lg:pt-0"
           >
             <h1 className="dark:text-gray-300 font-semibold text-4xl">
               Hello, I'm Raúl López

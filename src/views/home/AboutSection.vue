@@ -1,5 +1,5 @@
 <template>
-  <section id="resume" name="resume" className="w-full flex flex-col ">
+  <section id="about" name="about" className="w-full flex flex-col  py-[90px]">
     <!-- Section header -->
     <header class="">
       <h2

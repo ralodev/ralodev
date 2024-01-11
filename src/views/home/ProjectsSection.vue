@@ -2,10 +2,10 @@
   <section
     id="projects"
     name="projects"
-    className="w-full min-h-screen h-auto overflow-x-hidden pt-[80px]"
+    className="w-full min-h-screen h-auto overflow-x-hidden pt-[90px]"
   >
     <article
-      className="xl:px-0 py-10 mx-auto justify-center h-full text-center"
+      className="xl:px-0 pb-10 mx-auto justify-center h-full text-center"
     >
       <div class="text-start">
         <header>

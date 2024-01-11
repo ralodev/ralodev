@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-0 z-20 flex h-[80px] w-full items-center justify-center border-b border-[#0000001f] bg-lsurface !bg-opacity-90 text-[#14142b] backdrop-blur-lg dark:border-[#ffffff1f] dark:bg-dbg dark:text-gray-300"
+    class="fixed top-0 z-20 flex h-[80px] w-full items-center justify-center border-b border-[#0000001f] bg-lsurface !bg-opacity-90 text-[#14142b] backdrop-blur-lg dark:border-[#ffffff1f] dark:bg-bg_dark dark:text-gray-300"
   >
     <div
       class="flex w-full max-w-[1000px] items-center justify-between px-4 lg:px-0"
@@ -8,7 +8,7 @@
       <!-- Logo -->
       <header role="banner">
         <RouterLink
-          class="group relative flex h-12 text-2xl font-bold text-ltext1 dark:text-dtext1"
+          class="group flex h-12 text-2xl font-bold text-ltext1 dark:text-dtext1"
           :to="{ name: 'Home' }"
           spy="{true}"
           smooth="{true}"
@@ -18,7 +18,7 @@
         >
           <RaloDev class="z-20 h-12 w-12 transition-all duration-500" />
           <div
-            class="ms- pointer-events-none relative z-10 -translate-x-12 opacity-0 transition-all delay-100 duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+            class="ms- pointer-events-none z-10 -translate-x-12 opacity-0 transition-all delay-100 duration-300 group-hover:translate-x-0 group-hover:opacity-100"
           >
             <span
               class="absolute -top-1 inline-block bg-gradient-to-br from-[#447ffa] to-[#2e57ac] bg-clip-text font-display font-bold text-transparent"
@@ -33,27 +33,13 @@
       <!-- Content -->
       <div class="flex flex-row">
         <!-- Desktop menu -->
-        <div className="hidden md:flex code text-lg pe-8">
+        <div className="hidden md:flex code text-base pe-8">
           <!-- TailwindCSS Dropdown HOME -->
-          <div class="relative flex w-full flex-row">
+          <div class="flex w-full flex-row">
             <ul class="flex gap-3">
-              <li class="hover:text-lprimary dark:hover:text-dprimary">
+              <li class="">
                 <RouterLink
-                  class="border-b-2 text-ltext1 hover:text-primary dark:text-dtext1"
-                  :to="{ name: 'Home' }"
-                  active-class="border-b-2 border-primary dark:border-dprimary"
-                  spy="{true}"
-                  smooth="{true}"
-                  offset="{0}"
-                  duration="{500}"
-                  isDynamic="{true}"
-                >
-                  Home
-                </RouterLink>
-              </li>
-              <li class="hover:text-lprimary dark:hover:text-dprimary">
-                <RouterLink
-                  class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
+                  class="border-b-lprimary text-ltext1 hover:border-b-2 dark:border-b-dprimary dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#experience' }"
                   spy="{true}"
                   smooth="{true}"
@@ -64,9 +50,9 @@
                   Experience
                 </RouterLink>
               </li>
-              <li class="hover:text-lprimary dark:hover:text-dprimary">
+              <li class="">
                 <RouterLink
-                  class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
+                  class="border-b-lprimary text-ltext1 hover:border-b-2 dark:border-b-dprimary dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#services' }"
                   spy="{true}"
                   smooth="{true}"
@@ -78,9 +64,9 @@
                 </RouterLink>
               </li>
 
-              <li class="hover:text-lprimary dark:hover:text-dprimary">
+              <li class="">
                 <RouterLink
-                  class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
+                  class="border-b-lprimary text-ltext1 hover:border-b-2 dark:border-b-dprimary dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#about' }"
                   spy="{true}"
                   smooth="{true}"
@@ -91,9 +77,9 @@
                   About
                 </RouterLink>
               </li>
-              <li class="hover:text-lprimary dark:hover:text-dprimary">
+              <li class="">
                 <RouterLink
-                  class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
+                  class="border-b-lprimary text-ltext1 hover:border-b-2 dark:border-b-dprimary dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#projects' }"
                   spy="{true}"
                   smooth="{true}"
@@ -104,9 +90,9 @@
                   Projects
                 </RouterLink>
               </li>
-              <li class="hover:text-lprimary dark:hover:text-dprimary">
+              <li class="">
                 <RouterLink
-                  class="border-b-lprimary text-ltext1 hover:border-b-2 hover:text-lprimary dark:border-b-dprimary dark:text-dtext1 dark:hover:text-dprimary"
+                  class="border-b-lprimary text-ltext1 hover:border-b-2 dark:border-b-dprimary dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#contact' }"
                   spy="{true}"
                   smooth="{true}"
@@ -162,14 +148,14 @@
           </svg>
         </div>
         <!-- Mobile menu -->
+
         <ul
-          class="bg-lbg absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center transition-all duration-500 dark:bg-dbg"
+          class="bg-lbg absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center space-y-5 bg-bg transition-all duration-500 dark:bg-dbg"
           :class="[open ? 'opacity-100' : 'pointer-events-none opacity-0']"
         >
           <li v-for="link in links" :key="link.name">
             <RouterLink
               :to="link"
-              exactActiveClass="border-b-2 border-[#60f7d4]"
               spy="{true}"
               smooth="{true}"
               offset="{0}"

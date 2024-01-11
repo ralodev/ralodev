@@ -1,5 +1,5 @@
 <template>
-  <section id="experience" name="experience" class="dark:text-gray-100 py-[90px] z-50">
+  <section id="experience" name="experience" class="dark:text-gray-100 pt-[90px] min-h-screen z-50">
     <div class="container max-w-5xl px-4 mx-auto relative">
       <h3 class="text-4xl font-semibold text-center mb-5">Experience</h3>
       <div class="relative grid gap-4 mx-4 sm:grid-cols-12">

@@ -2,7 +2,7 @@
   <section
     id="services"
     name="services"
-    className="w-full  h-auto flex items-center justify-center content-center py-40"
+    className="min-h-screen w-full flex items-center justify-center content-center pt-[90px]"
   >
     <article className="relative xl:px-0 px-10  mx-auto h-full text-center ">
       <h2 className="dark:text-dtext1 text-ltext1 font-semibold text-4xl ">
@@ -15,7 +15,6 @@
       </p>
       <div
         class="relative grid cursor-default gap-y-10 text-start text-ltext2 dark:text-dtext2 md:grid-cols-2 md:gap-x-0 md:px-2"
-        :class="'[&>*]:text-center'"
       >
         <!--card-->
         <div

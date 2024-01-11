@@ -2,7 +2,7 @@
   <section
     id="contact"
     name="contact"
-    className="w-full min-h-screen items-center justify-center content-center relative overflow-x-hidden pt-[80px]"
+    className="w-full min-h-screen items-center justify-center content-center relative overflow-x-hidden pt-[90px]"
   >
     <header class="">
       <h2
