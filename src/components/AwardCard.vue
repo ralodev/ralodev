@@ -8,9 +8,7 @@
       />
       <div class="relative text-ltext2 dark:text-dtext2">
         <img
-          :src="
-            image || 'https://placehold.co/260x220?text=Will+be+added+soon+:)'
-          "
+          :src="image || placeholder"
           alt=""
           class="block h-[220px] w-full overflow-hidden rounded-2xl shadow-sm"
           :class="object + ' ' + bg"
@@ -58,6 +56,7 @@
 
 <script setup lang="ts">
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
+import placeholder from '@/assets/img/placeholder.svg'
 defineProps({
   title: String,
   description: String,
