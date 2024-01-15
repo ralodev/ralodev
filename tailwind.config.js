@@ -41,7 +41,6 @@ module.exports = {
         laccent: "#ff4081",
       },
       fontFamily: {
-        display: ['Expletus Sans Variable', 'sans-serif'],
         mono: ['Source Code Pro Variable', 'monospace'],
       },
     },
