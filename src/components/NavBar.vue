@@ -21,10 +21,10 @@
             class="ms- pointer-events-none z-10 -translate-x-12 opacity-0 transition-all delay-100 duration-300 group-hover:translate-x-0 group-hover:opacity-100"
           >
             <span
-              class="absolute -top-1 inline-block bg-gradient-to-br from-[#447ffa] to-[#2e57ac] bg-clip-text font-display font-bold text-transparent"
+              class="font-display absolute -top-1 inline-block bg-gradient-to-br from-[#447ffa] to-[#2e57ac] bg-clip-text font-bold text-transparent"
               >alo</span
             >
-            <span class="absolute -bottom-1 text-xl font-normal text-[#af39cc]">
+            <span class="absolute -bottom-1 text-xl font-normal text-[#6b6b6b]">
               /Dev
             </span>
           </div>
