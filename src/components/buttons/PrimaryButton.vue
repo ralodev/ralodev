@@ -15,16 +15,31 @@ const props = defineProps({
   btnClass: {
     type: String,
     default: ''
+  },
+  disabled: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
 
 <template>
-  <button class="Btn" :class="btnClass" :style="`height: ${props.height}px`">
+  <button
+    :disabled="props.disabled"
+    class="Btn"
+    :class="btnClass"
+    :style="`height: ${props.height}px`"
+    :title="disabled ? 'Not available' : `${label}`"
+  >
     <span class="labelContainer">
       <span class="px-3 font-medium text-dtext1">{{ label }}</span>
     </span>
-    <span class="BG" :class="props.bg ?? 'BG-default-color'"></span>
+    <span
+      v-if="!disabled"
+      class="BG"
+      :class="props.bg ?? 'BG-default-color'"
+    ></span>
+    <span v-else class="absolute inset-0 rounded-md bg-gray-400"></span>
   </button>
 </template>
 
@@ -37,7 +52,7 @@ const props = defineProps({
   background-color: transparent;
   position: relative;
   /* overflow: hidden; */
-  border-radius: 7px;
+  border-radius: 6px;
   cursor: pointer;
   z-index: 1;
   transition: all 0.3s;
@@ -58,7 +73,11 @@ const props = defineProps({
   border: 1px solid rgba(156, 156, 156, 0.466);
 }
 
-.BG {
+button:disabled {
+  cursor: default;
+}
+
+button:not([disabled]) .BG {
   position: absolute;
   content: '';
   width: 100%;
@@ -77,7 +96,7 @@ const props = defineProps({
   transform: rotate(3deg) translate(10px, 5px);
 }
 
-.Btn:hover .labelContainer {
+.Btn:not([disabled]):hover .labelContainer {
   background-color: rgba(156, 156, 156, 0.466);
   backdrop-filter: blur(4px);
 }
