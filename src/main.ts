@@ -6,8 +6,6 @@ import App from './App.vue'
 import router from './router'
 // Supports weights 100-900
 import '@fontsource-variable/onest';
-// Supports weights 400-700
-import '@fontsource-variable/expletus-sans';
 // Supports weights 200-900
 import '@fontsource-variable/source-code-pro';
 
