@@ -19,7 +19,7 @@
 <p>Hey there! I'm a Full Stack Developer who's all about diving into new tech stuff. I've got this passion for games and web development that keeps me hooked. Always up for a challenge and ready to level up my tech skills! 🚀</p>
 
 ## My Skills
-Here's a list of some of the skills and tools i have learned. However it can be slightly out of date, to see the full list check [my portfolio](https://ralo.dev/#/about#skills).
+Here's a list of some of the skills and tools i have learned. However it can be slightly out of date, to see the full list check [my portfolio](https://ralo.dev/).
 <details name="skills">
   <summary>🛠️ Languages</summary>
 <img src="https://img.shields.io/badge/ASM-8086-blue?style=for-the-badge&logo=assembly" alt="ASM">
