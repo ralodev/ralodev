@@ -2,7 +2,7 @@
   <section
     id="projects"
     name="projects"
-    className="w-full min-h-screen h-auto overflow-x-hidden pt-[90px]"
+    className="w-full min-h-screen h-auto pt-[90px]"
   >
     <article
       className="xl:px-0 pb-10 mx-auto justify-center h-full text-center"
@@ -22,7 +22,7 @@
           </p>
         </header>
       </div>
-      <div class="mt-5 text-start [&>*]:my-5">
+      <div class="flex flex-col gap-y-8 pt-5 text-start">
         <ProjectCard
           v-for="project in projectsInfo"
           :key="project.title"
@@ -30,76 +30,39 @@
           :description="project.description"
           :image="project.image"
           :image2="project.image2"
-          :live="project.live ? project.live : ''"
-          :source="project.source ? project.source : ''"
-          :demo="project.demo"
-          :info="project.info"
-          :reverse="projectsInfo.indexOf(project) % 2 !== 0"
-        >
-          <img
-            v-for="tag in project.tags"
-            :key="tag"
-            :src="`https://img.shields.io/badge/${tag.replace(
-              / /g,
-              '%20'
-            )}-%23c7c7c7?style=for-the-badge&logo=${tag.replace(/ /g, '-')}`"
-            alt=""
-          />
-        </ProjectCard>
+          :source="!!project.source"
+          @open-src="() => window.open(project.source)"
+          :site="!!project.site"
+          @open-live="() => window.open(project.site)"
+          :read="!!project.read"
+          @open-read="router.push({ name: project.read })"
+          :tags="project.tags"
+        />
       </div>
-      <div
-        v-if="showMore"
-        name="showMore"
-        class="max-w-[1200px] text-start [&>*]:my-5"
+      <h2
+        className="dark:text-dtext1 text-ltext1 font-bold text-4xl text-center md:text-start mt-8"
       >
-        <ProjectCard
+        Other Projects
+      </h2>
+      <div class="mt-8 grid grid-cols-1 gap-4 text-start md:grid-cols-2">
+        <ProjectCardSmall
           v-for="project in projectsInfo2"
           :key="project.id"
           :title="project.title"
           :description="project.description"
           :image="project.image"
-          :source="project.source"
-          :reverse="project.id % 2 !== 0"
+          :source="!!project.source"
+          @open-src="() => window.open(project.source)"
+          :tags="project.tags"
         >
-          <img
-            v-for="tag in project.tags"
-            :key="tag"
-            :src="`https://img.shields.io/badge/${tag.replace(
-              / /g,
-              '%20'
-            )}-%23c7c7c7?style=for-the-badge&logo=${tag.replace(/ /g, '-')}`"
-            alt=""
-          />
-        </ProjectCard>
+        </ProjectCardSmall>
       </div>
-      <PrimaryButton
-        v-if="!showMore"
-        label="Load more"
-        class="mx-auto mb-12 !w-[12rem]"
-        @click="showMore = true"
-      />
-      <a
-        v-else
-        class="rounded-full"
-        href="https://github.com/ralodev"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SecondaryButton
-          label="See more"
-          class="mx-auto mb-12 !w-[12rem] font-semibold"
-        >
-          <GitHub class="h-8 w-8" />
-        </SecondaryButton>
-      </a>
     </article>
   </section>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
-import GitHub from '@/components/icons/GitHub.vue'
+import { useRouter } from 'vue-router'
 
 import sgipdesktop from '@/assets/img/projects/sgip-desktop.webp'
 import sgipmobile from '@/assets/img/projects/sgip-mobile.webp'
@@ -108,10 +71,10 @@ import fsmmobile from '@/assets/img/projects/fsm-mobile.webp'
 import dinodesktop from '@/assets/img/projects/dino-desktop.webp'
 import crossydesktop from '@/assets/img/projects/crossy-desktop.webp'
 import asmdesktop from '@/assets/img/projects/asm-desktop.webp'
-import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
 import ProjectCard from '@/components/ProjectCard.vue'
+import ProjectCardSmall from '@/components/ProjectCardSmall.vue'
 
-const showMore = ref(false)
+const router = useRouter()
 
 const projectsInfo = [
   {
@@ -120,17 +83,19 @@ const projectsInfo = [
       'SGIP is an HRMS (Human Resources Management System) Full-Stack web application that allows you to manage the information of the personnel of a company/institution. It was developed for the Human Resources department of the Technological Institute of Oaxaca (ITO). The application is currently in production, hosted on a private server. The source code, however, is not available due to security reasons.',
     image: sgipdesktop,
     image2: sgipmobile,
-    demo: 'https://ralodev.github.io/HRMS-Demo/#/',
-    info: 'SGIP',
+    site: 'https://ralodev.github.io/HRMS-Demo/#/',
+    read: 'SGIP',
     tags: [
-      'PostgreSQL',
-      'Spring',
+      'Full-Stack',
+      'Spring MVC',
       'Spring Security',
-      'Json Web Tokens',
-      'vue.js',
-      'Vite',
-      'Tailwind CSS',
-      'Hibernate'
+      'Vue.js',
+      'PostgreSQL',
+      'Tailwind',
+      'JWT',
+      'JUnit',
+      'Mockito',
+      'Java Mail (SMTP)'
     ]
   },
   {
@@ -140,29 +105,46 @@ const projectsInfo = [
     image: fsmdesktop,
     image2: fsmmobile,
     source: 'https://github.com/ralodev/FSM-Generator',
-    live: 'https://ralodev.github.io/FSM-Generator/',
+    site: 'https://ralodev.github.io/FSM-Generator/',
     //info: '#',
-    tags: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap']
+    tags: [
+      'JavaScript',
+      'HTML5',
+      'CSS3',
+      'Bootstrap',
+      'jQuery',
+      'Vis-Network',
+      'Regex'
+    ]
   }
 ]
 const projectsInfo2 = [
   {
+    id: 3,
+    title: 'Spring Security + JWT + Java Mail',
+    description:
+      'Spring Boot template with prebuilt authentication and authorization using Spring Security and Json Web Tokens. It also includes a Java Mail service for sending emails.',
+    image: crossydesktop,
+    source: 'https://github.com/ralodev/SpringSecurity-Jwt-JavaMail',
+    tags: ['Spring', 'Spring Security', 'Json Web Tokens', 'Java Mail']
+  },
+  {
     id: 4,
     title: 'Crossy Road',
     description:
-      'A 3D remake of the popular game Crossy Road. Made with C, C++, Glut, and OpenGL. Made for desktop computers.',
+      'A 3D remake of the popular game Crossy Road. This version has a multiplayer mode, where you can play against a friend on the same computer.',
     image: crossydesktop,
     source: 'https://github.com/ralodev/CrossyRoad',
-    tags: ['C', 'C%2B%2B', 'OpenGL', 'Visual Studio']
+    tags: ['C', 'C++', 'OpenGL', 'GLUT', 'Game Development']
   },
   {
     id: 5,
     title: 'DinoRun',
     description:
-      'The classic DinoRun game, this application was made with the Swing and AWT libraries and incorporates a custom-made graphic tool that implements the Bresenham algorithm for rendering.',
+      'The classic DinoRun game, made with the Swing and AWT libraries and a custom-made graphic tool that implements the Bresenham algorithm for rendering.',
     image: dinodesktop,
     source: 'https://github.com/ralodev/DinoRun-2D',
-    tags: ['Java', 'NetBeans', 'Swing', 'AWT', 'OpenJDK']
+    tags: ['Java', 'Swing', 'AWT', 'Game Development', 'Rendering']
   },
   {
     id: 6,
@@ -172,7 +154,9 @@ const projectsInfo2 = [
     image: asmdesktop,
     //gif: asmgif,
     source: 'https://github.com/ralodev/ASM-Menu-Mouse',
-    tags: ['Assembly', 'MASM', 'x86']
+    tags: ['Assembly', 'MASM', 'x86', 'Low-Level Programming']
   }
 ]
+
+const window = globalThis.window
 </script>
