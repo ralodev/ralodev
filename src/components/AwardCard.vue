@@ -1,10 +1,10 @@
 <template>
   <div
-    class="relative col-span-1 mx-auto flex max-w-[350px] overflow-hidden rounded-3xl border-2 p-3 shadow-lg md:w-full"
+    class="relative col-span-1 mx-auto flex max-w-[350px] overflow-hidden rounded-3xl border-2 p-3 shadow-lg dark:border-slate-900 md:w-full"
   >
     <div class="">
       <div
-        class="absolute inset-0 rounded-3xl bg-lsurface bg-opacity-80 dark:bg-dsurface"
+        class="absolute inset-0 rounded-3xl bg-lsurface bg-opacity-80 dark:bg-slate-800"
       />
       <div class="relative text-ltext2 dark:text-dtext2">
         <img
@@ -15,7 +15,7 @@
           loading="lazy"
         />
         <div
-          class="pointer-events-none absolute bottom-2 left-2 flex rounded-md bg-slate-900 bg-opacity-70 p-1 font-display text-dtext1"
+          class="pointer-events-none absolute bottom-2 left-2 flex rounded-md bg-slate-900 bg-opacity-70 p-1 pe-2 text-sm font-light text-dtext1"
         >
           <slot />
         </div>
