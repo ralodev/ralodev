@@ -44,7 +44,7 @@
         id="linearGradient46"
       >
         <stop
-          style="stop-opacity: 1; stop-color: #af39cc"
+          style="stop-opacity: 1; stop-color: rgb(44, 83, 165)"
           offset="0"
           id="stop40"
         />
@@ -70,7 +70,7 @@
         id="linearGradient64"
       >
         <stop
-          style="stop-opacity: 1; stop-color: #af39cc"
+          style="stop-opacity: 1; stop-color: rgb(44, 83, 165)"
           offset="0"
           id="stop58"
         />
@@ -96,7 +96,7 @@
         id="linearGradient82"
       >
         <stop
-          style="stop-opacity: 1; stop-color: #af39cc"
+          style="stop-opacity: 1; stop-color: rgb(44, 83, 165)"
           offset="0"
           id="stop76"
         />
@@ -182,7 +182,7 @@
                 stroke: none;
               "
               id="middleLine"
-              class="group-hover:opacity-0 duration-300 group-hover:-translate-x-[-250%] ease-in-out"
+              class="duration-300 ease-in-out group-hover:-translate-x-[-250%] group-hover:opacity-0"
             />
           </g>
         </g>
@@ -211,7 +211,7 @@
                 stroke: none;
               "
               id="innerCurve"
-              class="group-hover:opacity-0 duration-300 group-hover:-translate-x-[-250%] ease-in-out"
+              class="duration-300 ease-in-out group-hover:-translate-x-[-250%] group-hover:opacity-0"
             />
           </g>
         </g>
