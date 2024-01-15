@@ -14,7 +14,6 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@fontsource-variable/expletus-sans": "^5.0.19",
     "@fontsource-variable/onest": "^5.0.2",
     "@fontsource-variable/source-code-pro": "^5.0.17",
     "@vueuse/core": "^10.5.0",
