@@ -85,6 +85,8 @@
       <span class="flex w-full flex-col text-center">
         Alternatively, you can use this form to send me a message:
         <form
+          action="https://getform.io/f/e69a0dfe-0aa2-403e-abc8-a745cf4fd478"
+          method="POST"
           class="flex max-w-[600px] flex-col gap-y-5 self-center pt-3 text-start"
         >
           <label class="block">
@@ -106,7 +108,7 @@
             </span>
             <input
               type="email"
-              placeholder="your@email.com"
+              placeholder="your_email@address.com"
               class="block min-h-[45px] w-full select-all rounded-md rounded-s-md border-[1px] bg-white ring-0 focus:ring-1 focus:ring-primary dark:bg-slate-800"
               required
             />
@@ -119,7 +121,7 @@
             <textarea
               rows="3"
               class="block min-h-[45px] w-full select-all rounded-md rounded-s-md border-[1px] bg-white ring-0 focus:ring-1 focus:ring-primary dark:bg-slate-800"
-              placeholder="Hi Raúl, I would like to talk to you about..."
+              placeholder="Hi Raúl, I'd like to talk with you about..."
               required
             ></textarea>
           </label>
@@ -142,6 +144,11 @@
             ref="ReCaptchaElement"
           >
           </vue-recaptcha>
+          <input
+            type="hidden"
+            name="_lastname"
+            style="display: none !important"
+          />
           <PrimaryButton
             :label="isHuman ? 'Send message' : 'Beep boop boop 🤖'"
             class="self-center"

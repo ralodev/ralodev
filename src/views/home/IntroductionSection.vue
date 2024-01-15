@@ -14,7 +14,8 @@
             <div class="absolute inset-0 z-[-1]">
               <img
                 :src="placeholder"
-                alt="Ralodev's profile picture"
+                alt="Ralodev's profile picture background"
+                aria-hidden="true"
                 class="absolute inset-0 left-0 right-0 z-0 mx-auto h-[210px] rounded-full blur-md sm:h-[310px] lg:h-[300px]"
               />
             </div>
@@ -27,8 +28,13 @@
           <span
             class="col-span-2 my-auto block items-center justify-center pt-10 text-center md:text-start lg:col-span-1 lg:pt-0"
           >
-            <h1 className="dark:text-gray-300 font-semibold text-4xl">
-              Hello, I'm Raúl López
+            <h1 className="dark:text-gray-300 font-semibold text-3xl">
+              Hello 🖖,
+              <span class="block text-4xl">
+                My name is
+
+                <span class="text-primary"> Raúl López </span>
+              </span>
             </h1>
             <p
               className="dark:text-gray-400 pt-3 md:text-lg text-base text-gray-700 my-5"

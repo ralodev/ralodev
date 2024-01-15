@@ -10,6 +10,41 @@
     </header>
     <!-- Education section -->
     <section class="text-[#14142b] dark:text-dtext2">
+      <div class="relative p-4 duration-500 md:grid md:grid-cols-2">
+        <span class="relative col-span-2 lg:col-span-1">
+          <div class="absolute inset-0 z-[-1]">
+            <img
+              :src="placeholder"
+              alt="Ralodev's profile picture background"
+              aria-hidden="true"
+              class="absolute inset-0 left-0 right-0 z-0 mx-auto h-[210px] rounded-full blur-md sm:h-[310px] lg:h-[300px]"
+            />
+          </div>
+          <img
+            :src="placeholder"
+            alt="Ralodev's profile picture"
+            class="z-1 mx-auto h-[200px] rounded-full p-1 sm:h-[300px] lg:h-[300px]"
+          />
+        </span>
+        <span
+          class="col-span-2 my-auto block items-center justify-center pt-10 text-center md:text-start lg:col-span-1 lg:pt-0"
+        >
+          <h1 className="dark:text-gray-300 font-semibold text-2xl">
+            My name is Raúl López
+          </h1>
+          <p
+            className="dark:text-gray-400 pt-3 md:text-lg text-base text-gray-700 my-5"
+          >
+            Here should be a brief description of myself, but for now, I'll just
+            leave this placeholder text. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Iusto porro facilis fugiat officiis dicta
+            explicabo pariatur maxime magnam consectetur! Iusto.
+          </p>
+          <span class="flex justify-evenly md:justify-normal md:gap-5">
+            <span class="flex gap-5"> </span>
+          </span>
+        </span>
+      </div>
       <!-- Section Header -->
       <header class="pb-3 text-2xl font-semibold dark:text-dtext1">
         Education
@@ -312,6 +347,7 @@
                 description="Second place achieved with the project 'Goods for Good' which addresses the issue of distributing and donating goods to nonprofit charitable organizations."
                 date="Sep 2022"
                 :image="salle"
+                object="object-cover"
                 @clicked="visitSalle()"
               >
                 <svg
@@ -341,6 +377,7 @@
                 title="Second National Scientific Conference"
                 description="Draft and presentation of the research article 'Analysis of Access to Internet Services in Oaxaca during the period 2013-2021'"
                 date="Mar 2023"
+                object="object-cover"
                 @clicked="visitIto()"
               >
                 <svg
@@ -388,6 +425,7 @@ import tehuacan from '@/assets/img/awards/tehuacan.webp'
 import salle from '@/assets/img/awards/salle.webp'
 import ciencias from '@/assets/img/awards/ciencia-sas.webp'
 import omegaup from '@/assets/img/awards/omegaup.webp'
+import placeholder from '@/assets/img/placeholder.svg'
 
 function visitCiencias() {
   window.open('https://rc.cienciasas.org/index.php/rc/Indexacion', '_blank')
