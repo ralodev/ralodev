@@ -1,9 +1,8 @@
 <template>
-  <!-- ====== Footer Section Start -->
   <footer
-    class="bg-lbg relative z-10 mt-5 overflow-hidden bg-gray-300 pb-10 pt-5 dark:bg-gradient-to-b dark:from-dbg dark:to-dsurface dark:text-dtext1 lg:pt-[120px]"
+    class="relative z-10 mt-5 overflow-hidden bg-gray-300 pb-10 pt-5 dark:bg-gradient-to-b dark:from-dbg dark:to-dsurface dark:text-dtext1 lg:pt-[120px]"
   >
-    <div class="container mx-auto max-w-[1200px] font-display">
+    <div class="container mx-auto max-w-[1200px]">
       <div class="flex flex-wrap">
         <div class="w-full px-4">
           <div class="flex w-full gap-3">
@@ -33,10 +32,10 @@
               This website is licensed under the GNU General Public License
               v3.0. The source code is available in
               <a
-                href="https://github.com/ralodev/ralodev/tree/Vuejs"
+                href="https://github.com/ralodev/ralodev/tree/Vuejs-v2"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-lprimary hover:text-primary dark:text-cyan-400 dark:hover:text-blue-400"
+                class="border-b-2 border-blue-800 font-semibold text-blue-800 dark:border-cyan-400 dark:text-cyan-400"
                 >GitHub</a
               >. Feel free to use it for your own projects. 🫡</span
             >
