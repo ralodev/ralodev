@@ -3,12 +3,14 @@
 <img alt="ralodev logo" title="Go to my site" src="https://ralo.dev/favicon-32x32.png" href="https://ralo.dev/">
     </a>
   Hello, I'm Raúl López
+  <a href="https://ralo.dev/" target="_blank">
+<img alt="ralodev logo" title="Go to my site" src="https://ralo.dev/gif.webp" href="https://ralo.dev/" width="32">
+    </a>
 </h1>
 
 <div align="center">
   <a href="https://ralo.dev/" target="_blank">
-<img alt="decorative image" title="Ralodev" src="https://ralo.dev/img.png" href="https://ralo.dev/" width="200" height="auto">
-    </a>
+<img alt="decorative image" title="Click to visit my website" src="https://ralo.dev/img.webp" href="https://ralo.dev/" width="200" height="auto">    </a>
 </div>
 
 
