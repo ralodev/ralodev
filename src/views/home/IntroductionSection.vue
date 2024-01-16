@@ -5,14 +5,15 @@
     className="w-full min-h-screen h-auto flex items-center justify-center content-center -mt-[80px]"
   >
     <article
-      className="xl:px-0 md:px-10 mx-auto justify-center h-full text-center grid-cols-2 "
+      className="xl:px-0 md:px-10 mx-auto justify-center w-full h-full text-center grid-cols-2 "
     >
       <div class="relative text-start dark:text-gray-300 md:gap-x-0">
         <!--card-->
-        <div class="relative p-4 duration-500 md:grid md:grid-cols-2">
+        <div
+          class="relative grid grid-cols-2 flex-col justify-center p-4 duration-500"
+        >
           <span
-            class="group/x relative col-span-2 h-[400px] w-[400px] lg:col-span-1"
-            ref="mediaContainer"
+            class="group/x relative col-span-2 mx-auto h-[210px] w-[210px] sm:h-[310px] sm:w-[310px] lg:col-span-1 lg:h-[400px] lg:w-[400px]"
           >
             <div class="absolute">
               <div class="absolute inset-0 z-[-1]">
@@ -38,7 +39,7 @@
             </div>
           </span>
           <span
-            class="col-span-2 my-auto block items-center justify-center pt-10 text-center md:text-start lg:col-span-1 lg:pt-0"
+            class="col-span-2 my-auto block items-center justify-center text-center md:pt-10 lg:col-span-1 lg:pt-0 lg:text-start"
           >
             <h1 className="dark:text-dtext1 font-semibold text-3xl">
               Hello 👋,
@@ -49,7 +50,7 @@
               </span>
             </h1>
             <p
-              className="dark:text-gray-300 pt-3 md:text-lg text-base text-gray-700 my-5"
+              className="dark:text-gray-300 py-3 md:text-lg text-base text-gray-700"
             >
               I'm a Full Stack Developer with
               <strong class="text-emerald-600 dark:text-emerald-200">
@@ -60,7 +61,7 @@
                 >solutions</strong
               >.
             </p>
-            <span class="flex justify-evenly md:justify-normal md:gap-5">
+            <span class="flex justify-evenly md:gap-5 lg:justify-normal">
               <span class="flex gap-5">
                 <SocialButton icon="GitHub" href="https://github.com/ralodev" />
                 <SocialButton

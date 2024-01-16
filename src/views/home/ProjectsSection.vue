@@ -5,7 +5,7 @@
     className="w-full min-h-screen h-auto pt-[90px]"
   >
     <article
-      className="xl:px-0 pb-10 mx-auto justify-center h-full text-center"
+      className="xl:px-0 pb-10 mx-auto justify-center h-full text-center px-4"
     >
       <div class="text-start">
         <header>

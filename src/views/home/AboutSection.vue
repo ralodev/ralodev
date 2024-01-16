@@ -61,14 +61,14 @@
         </span>
       </div>
       <!-- Section Header -->
-      <header class="pb-3 text-2xl font-semibold dark:text-dtext1">
+      <header class="p-4 text-2xl font-semibold dark:text-dtext1">
         Education
       </header>
       <!--Section Body -->
       <div class="">
         <!--Section Description -->
         <div
-          class="sticky top-20 z-[2] flex border-b-2 border-[#464646] bg-bg pb-2 dark:border-[#838383] dark:bg-bg_dark"
+          class="sticky top-20 z-[2] flex border-b-2 border-[#464646] bg-bg px-2 pb-2 dark:border-[#838383] dark:bg-bg_dark"
         >
           <span class="w-[90px]">
             <img
@@ -193,14 +193,14 @@
     <!-- Awards section -->
     <section class="mt-5 text-[#14142b] dark:text-dtext2">
       <!-- Section Header -->
-      <header class="pb-3 text-2xl font-semibold dark:text-dtext1">
+      <header class="p-4 text-2xl font-semibold dark:text-dtext1">
         Awards
       </header>
       <!--Section Body -->
       <div class="">
         <!--Section Description -->
         <div
-          class="sticky top-20 z-[2] flex border-b-2 border-[#464646] bg-bg pb-2 dark:border-[#838383] dark:bg-bg_dark"
+          class="sticky top-20 z-[2] flex border-b-2 border-[#464646] bg-bg px-2 pb-2 dark:border-[#838383] dark:bg-bg_dark"
         >
           <span>
             <img

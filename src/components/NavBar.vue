@@ -33,13 +33,13 @@
       <!-- Content -->
       <div class="flex flex-row">
         <!-- Desktop menu -->
-        <div className="hidden md:flex code text-base pe-8">
+        <div className="hidden md:flex code text-lg pe-8">
           <!-- TailwindCSS Dropdown HOME -->
           <div class="flex w-full flex-row">
             <ul class="flex gap-3">
               <li class="">
                 <RouterLink
-                  class="border-b-lprimary text-ltext1 hover:border-b-2 dark:border-b-dprimary dark:text-dtext1"
+                  class="dark:border-b-primary_dark border-b-primary text-ltext1 hover:border-b-2 dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#experience' }"
                   spy="{true}"
                   smooth="{true}"
@@ -52,7 +52,7 @@
               </li>
               <li class="">
                 <RouterLink
-                  class="border-b-lprimary text-ltext1 hover:border-b-2 dark:border-b-dprimary dark:text-dtext1"
+                  class="dark:border-b-primary_dark border-b-primary text-ltext1 hover:border-b-2 dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#services' }"
                   spy="{true}"
                   smooth="{true}"
@@ -66,7 +66,7 @@
 
               <li class="">
                 <RouterLink
-                  class="border-b-lprimary text-ltext1 hover:border-b-2 dark:border-b-dprimary dark:text-dtext1"
+                  class="dark:border-b-primary_dark border-b-primary text-ltext1 hover:border-b-2 dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#about' }"
                   spy="{true}"
                   smooth="{true}"
@@ -79,7 +79,7 @@
               </li>
               <li class="">
                 <RouterLink
-                  class="border-b-lprimary text-ltext1 hover:border-b-2 dark:border-b-dprimary dark:text-dtext1"
+                  class="dark:border-b-primary_dark border-b-primary text-ltext1 hover:border-b-2 dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#projects' }"
                   spy="{true}"
                   smooth="{true}"
@@ -92,7 +92,7 @@
               </li>
               <li class="">
                 <RouterLink
-                  class="border-b-lprimary text-ltext1 hover:border-b-2 dark:border-b-dprimary dark:text-dtext1"
+                  class="dark:border-b-primary_dark border-b-primary text-ltext1 hover:border-b-2 dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#contact' }"
                   spy="{true}"
                   smooth="{true}"
