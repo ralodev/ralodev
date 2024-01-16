@@ -18,7 +18,9 @@
       </p>
       <span class="text-center">
         There are my social media accounts and my email address:
-        <div class="flex w-full items-center justify-center gap-x-5 pt-3">
+        <div
+          class="flex w-full flex-wrap items-center justify-center gap-5 pt-3"
+        >
           <!-- Input group -->
           <div class="flex items-center">
             <input
