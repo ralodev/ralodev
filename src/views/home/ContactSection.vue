@@ -88,6 +88,7 @@
           action="https://getform.io/f/e69a0dfe-0aa2-403e-abc8-a745cf4fd478"
           method="POST"
           class="flex max-w-[600px] flex-col gap-y-5 self-center pt-3 text-start"
+
         >
           <label class="block">
             <span class="mb-1">
@@ -147,6 +148,8 @@
           <input
             type="hidden"
             name="_lastname"
+            aria-label="Last name"
+            tabindex="-1"
             style="display: none !important"
           />
           <PrimaryButton

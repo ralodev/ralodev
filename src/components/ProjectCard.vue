@@ -2,7 +2,7 @@
   <!-- Card container -->
   <article class="relative w-full rounded-3xl p-5 shadow-lg">
     <!-- Background -->
-    <span class="absolute inset-0 rounded-3xl border-2" />
+    <span class="absolute inset-0 rounded-3xl border-2 dark:border-gray-600" />
     <!-- Card Content -->
     <div
       class="relative my-2 flex flex-col flex-wrap justify-center gap-2 font-medium"

@@ -10,35 +10,50 @@
     </header>
     <!-- Education section -->
     <section class="text-[#14142b] dark:text-dtext2">
-      <div class="relative p-4 duration-500 md:grid md:grid-cols-2">
-        <span class="relative col-span-2 lg:col-span-1">
+      <div class="relative p-4 duration-500">
+        <span class="relative">
           <div class="absolute inset-0 z-[-1]">
             <img
-              :src="placeholder"
+              :src="avatar_2"
               alt="Ralodev's profile picture background"
               aria-hidden="true"
-              class="absolute inset-0 left-0 right-0 z-0 mx-auto h-[210px] rounded-full blur-md sm:h-[310px] lg:h-[300px]"
+              class="absolute inset-0 left-0 right-0 z-0 mx-auto h-[100px] rounded-full blur-sm sm:h-[150px]"
             />
           </div>
           <img
-            :src="placeholder"
+            :src="avatar_2"
             alt="Ralodev's profile picture"
-            class="z-1 mx-auto h-[200px] rounded-full p-1 sm:h-[300px] lg:h-[300px]"
+            class="z-1 mx-auto h-[100px] rounded-full p-1 sm:h-[150px] lg:h-[150px]"
           />
         </span>
         <span
           class="col-span-2 my-auto block items-center justify-center pt-10 text-center md:text-start lg:col-span-1 lg:pt-0"
         >
-          <h1 className="dark:text-gray-300 font-semibold text-2xl">
-            My name is Raúl López
-          </h1>
           <p
-            className="dark:text-gray-400 pt-3 md:text-lg text-base text-gray-700 my-5"
+            className="dark:text-gray-200 pt-3 md:text-lg text-base text-gray-700 my-2"
           >
-            Here should be a brief description of myself, but for now, I'll just
-            leave this placeholder text. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Iusto porro facilis fugiat officiis dicta
-            explicabo pariatur maxime magnam consectetur! Iusto.
+            My name is Raúl López, I'm a developer from
+            <span class="text-green-800 dark:text-green-400">México</span>. I'm
+            always looking for new challenges and opportunities to learn new
+            technologies.
+          </p>
+          <p
+            className="dark:text-gray-200 pt-3 md:text-lg text-base text-gray-700 my-2"
+          >
+            Since I was a child I've been passionate about technology, and I
+            always wanted to know how things work. As I grew up, I started to
+            learn more about computers and programming, and I decided to study
+            Computer Systems Engineering 🚀.
+          </p>
+          <p
+            className="dark:text-gray-200 pt-3 md:text-lg text-base text-gray-700 my-2"
+          >
+            Currently, I hold a
+            <span class="text-yellow-700 dark:text-yellow-100"
+              >BCs Degree in Computer Systems Engineering</span
+            >
+            . I've just started my professional career, and I'm looking forward
+            to learning more about software development and computer science.
           </p>
           <span class="flex justify-evenly md:justify-normal md:gap-5">
             <span class="flex gap-5"> </span>
@@ -75,7 +90,7 @@
             <p class="h">National Technological Institute Of Mexico</p>
           </span>
           <PrimaryButton
-            :label="showCourses ? 'Show More' : 'Show Less'"
+            :label="showCourses ? 'Show Less' : 'Show More'"
             width="150"
             class="my-auto ms-auto"
             bg="bg-secondary"
@@ -85,7 +100,7 @@
         <!--Section Content-->
         <div
           class="overflow-hidden transition-all duration-500"
-          :class="showCourses ? 'h-0' : 'h-[1100px] lg:h-[600px]'"
+          :class="showCourses ? 'h-[1100px] lg:h-[600px]' : 'h-0'"
         >
           <div class="bg-[#e9e9e9] p-3 dark:bg-[#1b1f2b]">
             <p class="">
@@ -203,7 +218,7 @@
             >
           </span>
           <PrimaryButton
-            :label="showAwards ? 'Show Awards' : 'Hide Awards'"
+            :label="showAwards ? 'Hide Awards' : 'Show Awards'"
             width="150"
             class="my-auto ms-auto"
             bg="bg-secondary"
@@ -213,7 +228,7 @@
         <!--Section Content-->
         <div
           class="overflow-hidden transition-all duration-500"
-          :class="showAwards ? 'h-0' : 'h-[2500px] sm:h-[1550px] md:h-[1050px]'"
+          :class="showAwards ? 'h-[2500px] sm:h-[1550px] md:h-[1050px]' : 'h-0'"
         >
           <div class="bg bg-[#e9e9e9] p-3 dark:bg-[#1b1f2b]">
             <p class="">
@@ -425,7 +440,7 @@ import tehuacan from '@/assets/img/awards/tehuacan.webp'
 import salle from '@/assets/img/awards/salle.webp'
 import ciencias from '@/assets/img/awards/ciencia-sas.webp'
 import omegaup from '@/assets/img/awards/omegaup.webp'
-import placeholder from '@/assets/img/placeholder.svg'
+import avatar_2 from '@/assets/img/avatar_2.webp'
 
 function visitCiencias() {
   window.open('https://rc.cienciasas.org/index.php/rc/Indexacion', '_blank')

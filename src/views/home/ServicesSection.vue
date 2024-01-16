@@ -8,9 +8,7 @@
       <h2 className="dark:text-dtext1 text-ltext1 font-semibold text-4xl ">
         My services
       </h2>
-      <p
-        className="dark:text-dtext2 pt-3 md:text-2xl  text-xl text-ltext2 mb-5"
-      >
+      <p className="dark:text-dtext2 pt-3 md:text-2xl text-xl text-ltext2 mb-5">
         I can provide you with a wide range of services, here are some of them:
       </p>
       <div
@@ -25,7 +23,7 @@
             <!--title-->
             <span class="my-auto">
               <svg
-                class="h-10 w-10 text-primary"
+                class="h-10 w-10 text-primary dark:text-sky-400"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -59,7 +57,7 @@
             <!--title-->
             <span class="my-auto">
               <svg
-                class="h-10 w-10 text-primary"
+                class="h-10 w-10 text-primary dark:text-sky-400"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -78,8 +76,9 @@
             <p class="my-auto ms-3 inline text-2xl font-bold">UI/UX Design</p>
           </header>
           <p class="text-pretty pro" style="text-wrap: pretty">
-            I can design you a modern and responsive UI/UX for your web
-            application based on your needs and requirements.
+            I take pride in creating interfaces that are not only visually
+            appealing but also user-friendly and responsive, ensuring an optimal
+            user experience across all devices
           </p>
         </div>
         <div
@@ -90,7 +89,7 @@
             <!--title-->
             <span class="my-auto">
               <svg
-                class="h-10 w-10 text-primary"
+                class="h-10 w-10 text-primary dark:text-sky-400"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -108,9 +107,9 @@
             <p class="my-auto ms-3 inline text-2xl font-bold">Data Analysis</p>
           </header>
           <p>
-            I can help you analyze and visualize your data using the latest
-            tools and technologies, providing you with a detailed report and
-            insights.
+            As a proficient data analyst, I can analyze your data using
+            cutting-edge tools and technologies, transforming raw data into
+            meaningful insights.
           </p>
         </div>
         <div
@@ -121,7 +120,7 @@
             <!--title-->
             <span class="my-auto">
               <svg
-                class="h-10 w-10 text-primary"
+                class="h-10 w-10 text-primary dark:text-sky-400"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
