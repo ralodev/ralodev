@@ -89,7 +89,7 @@
           method="POST"
           class="flex max-w-[600px] flex-col gap-y-5 self-center pt-3 text-start"
         >
-          <label class="block">
+          <label class="block" for="name">
             <span class="mb-1">
               Name
               <span class="text-red-500">*</span>
@@ -97,43 +97,51 @@
             <input
               type="text"
               name="name"
+              id="name"
+              title="Name"
+              autocomplete="name"
               placeholder="Your awesome name"
               class="block min-h-[45px] w-full select-all rounded-md rounded-s-md border-[1px] bg-white ring-0 focus:ring-1 focus:ring-primary dark:bg-slate-800"
               required
             />
           </label>
-          <label class="block">
+          <label class="block" for="email">
             <span class="mb-1"
               >Email address
               <span class="text-red-500">*</span>
             </span>
             <input
               type="email"
+              title="Email address"
+              id="email"
               name="email"
+              autocomplete="email"
               placeholder="your_email@address.com"
               class="block min-h-[45px] w-full select-all rounded-md rounded-s-md border-[1px] bg-white ring-0 focus:ring-1 focus:ring-primary dark:bg-slate-800"
               required
             />
           </label>
-          <label class="block">
+          <label class="block" for="message">
             <span class="mb-1"
               >Message
               <span class="text-red-500">*</span>
             </span>
             <textarea
               rows="3"
+              title="Message"
+              id="message"
               name="message"
               class="block min-h-[45px] w-full select-all rounded-md rounded-s-md border-[1px] bg-white ring-0 focus:ring-1 focus:ring-primary dark:bg-slate-800"
               placeholder="Hi Raúl, I'd like to talk with you about..."
               required
             ></textarea>
           </label>
-          <label for="" class="block text-start">
+          <p class="block text-start">
             <span class="mb-1 italic text-gray-500">
               Although I love robots, I prefer to receive messages from humans,
               so please prove you are one by checking the box below
             </span>
-          </label>
+          </p>
           <vue-recaptcha
             v-show="showRecaptcha"
             sitekey="6Lf2JlgoAAAAAApyzcXXK-9WljZW1MgTrTsyKg99"

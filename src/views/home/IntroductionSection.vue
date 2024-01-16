@@ -53,11 +53,11 @@
               className="dark:text-gray-300 py-3 md:text-lg text-base text-gray-700"
             >
               I'm a Full Stack Developer with
-              <strong class="text-emerald-600 dark:text-emerald-200">
+              <strong class="text-emerald-700 dark:text-emerald-200">
                 1+ year of experience</strong
               >. I'm passionate about learning new technologies and building
               innovative
-              <strong class="text-yellow-600 dark:text-yellow-200"
+              <strong class="text-yellow-700 dark:text-yellow-200"
                 >solutions</strong
               >.
             </p>

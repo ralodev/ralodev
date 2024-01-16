@@ -69,11 +69,10 @@
 
 <script lang="ts" setup>
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
-import { RouterLink } from 'vue-router'
 
 const emits = defineEmits(['open-src', 'open-demo', 'open-live', 'open-read'])
 
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     required: true
