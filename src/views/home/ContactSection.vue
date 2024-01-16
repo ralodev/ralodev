@@ -96,6 +96,7 @@
             </span>
             <input
               type="text"
+              name="name"
               placeholder="Your awesome name"
               class="block min-h-[45px] w-full select-all rounded-md rounded-s-md border-[1px] bg-white ring-0 focus:ring-1 focus:ring-primary dark:bg-slate-800"
               required
@@ -108,6 +109,7 @@
             </span>
             <input
               type="email"
+              name="email"
               placeholder="your_email@address.com"
               class="block min-h-[45px] w-full select-all rounded-md rounded-s-md border-[1px] bg-white ring-0 focus:ring-1 focus:ring-primary dark:bg-slate-800"
               required
@@ -120,6 +122,7 @@
             </span>
             <textarea
               rows="3"
+              name="message"
               class="block min-h-[45px] w-full select-all rounded-md rounded-s-md border-[1px] bg-white ring-0 focus:ring-1 focus:ring-primary dark:bg-slate-800"
               placeholder="Hi Raúl, I'd like to talk with you about..."
               required
