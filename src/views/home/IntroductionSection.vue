@@ -9,11 +9,9 @@
     >
       <div class="relative text-start dark:text-gray-300 md:gap-x-0">
         <!--card-->
-        <div
-          class="relative grid grid-cols-2 flex-col justify-center p-4 duration-500"
-        >
+        <div class="relative grid grid-cols-5 justify-center py-4 duration-500">
           <span
-            class="group/x relative col-span-2 mx-auto h-[210px] w-[210px] sm:h-[310px] sm:w-[310px] lg:col-span-1 lg:h-[400px] lg:w-[400px]"
+            class="group/x relative col-span-5 mx-auto h-[210px] w-[210px] sm:h-[310px] sm:w-[310px] lg:order-2 lg:col-span-2 lg:h-[400px] lg:w-[400px]"
           >
             <div class="absolute">
               <div class="absolute inset-0 z-[-1]">
@@ -39,18 +37,18 @@
             </div>
           </span>
           <span
-            class="col-span-2 my-auto block items-center justify-center text-center md:pt-10 lg:col-span-1 lg:pt-0 lg:text-start"
+            class="col-span-5 my-auto block items-center justify-center text-center md:pt-10 lg:order-1 lg:col-span-3 lg:pt-0 lg:text-start"
           >
             <h1 className="dark:text-dtext1 font-semibold text-3xl">
               Hello 👋,
-              <span class="block text-4xl">
+              <span class="block text-3xl sm:text-4xl md:text-5xl">
                 My name is
 
                 <span class="text-primary dark:text-sky-400"> Raúl López </span>
               </span>
             </h1>
             <p
-              className="dark:text-gray-300 py-3 md:text-lg text-base text-gray-700"
+              className="dark:text-gray-100 py-3 md:text-xl text-base text-gray-900"
             >
               I'm a Full Stack Developer with
               <strong class="text-emerald-700 dark:text-emerald-200">
