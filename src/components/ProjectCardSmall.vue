@@ -6,11 +6,13 @@
     <!-- Card Content -->
     <div class="relative flex h-full flex-col flex-wrap gap-2 font-medium">
       <!-- Title -->
-      <h2 class="text-2xl font-semibold text-ltext1 dark:text-dtext1">
+      <h2
+        class="text-xl font-semibold text-ltext1 dark:text-dtext1 md:text-2xl"
+      >
         {{ title }}
       </h2>
       <!-- Description -->
-      <p class="text-base text-ltext2 dark:text-dtext2">
+      <p class="text-sm text-ltext2 dark:text-dtext2 md:text-base">
         {{
           description.length > 150
             ? description.substring(0, 150) + '...'
@@ -22,7 +24,7 @@
         <div
           v-for="tag in tags"
           :key="tag.toLowerCase()"
-          class="relative flex flex-nowrap whitespace-nowrap rounded-md bg-gray-300 px-2 py-1 text-sm font-normal dark:bg-gray-700 dark:text-white"
+          class="relative flex flex-nowrap whitespace-nowrap rounded-md bg-gray-300 px-2 py-1 text-xs font-normal dark:bg-gray-700 dark:text-white"
         >
           {{ tag }}
         </div>
@@ -34,6 +36,8 @@
           bg="bg-primary"
           :disabled="!source"
           @click="emits('open-src')"
+          btn-class="text-sm "
+          height="35"
         />
       </div>
     </div>
