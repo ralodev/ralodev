@@ -2,7 +2,7 @@
   <!-- Card container -->
   <article class="relative h-full w-full rounded-xl p-5 shadow-lg">
     <!-- Background -->
-    <span class="absolute inset-0 rounded-xl border-2" />
+    <span class="absolute inset-0 rounded-xl border-2 dark:border-gray-600" />
     <!-- Card Content -->
     <div class="relative flex h-full flex-col flex-wrap gap-2 font-medium">
       <!-- Title -->
