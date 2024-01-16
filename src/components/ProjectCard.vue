@@ -39,24 +39,27 @@
         <img
           :src="image"
           :alt="title + ' main image'"
-          class="mx-auto max-h-[400px] min-h-[260px] object-cover transition-all duration-500 ease-in-out group-hover:brightness-50"
+          class="mx-auto max-h-[400px] min-h-[260px] object-contain transition-all duration-500 ease-in-out group-hover:brightness-50"
         />
       </div>
       <!-- Buttons -->
       <div class="flex justify-center gap-5">
         <PrimaryButton
+          v-if="source"
           label="Source code"
           bg="bg-primary"
           :disabled="!source"
           @click="emits('open-src')"
         />
         <PrimaryButton
+          v-if="site"
           label="Live site"
           bg="bg-primary"
           :disabled="!site"
           @click="emits('open-live')"
         />
         <PrimaryButton
+          v-if="read"
           :label="'Read case study'"
           bg="bg-primary"
           :disabled="!read"
