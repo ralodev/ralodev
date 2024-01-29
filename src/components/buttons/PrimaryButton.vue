@@ -5,7 +5,10 @@
     :class="btn_size"
     :title="props.disabled ? 'Disabled' : `${props.label}`"
   >
-    <span class="labelContainer text-white" :class="btn_spacing">
+    <span
+      class="labelContainer text-white"
+      :class="btn_spacing"
+    >
       <span
         v-if="props.iconLeft && btn_slot"
         class="flex [&>svg]:my-auto [&>svg]:inline"
@@ -13,7 +16,10 @@
       >
         <slot />
       </span>
-      <span v-if="props.label" class="m-auto">
+      <span
+        v-if="props.label"
+        class="m-auto"
+      >
         {{ props.label }}
       </span>
       <span
@@ -32,7 +38,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useSlots, computed } from 'vue'
+import { useSlots, computed } from 'vue';
 
 const r_colors: Record<string, string> = {
   primary: ' bg-sky-800',
@@ -40,22 +46,22 @@ const r_colors: Record<string, string> = {
   danger: ' bg-red-700',
   warning: ' bg-yellow-400',
   success: ' bg-green-700'
-}
+};
 const r_sizes: Record<string, string> = {
   small: ' h-[35px] min-w-[35px] text-sm',
   medium: ' h-[45px] min-w-[45px] text-base',
   large: ' h-[55px] min-w-[55px] text-lg'
-}
+};
 const r_spacing: Record<string, string> = {
   small: ' px-2 space-x-1',
   medium: ' px-3 space-x-2',
   large: ' px-4 space-x-3'
-}
+};
 const r_icon: Record<string, string> = {
   small: ' [&>svg]:h-3 [&>svg]:w-3',
   medium: ' [&>svg]:h-4 [&>svg]:w-4',
   large: ' [&>svg]:h-5 [&>svg]:w-5'
-}
+};
 const props = defineProps({
   label: {
     type: String,
@@ -86,24 +92,24 @@ const props = defineProps({
     default: 'medium',
     required: false
   }
-})
+});
 const btn_slot = computed(() => {
-  return !!useSlots().default
-})
+  return !!useSlots().default;
+});
 const bg_color = computed(() => {
   return props.severity.includes('bg-')
     ? props.severity
-    : r_colors[props.severity] ?? r_colors['primary']
-})
+    : r_colors[props.severity] ?? r_colors['primary'];
+});
 const btn_size = computed(() => {
-  return r_sizes[props.size] ?? r_sizes['medium']
-})
+  return r_sizes[props.size] ?? r_sizes['medium'];
+});
 const btn_spacing = computed(() => {
-  return r_spacing[props.size] ?? r_spacing['medium']
-})
+  return r_spacing[props.size] ?? r_spacing['medium'];
+});
 const btn_icon = computed(() => {
-  return r_icon[props.size] ?? r_icon['medium']
-})
+  return r_icon[props.size] ?? r_icon['medium'];
+});
 </script>
 
 <style scoped>
