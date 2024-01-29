@@ -1,12 +1,12 @@
 <template>
   <button
     :disabled="props.disabled"
-    class="Btn"
+    class="glass-button"
     :class="btn_size"
     :title="props.disabled ? 'Disabled' : `${props.label}`"
   >
     <span
-      class="labelContainer text-white"
+      class="glass-button__content text-white"
       :class="btn_spacing"
     >
       <span
@@ -31,7 +31,7 @@
       </span>
     </span>
     <span
-      class="BG"
+      class="glass-button__bg"
       :class="props.disabled ? 'bg-neutral-500' : bg_color"
     ></span>
   </button>
@@ -113,7 +113,7 @@ const btn_icon = computed(() => {
 </script>
 
 <style scoped>
-.Btn {
+.glass-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,15 +126,15 @@ const btn_icon = computed(() => {
   transition: all 0.3s;
 }
 
-.Btn:not([disabled]) {
+.glass-button:not([disabled]) {
   cursor: pointer;
 }
 
-.Btn:is([disabled]) {
+.glass-button:is([disabled]) {
   cursor: not-allowed;
 }
 
-.labelContainer {
+.glass-button__content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -149,11 +149,11 @@ const btn_icon = computed(() => {
   border: 1px solid rgba(156, 156, 156, 0.466);
 }
 
-button:disabled {
+.glass-button:disabled {
   cursor: default;
 }
 
-button .BG {
+.glass-button .glass-button__bg {
   position: absolute;
   content: '';
   width: 100%;
@@ -164,12 +164,12 @@ button .BG {
   transition: all 0.3s;
 }
 
-.Btn:not([disabled]):hover .BG {
+.glass-button:not([disabled]):hover .glass-button__bg {
   transform: translate(5px, 5px);
   box-shadow: 5px 5px 5px 0px #0000003a;
 }
 
-.Btn:not([disabled]):hover .labelContainer {
+.glass-button:not([disabled]):hover .glass-button__content {
   background-color: #00000017;
   backdrop-filter: blur(4px);
 }
