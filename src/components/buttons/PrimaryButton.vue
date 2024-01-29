@@ -1,47 +1,110 @@
+<template>
+  <button
+    :disabled="props.disabled"
+    class="Btn"
+    :class="btn_size"
+    :title="props.disabled ? 'Disabled' : `${props.label}`"
+  >
+    <span class="labelContainer text-white" :class="btn_spacing">
+      <span
+        v-if="props.iconLeft && btn_slot"
+        class="flex [&>svg]:my-auto [&>svg]:inline"
+        :class="btn_icon"
+      >
+        <slot />
+      </span>
+      <span v-if="props.label" class="m-auto">
+        {{ props.label }}
+      </span>
+      <span
+        v-if="props.iconLeft && btn_slot"
+        class="flex [&>svg]:my-auto [&>svg]:inline"
+        :class="btn_spacing"
+      >
+        <slot />
+      </span>
+    </span>
+    <span
+      class="BG"
+      :class="props.disabled ? 'bg-neutral-500' : bg_color"
+    ></span>
+  </button>
+</template>
+
 <script lang="ts" setup>
+import { useSlots, computed } from 'vue'
+
+const r_colors: Record<string, string> = {
+  primary: ' bg-sky-800',
+  secondary: ' bg-neutral-500',
+  danger: ' bg-red-700',
+  warning: ' bg-yellow-400',
+  success: ' bg-green-700'
+}
+const r_sizes: Record<string, string> = {
+  small: ' h-[35px] min-w-[35px] text-sm',
+  medium: ' h-[45px] min-w-[45px] text-base',
+  large: ' h-[55px] min-w-[55px] text-lg'
+}
+const r_spacing: Record<string, string> = {
+  small: ' px-2 space-x-1',
+  medium: ' px-3 space-x-2',
+  large: ' px-4 space-x-3'
+}
+const r_icon: Record<string, string> = {
+  small: ' [&>svg]:h-3 [&>svg]:w-3',
+  medium: ' [&>svg]:h-4 [&>svg]:w-4',
+  large: ' [&>svg]:h-5 [&>svg]:w-5'
+}
 const props = defineProps({
   label: {
     type: String,
     required: true
   },
-  bg: {
+  /*
+   * Valid values: 'primary', 'secondary', 'danger', 'warning', 'success'
+   * You can override the colors by passing a custom bg-color prop (e.g. bg-lime-500 or bg-color-[#000000])
+   */
+  severity: {
     type: String,
-    default: null
-  },
-  height: {
-    type: String,
-    default: '45'
-  },
-  btnClass: {
-    type: String,
-    default: ''
+    default: 'primary'
   },
   disabled: {
     type: Boolean,
     default: false
+  },
+  iconLeft: {
+    type: Boolean,
+    default: false
+  },
+  iconRight: {
+    type: Boolean,
+    default: false
+  },
+  size: {
+    type: String,
+    default: 'medium',
+    required: false
   }
 })
+const btn_slot = computed(() => {
+  return !!useSlots().default
+})
+const bg_color = computed(() => {
+  return props.severity.includes('bg-')
+    ? props.severity
+    : r_colors[props.severity] ?? r_colors['primary']
+})
+const btn_size = computed(() => {
+  return r_sizes[props.size] ?? r_sizes['medium']
+})
+const btn_spacing = computed(() => {
+  return r_spacing[props.size] ?? r_spacing['medium']
+})
+const btn_icon = computed(() => {
+  return r_icon[props.size] ?? r_icon['medium']
+})
 </script>
-
-<template>
-  <button
-    :disabled="props.disabled"
-    class="Btn"
-    :class="btnClass"
-    :style="`height: ${props.height}px`"
-    :title="disabled ? 'Not available' : `${label}`"
-  >
-    <span class="labelContainer">
-      <span class="px-3 font-medium text-dtext1">{{ label }}</span>
-    </span>
-    <span
-      v-if="!disabled"
-      class="BG"
-      :class="props.bg ?? 'BG-default-color'"
-    ></span>
-    <span v-else class="absolute inset-0 rounded-md bg-gray-400"></span>
-  </button>
-</template>
 
 <style scoped>
 .Btn {
@@ -53,9 +116,16 @@ const props = defineProps({
   position: relative;
   /* overflow: hidden; */
   border-radius: 6px;
-  cursor: pointer;
   z-index: 1;
   transition: all 0.3s;
+}
+
+.Btn:not([disabled]) {
+  cursor: pointer;
+}
+
+.Btn:is([disabled]) {
+  cursor: not-allowed;
 }
 
 .labelContainer {
@@ -66,7 +136,7 @@ const props = defineProps({
   justify-content: center;
   background-color: transparent;
   backdrop-filter: blur(0px);
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
   border-radius: 10px;
   transition: all 0.3s;
   z-index: 1;
@@ -77,7 +147,7 @@ button:disabled {
   cursor: default;
 }
 
-button:not([disabled]) .BG {
+button .BG {
   position: absolute;
   content: '';
   width: 100%;
@@ -88,16 +158,13 @@ button:not([disabled]) .BG {
   transition: all 0.3s;
 }
 
-.BG-default-color {
-  background: #12809e;
-}
-
-.Btn:hover .BG {
-  transform: rotate(3deg) translate(10px, 5px);
+.Btn:not([disabled]):hover .BG {
+  transform: translate(5px, 5px);
+  box-shadow: 5px 5px 5px 0px #0000003a;
 }
 
 .Btn:not([disabled]):hover .labelContainer {
-  background-color: rgba(156, 156, 156, 0.466);
+  background-color: #00000017;
   backdrop-filter: blur(4px);
 }
 </style>
