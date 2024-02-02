@@ -1,53 +1,45 @@
 <template>
   <div
-    class="relative col-span-1 mx-auto flex max-w-[350px] overflow-hidden rounded-3xl border-2 p-3 shadow-lg dark:border-slate-900 md:w-full"
+    class="relative col-span-1 mx-auto flex h-full max-w-[350px] overflow-hidden p-3 md:w-full"
   >
     <div class="">
       <div
-        class="absolute inset-0 rounded-3xl bg-lsurface bg-opacity-80 dark:bg-slate-800"
-      />
-      <div class="relative text-ltext2 dark:text-dtext2">
+        class="group relative h-[228px] select-none overflow-hidden rounded-lg text-ltext2 dark:text-dtext2"
+      >
         <img
           :src="image || placeholder"
           alt=""
-          class="block h-[220px] w-full overflow-hidden rounded-2xl shadow-sm"
+          class="pointer-events-none block h-[228px] w-full overflow-hidden shadow-sm"
           :class="object + ' ' + bg"
           loading="lazy"
         />
         <div
-          class="pointer-events-none absolute bottom-2 left-2 flex rounded-md bg-slate-900 bg-opacity-70 p-1 pe-2 text-sm font-light text-dtext1"
+          class="pointer-events-none absolute top-[200px] h-full w-full flex-col bg-neutral-950 bg-opacity-70 p-1 pe-2 text-sm font-light text-dtext1 backdrop-blur-0 transition-all duration-500 ease-in-out group-hover:top-0 group-hover:bg-opacity-70 group-hover:backdrop-blur-md"
         >
-          <slot />
+          <div class="flex justify-between">
+            <span class="my-auto flex">
+              <slot />
+            </span>
+            <span class="my-auto">
+              {{ date }}
+            </span>
+          </div>
+          <div
+            class="-mt-2 flex h-full w-full flex-col justify-center px-3 text-base"
+          >
+            <p class="text-pretty">
+              {{ description }}
+            </p>
+          </div>
         </div>
       </div>
-      <div class="relative pt-3">
-        <div
-          class="flex h-[12rem] flex-col justify-between sm:min-h-[9rem] lg:h-[12rem]"
-        >
+      <div class="relative pt-1">
+        <div class="flex w-full flex-col justify-center">
           <h3
-            class="text-start text-base font-semibold text-ltext2 dark:text-dtext2"
+            class="text-balance my-auto text-lg font-semibold text-ltext2 dark:text-dtext2"
           >
             {{ title }}
           </h3>
-          <p
-            class="text-start text-sm text-ltext3 dark:text-dtext3"
-            style="text-wrap: pretty"
-          >
-            {{ description }}
-          </p>
-          <div class="mt-1">
-            <PrimaryButton
-              label="Read More"
-              bg="bg-gray-500 inline"
-              class="text-sm"
-              height="35"
-              @click="$emit('clicked')"
-            />
-            <span
-              class="pointer-events-none absolute bottom-0 right-0 text-xs uppercase text-ltext2 dark:text-dtext2"
-              >{{ date }}</span
-            >
-          </div>
         </div>
       </div>
     </div>
@@ -55,8 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
-import placeholder from '@/assets/img/placeholder.svg'
+import placeholder from '@/assets/img/placeholder.svg';
 defineProps({
   title: String,
   description: String,
@@ -72,5 +63,5 @@ defineProps({
     required: false,
     default: `cover`
   }
-})
+});
 </script>

@@ -47,21 +47,18 @@
         <PrimaryButton
           v-if="source"
           label="Source code"
-          bg="bg-primary"
           :disabled="!source"
           @click="emits('open-src')"
         />
         <PrimaryButton
           v-if="site"
           label="Live site"
-          bg="bg-primary"
           :disabled="!site"
           @click="emits('open-live')"
         />
         <PrimaryButton
           v-if="read"
           :label="'Read case study'"
-          bg="bg-primary"
           :disabled="!read"
           @click="emits('open-read')"
         />
@@ -71,9 +68,9 @@
 </template>
 
 <script lang="ts" setup>
-import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
+import PrimaryButton from '@/components/buttons/PrimaryButton.vue';
 
-const emits = defineEmits(['open-src', 'open-demo', 'open-live', 'open-read'])
+const emits = defineEmits(['open-src', 'open-demo', 'open-live', 'open-read']);
 
 defineProps({
   title: {
@@ -108,5 +105,5 @@ defineProps({
     type: Array<String>,
     required: false
   }
-})
+});
 </script>

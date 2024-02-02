@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import { onMounted } from 'vue'
-import NavBar from './components/NavBar.vue'
-import FooterBar from '@/components/FooterBar.vue'
+import { RouterView } from 'vue-router';
+import { onMounted } from 'vue';
+import NavBar from './components/NavBar.vue';
+import FooterBar from '@/components/FooterBar.vue';
 
 onMounted(() => {
-  document.body.classList.add('dark:bg-bg_dark', 'bg-bg')
-})
+  document.body.classList.add('dark:bg-bg_dark', 'bg-bg');
+});
 
 const links = [
   {
@@ -20,20 +20,20 @@ const links = [
   },
   {
     name: 'Home',
-    hash: '#about',
-    label: 'About'
+    hash: '#projects',
+    label: 'Projects'
   },
   {
     name: 'Home',
-    hash: '#projects',
-    label: 'Projects'
+    hash: '#about',
+    label: 'About'
   },
   {
     name: 'Home',
     hash: '#contact',
     label: 'Contact'
   }
-]
+];
 </script>
 
 <template>

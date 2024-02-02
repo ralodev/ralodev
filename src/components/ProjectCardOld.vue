@@ -40,7 +40,7 @@
         </p>
         <div class="flex justify-evenly">
           <a target="_blank" v-if="source" :href="source">
-            <PrimaryButton label="Source code" bg="bg-primary">
+            <PrimaryButton label="Source code">
               <svg
                 class="h-6 w-6 text-white"
                 aria-hidden="true"
@@ -57,7 +57,7 @@
             </PrimaryButton>
           </a>
           <a target="_blank" v-if="demo" :href="demo">
-            <PrimaryButton label="Demo site" bg="bg-primary">
+            <PrimaryButton label="Demo site">
               <svg
                 class="h-6 w-6 text-white"
                 aria-hidden="true"
@@ -76,7 +76,7 @@
             </PrimaryButton>
           </a>
           <a target="_blank" v-if="props.live" :href="props.live">
-            <PrimaryButton label="Live site" bg="bg-primary">
+            <PrimaryButton label="Live site">
               <svg
                 class="h-6 w-6 text-white"
                 aria-hidden="true"
@@ -95,7 +95,7 @@
             </PrimaryButton>
           </a>
           <RouterLink v-if="info" :to="{ name: info }">
-            <PrimaryButton :label="'Read case study'" bg="bg-primary">
+            <PrimaryButton :label="'Read case study'">
               <svg
                 class="h-6 w-6 text-white"
                 aria-hidden="true"

@@ -40,11 +40,14 @@
               title="Copy email"
               :class="
                 copied
-                  ? 'cursor-default bg-[#6b88a3]'
-                  : 'cursor-pointer bg-primary hover:bg-[#3e7fbd] '
+                  ? 'cursor-default bg-neutral-600'
+                  : 'cursor-pointer bg-sky-800 hover:bg-sky-900 '
               "
             >
-              <span v-if="!copied" class="flex gap-x-1">
+              <span
+                v-if="!copied"
+                class="flex gap-x-1"
+              >
                 <svg
                   class="my-auto h-4 w-4 text-white"
                   aria-hidden="true"
@@ -61,7 +64,10 @@
                 </svg>
                 Copy
               </span>
-              <span v-else class="contact@ralo.dev flex gap-x-1">
+              <span
+                v-else
+                class="contact@ralo.dev flex gap-x-1"
+              >
                 <svg
                   class="my-auto h-4 w-4 text-white"
                   aria-hidden="true"
@@ -77,11 +83,30 @@
               </span>
             </button>
           </div>
-          <SocialButton icon="github" href="https://github.com/ralodev" />
-          <SocialButton
-            icon="linkedin"
-            href="https://www.linkedin.com/in/raul-lopez-cruz/"
-          />
+          <a
+            href="https://github.com/ralodev"
+            target="_blank"
+          >
+            <PrimaryButton
+              severity="bg-neutral-800"
+              title="GitHub"
+              type="icon"
+            >
+              <GitHub />
+            </PrimaryButton>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/raul-lc/"
+            target="_blank"
+          >
+            <PrimaryButton
+              severity="bg-[#0e72a3]"
+              title="LinkedIn"
+              type="icon"
+            >
+              <LinkedIn />
+            </PrimaryButton>
+          </a>
         </div>
       </span>
       <span class="flex w-full flex-col text-center">
@@ -91,7 +116,10 @@
           method="POST"
           class="flex max-w-[600px] flex-col gap-y-5 self-center pt-3 text-start"
         >
-          <label class="block" for="name">
+          <label
+            class="block"
+            for="name"
+          >
             <span class="mb-1">
               Name
               <span class="text-red-500">*</span>
@@ -102,12 +130,15 @@
               id="name"
               title="Name"
               autocomplete="name"
-              placeholder="Your awesome name"
+              placeholder="Your name goes here"
               class="block min-h-[45px] w-full select-all rounded-md rounded-s-md border-[1px] bg-white ring-0 focus:ring-1 focus:ring-primary dark:bg-slate-800"
               required
             />
           </label>
-          <label class="block" for="email">
+          <label
+            class="block"
+            for="email"
+          >
             <span class="mb-1"
               >Email address
               <span class="text-red-500">*</span>
@@ -123,7 +154,10 @@
               required
             />
           </label>
-          <label class="block" for="message">
+          <label
+            class="block"
+            for="message"
+          >
             <span class="mb-1"
               >Message
               <span class="text-red-500">*</span>
@@ -134,7 +168,7 @@
               id="message"
               name="message"
               class="block min-h-[45px] w-full select-all rounded-md rounded-s-md border-[1px] bg-white ring-0 focus:ring-1 focus:ring-primary dark:bg-slate-800"
-              placeholder="Hi Raúl, I'd like to talk with you about..."
+              placeholder="Why are you contacting me?"
               required
             ></textarea>
           </label>
@@ -158,18 +192,20 @@
           >
           </vue-recaptcha>
           <input
-            type="hidden"
+            type="text"
             name="_lastname"
+            id="_lastname"
             aria-label="Last name"
+            aria-hidden="true"
             tabindex="-1"
-            style="display: none !important"
+            class="invisible m-0 h-0 w-0 p-0"
+            v-model="gotcha"
           />
           <PrimaryButton
             :label="isHuman ? 'Send message' : 'Beep boop boop 🤖'"
             class="self-center"
-            :bg="isHuman ? 'bg-primary' : 'bg-gray-500'"
+            :severity="isHuman ? 'primary' : 'secondary'"
             :disabled="!isHuman"
-            :btn-class="!isHuman ? '!cursor-not-allowed' : ''"
           />
         </form>
       </span>
@@ -178,45 +214,58 @@
 </template>
 
 <script lang="ts" setup>
-import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
-import vueRecaptcha from 'vue3-recaptcha2'
-import SocialButton from '@/components/buttons/SocialButton.vue'
-import { useDark } from '@vueuse/core'
-import { ref } from 'vue'
+import PrimaryButton from '@/components/buttons/PrimaryButton.vue';
+import vueRecaptcha from 'vue3-recaptcha2';
+import GitHub from '@/components/icons/GitHub.vue';
+import LinkedIn from '@/components/icons/LinkedIn.vue';
+import { ref, watch } from 'vue';
 
-const isHuman = ref(false)
-const showRecaptcha = ref(true)
-const loadingTimeout = ref(10000)
-const ReCaptchaElement = ref(null)
-const isDark = useDark()
-const email = 'contact@ralo.dev'
-const copied = ref(false)
+const isHuman = ref(false);
+const showRecaptcha = ref(true);
+const loadingTimeout = ref(10000);
+const ReCaptchaElement = ref(null);
+const email = 'contact@ralo.dev';
+const gotcha = ref('');
+const copied = ref(false);
 function verify() {
-  console.log('Recaptcha verified')
-  isHuman.value = true
+  console.log('Recaptcha verified');
+  isHuman.value = true;
 }
 function recaptchaVerified() {
-  verify()
+  verify();
 }
 function recaptchaExpired() {
-  console.log('Recaptcha expired')
-  isHuman.value = false
+  console.log('Recaptcha expired');
+  isHuman.value = false;
 }
 function recaptchaFailed() {
-  console.log('Recaptcha failed')
+  console.log('Recaptcha failed');
 }
 function recaptchaError(reason: any) {
-  console.log('Recaptcha error', reason)
+  console.log('Recaptcha error', reason);
 }
 
 function copyEmail() {
-  if (copied.value) return
-  navigator.clipboard.writeText(email)
-  copied.value = true
+  if (copied.value) return;
+  navigator.clipboard.writeText(email);
+  copied.value = true;
   setTimeout(() => {
-    copied.value = false
-  }, 2000)
+    copied.value = false;
+  }, 2000);
 }
-console.log('Is human', isHuman.value)
-console.log('Is dark', isDark.value)
+
+watch(
+  () => gotcha.value,
+  (newValue) => {
+    if (newValue) {
+      bot();
+    }
+  }
+);
+
+function bot() {
+  console.log('Gotcha');
+  window.location.href =
+    'http://news.rr.nihalnavath.com/posts/Message-Sent-02788c4c';
+}
 </script>

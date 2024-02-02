@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="relative z-10 mt-5 overflow-hidden bg-gray-300 pb-10 pt-5 dark:bg-gradient-to-b dark:from-dbg dark:to-dsurface dark:text-dtext1 lg:pt-[120px]"
+    class="relative z-10 mt-5 overflow-hidden bg-gray-300 pb-10 pt-[120px] dark:bg-gradient-to-b dark:from-neutral-950 dark:to-neutral-800 dark:text-dtext1"
   >
     <div class="container mx-auto max-w-[1200px]">
       <div class="flex flex-wrap">
@@ -66,7 +66,7 @@
 </template>
 
 <script lang="ts" setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink } from 'vue-router';
 </script>
 
 <style scoped>

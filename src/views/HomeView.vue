@@ -1,19 +1,17 @@
 <script lang="ts" setup>
-import Projects from './home/ProjectsSection.vue'
-import About from './home/AboutSection.vue'
-import Services from './home/ServicesSection.vue'
-import Contact from './home/ContactSection.vue'
-import Introduction from './home/IntroductionSection.vue'
-import Experience from './home/ExperienceSection.vue'
+import Projects from './home/ProjectsSection.vue';
+import About from './home/AboutSection.vue';
+import Contact from './home/ContactSection.vue';
+import HeroSection from './home/HeroSection.vue';
+import Experience from './home/ExperienceSection.vue';
 </script>
 
 <template>
   <div class="relative">
-    <Introduction />
+    <HeroSection />
     <Experience />
-    <Services />
-    <About />
     <Projects />
+    <About />
     <Contact />
   </div>
 </template>

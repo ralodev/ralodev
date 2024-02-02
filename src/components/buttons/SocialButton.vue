@@ -11,11 +11,11 @@
     <span class="svgContainer">
       <GitHub
         v-if="icon.toLocaleLowerCase() === 'github'"
-        class="text-white m-auto w-6 h-6"
+        class="m-auto h-6 w-6 text-white"
       />
       <LinkedIn
         v-if="icon.toLocaleLowerCase() === 'linkedin'"
-        class="text-white m-auto w-5 h-5"
+        class="m-auto h-5 w-5 text-white"
       />
     </span>
     <span class="BG"></span>
@@ -86,12 +86,12 @@ defineProps({
 }
 
 .Btn:hover .BG {
-  transform: rotate(35deg);
-  transform-origin: bottom;
+  transform: translate(5px, 5px);
+  box-shadow: 5px 5px 5px 0px #0000003a;
 }
 
-.Btn:hover .svgContainer {
-  background-color: rgba(156, 156, 156, 0.466);
-  backdrop-filter: blur(4px);
+.Btn:not([disabled]):hover .svgContainer {
+  background-color: #0000001c;
+  backdrop-filter: blur(5px);
 }
 </style>

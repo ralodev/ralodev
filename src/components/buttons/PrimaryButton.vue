@@ -3,36 +3,36 @@
     :disabled="props.disabled"
     class="glass-button"
     :class="btn_size"
-    :title="props.disabled ? 'Disabled' : `${props.label}`"
+    :title="props.disabled ? 'Disabled' : props.title ?? props.label ?? ''"
   >
     <span
       class="glass-button__content text-white"
       :class="btn_spacing"
     >
       <span
-        v-if="props.iconLeft && btn_slot"
+        v-if="props.type === 'icon' || (props.iconLeft && btn_slot)"
         class="flex [&>svg]:my-auto [&>svg]:inline"
         :class="btn_icon"
       >
         <slot />
       </span>
       <span
-        v-if="props.label"
+        v-if="props.label && props.type !== 'icon'"
         class="m-auto"
       >
         {{ props.label }}
       </span>
       <span
-        v-if="props.iconLeft && btn_slot"
+        v-if="props.iconRight && btn_slot && props.type !== 'icon'"
         class="flex [&>svg]:my-auto [&>svg]:inline"
-        :class="btn_spacing"
+        :class="btn_icon"
       >
         <slot />
       </span>
     </span>
     <span
       class="glass-button__bg"
-      :class="props.disabled ? 'bg-neutral-500' : bg_color"
+      :class="bg_color + (props.disabled ? ' opacity-50' : '')"
     ></span>
   </button>
 </template>
@@ -55,17 +55,16 @@ const r_sizes: Record<string, string> = {
 const r_spacing: Record<string, string> = {
   small: ' px-2 space-x-1',
   medium: ' px-3 space-x-2',
-  large: ' px-4 space-x-3'
+  large: ' px-3 space-x-3'
 };
 const r_icon: Record<string, string> = {
-  small: ' [&>svg]:h-3 [&>svg]:w-3',
-  medium: ' [&>svg]:h-4 [&>svg]:w-4',
-  large: ' [&>svg]:h-5 [&>svg]:w-5'
+  small: ' [&>svg]:h-4 [&>svg]:w-4',
+  medium: ' [&>svg]:h-5 [&>svg]:w-5',
+  large: ' [&>svg]:h-6 [&>svg]:w-6'
 };
 const props = defineProps({
   label: {
-    type: String,
-    required: true
+    type: String
   },
   /*
    * Valid values: 'primary', 'secondary', 'danger', 'warning', 'success'
@@ -74,6 +73,10 @@ const props = defineProps({
   severity: {
     type: String,
     default: 'primary'
+  },
+  title: {
+    type: String,
+    default: ''
   },
   disabled: {
     type: Boolean,
@@ -86,6 +89,10 @@ const props = defineProps({
   iconRight: {
     type: Boolean,
     default: false
+  },
+  type: {
+    type: String,
+    default: 'button'
   },
   size: {
     type: String,
@@ -105,10 +112,14 @@ const btn_size = computed(() => {
   return r_sizes[props.size] ?? r_sizes['medium'];
 });
 const btn_spacing = computed(() => {
-  return r_spacing[props.size] ?? r_spacing['medium'];
+  return props.type === 'icon'
+    ? r_spacing['small']
+    : r_spacing[props.size] ?? r_spacing['medium'];
 });
 const btn_icon = computed(() => {
-  return r_icon[props.size] ?? r_icon['medium'];
+  return props.type === 'icon'
+    ? r_icon['large']
+    : r_icon[props.size] ?? r_icon['medium'];
 });
 </script>
 

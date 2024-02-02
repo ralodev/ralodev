@@ -33,7 +33,6 @@
       <div class="mt-auto flex justify-end gap-5">
         <PrimaryButton
           label="Source code"
-          bg="bg-primary"
           :disabled="!source"
           @click="emits('open-src')"
           btn-class="text-sm "

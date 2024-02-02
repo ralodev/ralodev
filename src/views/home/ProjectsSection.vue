@@ -62,23 +62,23 @@
 </template>
 
 <script lang="ts" setup>
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router';
 
-import sgipdesktop from '@/assets/img/projects/sgip-desktop.webp'
-import sgipmobile from '@/assets/img/projects/sgip-mobile.webp'
-import fsmdesktop from '@/assets/img/projects/fsm-desktop.webp'
-import fsmmobile from '@/assets/img/projects/fsm-mobile.webp'
-import dinodesktop from '@/assets/img/projects/dino-desktop.webp'
-import crossydesktop from '@/assets/img/projects/crossy-desktop.webp'
-import asmdesktop from '@/assets/img/projects/asm-desktop.webp'
-import ProjectCard from '@/components/ProjectCard.vue'
-import ProjectCardSmall from '@/components/ProjectCardSmall.vue'
+import sgipdesktop from '@/assets/img/projects/sgip-desktop.webp';
+import sgipmobile from '@/assets/img/projects/sgip-mobile.webp';
+import fsmdesktop from '@/assets/img/projects/fsm-desktop.webp';
+import fsmmobile from '@/assets/img/projects/fsm-mobile.webp';
+import dinodesktop from '@/assets/img/projects/dino-desktop.webp';
+import crossydesktop from '@/assets/img/projects/crossy-desktop.webp';
+import asmdesktop from '@/assets/img/projects/asm-desktop.webp';
+import ProjectCard from '@/components/ProjectCard.vue';
+import ProjectCardSmall from '@/components/ProjectCardSmall.vue';
 
-const router = useRouter()
+const router = useRouter();
 
 const projectsInfo = [
   {
-    title: 'SGIP (Sistema de Gestión de Información de Personal)',
+    title: 'SGIP (Personnel Information Management System)',
     description:
       'SGIP is an HRMS (Human Resources Management System) Full-Stack web application that allows you to manage the information of the personnel of a company/institution. It was developed for the Human Resources department of the Technological Institute of Oaxaca (ITO). The application is currently in production, hosted on a private server. The source code, however, is not available due to security reasons.',
     image: sgipdesktop,
@@ -86,12 +86,11 @@ const projectsInfo = [
     site: 'https://ralodev.github.io/HRMS-Demo/#/',
     read: 'SGIP',
     tags: [
-      'Full-Stack',
-      'Spring MVC',
+      'Spring Boot',
       'Spring Security',
       'Vue.js',
       'PostgreSQL',
-      'Tailwind',
+      'TailwindCSS',
       'JWT',
       'JUnit',
       'Mockito',
@@ -107,17 +106,9 @@ const projectsInfo = [
     source: 'https://github.com/ralodev/FSM-Generator',
     site: 'https://ralodev.github.io/FSM-Generator/',
     //info: '#',
-    tags: [
-      'JavaScript',
-      'HTML5',
-      'CSS3',
-      'Bootstrap',
-      'jQuery',
-      'Vis-Network',
-      'Regex'
-    ]
+    tags: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'jQuery', 'Vis-Network']
   }
-]
+];
 const projectsInfo2 = [
   {
     id: 3,
@@ -156,7 +147,7 @@ const projectsInfo2 = [
     source: 'https://github.com/ralodev/ASM-Menu-Mouse',
     tags: ['Assembly', 'MASM', 'x86', 'Low-Level Programming']
   }
-]
+];
 
-const window = globalThis.window
+const window = globalThis.window;
 </script>

@@ -36,10 +36,10 @@
         <div className="hidden md:flex code text-lg pe-8">
           <!-- TailwindCSS Dropdown HOME -->
           <div class="flex w-full flex-row">
-            <ul class="flex gap-3">
+            <ul class="flex gap-5 font-medium">
               <li class="">
                 <RouterLink
-                  class="dark:border-b-primary_dark border-b-primary text-ltext1 hover:border-b-2 dark:text-dtext1"
+                  class="border-b-primary text-ltext1 hover:border-b-2 dark:border-b-primary_dark dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#experience' }"
                   spy="{true}"
                   smooth="{true}"
@@ -50,36 +50,10 @@
                   Experience
                 </RouterLink>
               </li>
-              <li class="">
-                <RouterLink
-                  class="dark:border-b-primary_dark border-b-primary text-ltext1 hover:border-b-2 dark:text-dtext1"
-                  :to="{ name: 'Home', hash: '#services' }"
-                  spy="{true}"
-                  smooth="{true}"
-                  offset="{0}"
-                  duration="{500}"
-                  isDynamic="{true}"
-                >
-                  Services
-                </RouterLink>
-              </li>
 
               <li class="">
                 <RouterLink
-                  class="dark:border-b-primary_dark border-b-primary text-ltext1 hover:border-b-2 dark:text-dtext1"
-                  :to="{ name: 'Home', hash: '#about' }"
-                  spy="{true}"
-                  smooth="{true}"
-                  offset="{0}"
-                  duration="{500}"
-                  isDynamic="{true}"
-                >
-                  About
-                </RouterLink>
-              </li>
-              <li class="">
-                <RouterLink
-                  class="dark:border-b-primary_dark border-b-primary text-ltext1 hover:border-b-2 dark:text-dtext1"
+                  class="border-b-primary text-ltext1 hover:border-b-2 dark:border-b-primary_dark dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#projects' }"
                   spy="{true}"
                   smooth="{true}"
@@ -92,7 +66,20 @@
               </li>
               <li class="">
                 <RouterLink
-                  class="dark:border-b-primary_dark border-b-primary text-ltext1 hover:border-b-2 dark:text-dtext1"
+                  class="border-b-primary text-ltext1 hover:border-b-2 dark:border-b-primary_dark dark:text-dtext1"
+                  :to="{ name: 'Home', hash: '#about' }"
+                  spy="{true}"
+                  smooth="{true}"
+                  offset="{0}"
+                  duration="{500}"
+                  isDynamic="{true}"
+                >
+                  About
+                </RouterLink>
+              </li>
+              <li class="">
+                <RouterLink
+                  class="border-b-primary text-ltext1 hover:border-b-2 dark:border-b-primary_dark dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#contact' }"
                   spy="{true}"
                   smooth="{true}"
@@ -153,7 +140,10 @@
           class="bg-lbg absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center space-y-5 bg-bg transition-all duration-500 dark:bg-dbg"
           :class="[open ? 'opacity-100' : 'pointer-events-none opacity-0']"
         >
-          <li v-for="link in links" :key="link.name">
+          <li
+            v-for="link in links"
+            :key="link.name"
+          >
             <RouterLink
               :to="link"
               spy="{true}"
@@ -174,26 +164,26 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
-import SwitchThemeButton from './buttons/SwitchThemeButton.vue'
-import RaloDev from './icons/RaloDev.vue'
-const open = ref(false)
+import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
+import SwitchThemeButton from './buttons/SwitchThemeButton.vue';
+import RaloDev from './icons/RaloDev.vue';
+const open = ref(false);
 
 type LinkInterface = {
-  name: string
-  hash?: string
-  label: string
-}
+  name: string;
+  hash?: string;
+  label: string;
+};
 
 defineProps({
   links: {
     type: Array as () => LinkInterface[],
     required: true
   }
-})
+});
 
 const handleClick = () => {
-  open.value = !open.value
-}
+  open.value = !open.value;
+};
 </script>
