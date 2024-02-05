@@ -6,7 +6,7 @@
         <div class="col-span-12 sm:col-span-3 ">
           <div
             class="text-center sm:text-left  sm:before:block before:w-24 before:h-3 before:mt-2 before:mb-5 before:rounded-md before:mx-auto before:hidden sm:before:mx-0 before:bg-sky-800 sticky top-24 ">
-            <span class="text-base font-semibold  dark:text-gray-400">
+            <span class="text-base font-semibold  dark:text-neutral-300">
               This is my experience so far, you can download my CV by clicking the button below.
             </span>
             <PrimaryButton label="Download CV" class="mt-2 mx-auto" @click="gotoCV" />
@@ -20,23 +20,25 @@
               <time class="time text-sm " title="From 2022-08 to 2021-07">
                 Jan 2024 - Present
               </time>
-              <h3 class="text-xl font-semibold ">
+              <h3 class="text-xl font-semibold">
                 Full Stack Developer
               </h3>
-              <h4 class="text-lg font-medium  dark:text-gray-400">
+              <h4 class="text-lg font-medium">
                 @ Technologial Institute of Oaxaca
               </h4>
-              <p class="mt-1" >
-                For the last
-                <!-- calculate the months from Aug 2023 til today -->
-                {{ new Date().getMonth() - 11 + 12 * (new Date().getFullYear() - 2023) }}
-                months, I've been working as a Full-Stack developer for the Systems and Computing department, contributing to the development of an institutional system intended for nationwide use. My tasks include:
-              <ul class="list-disc ps-5 pb-3">
-                <li>Analyzing administrative processes and identifying areas for improvement.</li>
-                <li>Designing and mantaining server-side logic using <strong>Python</strong> and <strong>Django</strong>.</li>
-                <li>Collaborating with other developers and stakeholders.</li>
-              </ul>
-              </p>
+              <div class="dark:text-neutral-300">
+                <p class="mt-1" >
+                  For the last
+                  <!-- calculate the months from Aug 2023 til today -->
+                  {{ new Date().getMonth() - 11 + 12 * (new Date().getFullYear() - 2023) }}
+                  months, I've been working as a Full-Stack developer for the Systems and Computing department, contributing to the development of an institutional system intended for nationwide use. My tasks include:
+                <ul class="list-disc ps-5 pb-3">
+                  <li>Analyzing administrative processes and identifying areas for improvement.</li>
+                  <li>Designing and mantaining server-side logic using <strong>Python</strong> and <strong>Django</strong>.</li>
+                  <li>Collaborating with other developers and stakeholders.</li>
+                </ul>
+                </p>
+              </div>
             </div>
             <div
               class="flex flex-col relative before:absolute  before:top-[2px] before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-sky-800 pb-8">
@@ -46,26 +48,28 @@
               <h3 class="text-xl font-semibold ">
                 Full Stack Developer Intern
               </h3>
-              <h4 class="text-lg font-medium  dark:text-gray-400">
+              <h4 class="text-lg font-medium ">
                 @ Technologial Institute of Oaxaca
               </h4>
-              <p class="mt-1" >
-                In this job I was responsible for the development of a web application for the management of the company's
-                HR department. My tasks included:
-              <ul class="list-disc ps-5 pb-3">
-                <li>Meeting with the HR department to gather requirements.</li>
-                <li>Designing the database schema.</li>
-                <li>Analysing vulnerabilities and implementing security measures.</li>
+              <div class="dark:text-neutral-300">
+                <p class="mt-1" >
+                  In this job I was responsible for the development of a web application for the management of the company's
+                  HR department. My tasks included:
+                <ul class="list-disc ps-5 pb-3">
+                  <li>Meeting with the HR department to gather requirements.</li>
+                  <li>Designing the database schema.</li>
+                  <li>Analysing vulnerabilities and implementing security measures.</li>
+                  </ul>
+                  As a result of my work, I:
+                  <ul class="list-disc ps-5">
+                  <li>Optimized report generation times by 90%</li>
+                  <li>Developed a fully functional HRMS (Human Resources Management System)
+                    using <strong>Spring Boot</strong> for the backend and <strong>Vue.js</strong> for the frontend.</li>
+                  <li>Succesfully deployed and mantained the HRMS hosted at <a href="https://itoaxaca.tech" target="_blank"
+                      rel="noreferrer" class="underline">https://itoaxaca.tech/</a></li>
                 </ul>
-                As a result of my work, I:
-                <ul class="list-disc ps-5">
-                <li>Optimized report generation times by 90%</li>
-                <li>Developed a fully functional HRMS (Human Resources Management System)
-                  using <strong>Spring Boot</strong> for the backend and <strong>Vue.js</strong> for the frontend.</li>
-                <li>Succesfully deployed and mantained the HRMS hosted at <a href="https://itoaxaca.tech" target="_blank"
-                    rel="noreferrer" class="underline">https://itoaxaca.tech/</a></li>
-              </ul>
-              </p>
+                </p>
+              </div>
             </div>
             <div
             :class=" more && 'flex flex-col relative before:absolute  before:top-[5px] before:w-4 before:h-4 before:rounded-full before:left-[-35px] before:z-[1] before:bg-sky-800'">
@@ -74,19 +78,21 @@
               <h3 class="text-xl font-semibold ">
                 Touristic Ambassador
               </h3>
-              <h4 class="text-lg font-medium dark:text-gray-400">
+              <h4 class="text-lg font-medium">
                 @ SECTUR Oaxaca
               </h4>
-              <p class="mt-1" >
-                Worked as Turistic Ambassador for the <a href="https://www.oaxaca.gob.mx/ageo/la-guelaguetza/"
-                  class="underline">Guelaguetza</a> 2019. Some of the tasks I was involved in included:
-              <ul class="list-disc ps-5">
-                <li>Multilingual Communication: Facilitating communication between visitors and locals, acting as an
-                  interpreter when necessary</li>
-                <li>Logistics and Organization: Planning and coordinating activities and ensuring logistical
-                  details.</li>
-              </ul>
-              </p>
+              <div class="dark:text-neutral-300">
+                <p class="mt-1" >
+                  Worked as Turistic Ambassador for the <a href="https://www.oaxaca.gob.mx/ageo/la-guelaguetza/"
+                    class="underline">Guelaguetza</a> 2019. Some of the tasks I was involved in included:
+                <ul class="list-disc ps-5">
+                  <li>Multilingual Communication: Facilitating communication between visitors and locals, acting as an
+                    interpreter when necessary</li>
+                  <li>Logistics and Organization: Planning and coordinating activities and ensuring logistical
+                    details.</li>
+                </ul>
+                </p>
+              </div>
             </div>
             </div>
             <PrimaryButton :label="more ? 'Show less' : 'Show more'" icon-left
