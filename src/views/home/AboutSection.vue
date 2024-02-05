@@ -6,62 +6,34 @@
   >
     <!-- Section header -->
     <header class="">
-      <h2
-        className="dark:text-dtext1 text-ltext1 font-semibold text-4xl text-center my-4"
-      >
-        More about me
-      </h2>
+      <h2 className="font-semibold text-4xl text-center my-4">More about me</h2>
     </header>
     <!-- Introduction -->
-    <section class="text-[#14142b] dark:text-dtext2">
-      <div class="relative p-4 duration-500">
-        <div
-          class="col-span-2 my-auto block items-center justify-center pt-10 text-center md:text-start lg:col-span-1 lg:pt-0"
-        >
-          <p
-            className="dark:text-gray-200 pt-3 md:text-lg text-base text-gray-700 my-2"
-          >
-            <!--name: Soy Raúl López, soy de México-->
-            Hello 👋, my name is Raúl López and my friends call me Ralo. I'm
-            from Mexico.
-            <!--education: Soy un ingeniero en sistemas computacionales-->
-            I'm a graduate Computer Systems Engineer with a specialization in
-            Emerging Technologies.
-            <!--fact: Cuento con 1 año en prácticas profesionales-->
-            I have 1+ year of experience in the field.
-          </p>
-          <p
-            className="dark:text-gray-200 pt-3 md:text-lg text-base text-gray-700 my-2"
-          >
-            <!--what im doing-->
-            One of my main achievements is that I've been able to publish a
-            scientific research article in a journal indexed by the Harvard
-            Library.
-            <strong
-              >I'm currently enrolled in the Oracle Next Education program and
-              working as a Full Stack Developer</strong
-            >.
-            <!--what i like-->
-            <!--hitos-->
-            Since I was a child I've been passionate about technology, and I
-            always wanted to know how things work. As I grew up, I started to
-            learn more about computers and programming, and I decided to study
-            Computer Systems Engineering 🚀.
-          </p>
-          <p
-            className="dark:text-gray-200 pt-3 md:text-lg text-base text-gray-700 my-2"
-          >
-            Currently, I hold a
-            <span class="text-yellow-700 dark:text-yellow-100"
-              >BCs Degree in Computer Systems Engineering</span
-            >
-            . I've just started my professional career, and I'm looking forward
-            to learning more about software development and computer science.
-          </p>
-          <span class="flex justify-evenly md:justify-normal md:gap-5">
-            <span class="flex gap-5"> </span>
-          </span>
-        </div>
+    <section class="p-4">
+      <div
+        class="col-span-2 my-auto block items-center justify-center space-y-3 text-center text-base md:text-start md:text-lg"
+      >
+        <p>
+          Hello 👋, my name is Raúl López but my friends call me Ralo. I'm from
+          México. I'm a graduate Computer Systems Engineer with a specialization
+          in Emerging Technologies and I have 1+ year of experience in the
+          field.
+        </p>
+        <p>
+          I'm currently enrolled in the
+          <strong>Oracle Next Education</strong> program and working as
+          part-time <strong>Full Stack Developer</strong> at
+          <strong>TECNM</strong>.
+        </p>
+        <p>
+          One of my main achievements is that I've been able to publish a
+          scientific research article in a recognized journal indexed by the
+          Harvard Library, and I've also won several awards in different
+          scientific conferences and programming contests.
+        </p>
+        <span class="flex justify-evenly md:justify-normal md:gap-5">
+          <span class="flex gap-5"> </span>
+        </span>
       </div>
     </section>
     <!-- END OF SECTION -->
@@ -100,20 +72,18 @@
           />
         </span>
         <span class="my-auto w-full px-2">
-          <!--title-->
-          <p class="text-lg font-semibold">AlumniONE, Oracle Next Education</p>
           <!--date-->
-          <time class="text-sm uppercase dark:text-gray-400"
-            >Jan 2024 - Sep 2024
-          </time>
+          <time class="time text-sm uppercase">Jan 2024 - Sep 2024 </time>
+          <!--title-->
+          <p class="text-xl font-semibold">AlumniONE, Oracle Next Education</p>
           <!--site-->
-          <p class="font-medium">Alura</p>
+          <p class="text-lg font-medium">@ Alura</p>
         </span>
       </div>
-      <p class="inline-block">
+      <p class="inline-block dark:text-neutral-300">
         I'm currently enrolled in the Oracle Next Education program, where I'm
-        currently learning about web development with a focus on Backend using
-        Java and Spring Boot.
+        learning about web development with a focus on Backend using Java and
+        Spring Boot.
       </p>
       <!-- tecnm -->
       <div class="mt-4 flex">
@@ -125,20 +95,20 @@
           />
         </span>
         <span class="my-auto w-8/12 px-2">
+          <!--date-->
+          <time class="time text-sm uppercase">Aug 2018 - Jul 2023</time>
           <!--title-->
-          <p class="text-lg font-semibold">
+          <p class="text-xl font-semibold">
             Bachelor's Degree in Computer Systems Engineering
           </p>
-          <!--date-->
-          <time class="text-sm uppercase dark:text-gray-400"
-            >Aug 2018 - Jul 2023</time
-          >
           <!--site-->
-          <p class="h">National Technological Institute Of Mexico</p>
+          <p class="text-lg font-medium">
+            @ National Technological Institute Of Mexico
+          </p>
         </span>
       </div>
 
-      <p class="mb-4">
+      <p class="mb-4 dark:text-neutral-300">
         I'm a graduate Computer Systems Engineer with a specialization in
         Emerging Technologies. In my career, I learned about the fundamentals of
         computer science, software development, and emerging technologies such
@@ -382,45 +352,10 @@
 import CollapsiblePanel from '@/components/CollapsiblePanel.vue';
 import tecnm from '/src/assets/img/tecnm.webp';
 import one from '/src/assets/img/one.webp';
-import toefl from '@/assets/img/toefl.webp';
-import platzi from '@/assets/img/platzi.webp';
-import capacitate from '@/assets/img/capacitate.webp';
-import { ref } from 'vue';
 import AwardCard from '@/components/AwardCard.vue';
 import tehuacan from '@/assets/img/awards/tehuacan.webp';
 import salle from '@/assets/img/awards/salle.webp';
 import ciencias from '@/assets/img/awards/ciencia-sas.webp';
 import omegaup from '@/assets/img/awards/omegaup.webp';
 import avatar from '@/assets/img/avatar.webp';
-
-function visitCiencias() {
-  window.open('https://rc.cienciasas.org/index.php/rc/Indexacion', '_blank');
-}
-function visitTehuacan() {
-  window.open('https://www.buap.mx/', '_blank');
-}
-function visitOmegaup() {
-  window.open('https://omegaup.com/profile/ralo-dev/#contests', '_blank');
-}
-function visitSalle() {
-  window.open(
-    'https://www.instagram.com/dakota_danonino/p/Cigo0eLsOlk/',
-    '_blank'
-  );
-}
-function visitIto() {
-  window.open(
-    'http://201.132.162.254:17000/noticias/img/2022/CONVOCATORIA_ABRIL.pdf',
-    '_blank'
-  );
-}
-const showCourses = ref(false);
-const showAwards = ref(false);
-
-function toggleCourses() {
-  showCourses.value = !showCourses.value;
-}
-function toggleAwards() {
-  showAwards.value = !showAwards.value;
-}
 </script>
