@@ -7,7 +7,7 @@ import Experience from './home/ExperienceSection.vue';
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative text-neutral-700 dark:text-neutral-300">
     <HeroSection />
     <Experience />
     <Projects />
