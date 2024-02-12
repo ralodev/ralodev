@@ -31,10 +31,10 @@
                   For the last
                   <!-- calculate the months from Aug 2023 til today -->
                   {{ new Date().getMonth() - 11 + 12 * (new Date().getFullYear() - 2023) }}
-                  months, I've been working as a Full-Stack developer for the Systems and Computing department, contributing to the development of an institutional system intended for nationwide use. My tasks include:
+                  months, I've been working as a Full-Stack developer for the Systems and Computing department, contributing to the development of an institutional system intended to manage the academic and administrative processes of the institute. My main responsibilities include:
                 <ul class="list-disc ps-5 pb-3">
                   <li>Analyzing administrative processes and identifying areas for improvement.</li>
-                  <li>Designing and mantaining server-side logic using <strong>Python</strong> and <strong>Django</strong>.</li>
+                  <li>Designing and mantaining server-side logic using <strong>Typescript</strong> and <strong>Nestjs</strong>.</li>
                   <li>Collaborating with other developers and stakeholders.</li>
                 </ul>
                 </p>
