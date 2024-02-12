@@ -9,7 +9,7 @@
       <h2
         class="text-xl font-semibold text-ltext1 dark:text-dtext1 md:text-2xl"
       >
-        {{ title }}
+        {{ props.title }}
       </h2>
       <!-- Description -->
       <p class="text-sm text-ltext2 dark:text-dtext2 md:text-base">
@@ -22,7 +22,7 @@
       <!-- Tags -->
       <div class="my-2 flex flex-wrap gap-2 font-medium">
         <div
-          v-for="tag in tags"
+          v-for="tag in props.tags"
           :key="tag.toLowerCase()"
           class="relative flex flex-nowrap whitespace-nowrap rounded-md bg-gray-300 px-2 py-1 text-xs font-normal dark:bg-gray-700 dark:text-white"
         >
