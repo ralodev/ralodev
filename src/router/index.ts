@@ -10,21 +10,11 @@ const router = createRouter({
       name: 'Home',
       component: LandingView
     },
-    // {
-    //   path: '/es/',
-    //   name: 'Home',
-    //   component: LandingView
-    // },
     {
       path: '/projects/SGIP',
       name: 'SGIP',
       component: SgipView
     },
-    // {
-    //   path: '/es/projects/SGIP',
-    //   name: 'SGIP',
-    //   component: SgipView
-    // },
     {
       path: '/404',
       name: '404',
