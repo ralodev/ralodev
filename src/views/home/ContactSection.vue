@@ -2,20 +2,19 @@
   <section
     id="contact"
     name="contact"
-    className="w-full min-h-screen items-center justify-center content-center relative overflow-x-hidden pt-[90px] px-4"
+    class="body__section flex-col"
   >
     <header class="">
-      <h2
-        className="dark:text-dtext1 font-semibold text-4xl md:my-4 lg:px-0 text-center"
-      >
-        Contact
-      </h2>
+      <h2 class="body__section__title">Contact</h2>
     </header>
     <div class="flex w-full flex-col gap-y-5 dark:text-dtext2">
       <p class="text-center text-lg">
-        Hello again! If you want to get in touch with me, you can do it through
-        my social media or via email.
+        If you want to get in touch with me, you can do it through my social
+        media or via email.
       </p>
+      <span
+        class="h-1 w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-500"
+      />
       <span class="text-center">
         There are my social media accounts and my email address:
         <div
@@ -109,21 +108,22 @@
           </a>
         </div>
       </span>
+      <span
+        class="h-1 w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-500"
+      />
       <span class="flex w-full flex-col text-center">
         Alternatively, you can use this form to send me a message:
         <form
           action="https://getform.io/f/e69a0dfe-0aa2-403e-abc8-a745cf4fd478"
           method="POST"
-          class="flex max-w-[600px] flex-col gap-y-5 self-center pt-3 text-start"
+          class="flex max-w-[600px] flex-col gap-y-5 self-center pt-3 text-start dark:text-neutral-200"
         >
           <label
             class="block"
             for="name"
           >
-            <span class="mb-1">
-              Name
-              <span class="text-red-500">*</span>
-            </span>
+            Name
+            <strong class="text-red-500">*</strong>
             <input
               type="text"
               name="name"
@@ -139,10 +139,8 @@
             class="block"
             for="email"
           >
-            <span class="mb-1"
-              >Email address
-              <span class="text-red-500">*</span>
-            </span>
+            Email address
+            <strong class="text-red-500">*</strong>
             <input
               type="email"
               title="Email address"
@@ -158,10 +156,8 @@
             class="block"
             for="message"
           >
-            <span class="mb-1"
-              >Message
-              <span class="text-red-500">*</span>
-            </span>
+            Message
+            <strong class="text-red-500">*</strong>
             <textarea
               rows="3"
               title="Message"
@@ -173,7 +169,7 @@
             ></textarea>
           </label>
           <p class="block text-start">
-            <span class="mb-1 italic text-gray-500">
+            <span class="italic text-gray-500">
               Although I love robots, I prefer to receive messages from humans,
               so please prove you are one by checking the box below
             </span>
@@ -202,7 +198,7 @@
             v-model="gotcha"
           />
           <PrimaryButton
-            :label="isHuman ? 'Send message' : 'Beep boop boop 🤖'"
+            :label="isHuman ? 'Send message' : '🤖'"
             class="self-center"
             :severity="isHuman ? 'primary' : 'secondary'"
             :disabled="!isHuman"
