@@ -34,7 +34,7 @@
                   months, I've been working as a Full-Stack developer for the Systems and Computing department, contributing to the development of an institutional system intended to manage the academic and administrative processes of the institute. My main responsibilities include:
                 <ul class="list-disc ps-5 pb-3">
                   <li>Analyzing administrative processes and identifying areas for improvement.</li>
-                  <li>Designing and mantaining server-side logic using <strong>Typescript</strong> and <strong>Nestjs</strong>.</li>
+                  <li>Designing and mantaining server-side logic using <strong>Typescript</strong>, <strong>Nextjs</strong> and <strong>Nestjs</strong>.</li>
                   <li>Collaborating with other developers and stakeholders.</li>
                 </ul>
                 </p>
