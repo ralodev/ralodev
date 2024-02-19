@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="my-auto mx-auto"
+    class="mx-auto my-auto"
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
@@ -12,4 +12,3 @@
     />
   </svg>
 </template>
-<script lang="ts" setup></script>
