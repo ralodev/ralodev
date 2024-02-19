@@ -142,7 +142,6 @@
 
 <script lang="ts" setup>
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue';
-import GitHub from './icons/GitHub.vue';
 
 const emits = defineEmits(['open-src', 'open-demo', 'open-live', 'open-read']);
 
