@@ -2,27 +2,13 @@
   <section
     id="projects"
     name="projects"
-    className="w-full min-h-screen h-auto pt-[90px]"
+    class="body__section"
   >
-    <article
-      className="xl:px-0 pb-10 mx-auto justify-center h-full text-center px-4"
-    >
-      <div class="text-start">
-        <header>
-          <h2
-            className="dark:text-dtext1 text-ltext1 font-bold text-4xl text-center md:text-start md:my-4"
-          >
-            Projects
-          </h2>
-          <p
-            className="dark:text-gray-400 py-3 md:text-xl text-bold text-xl text-gray-700 text-center md:text-start w-full"
-          >
-            Here are some of my recent projects. You can find more on my GitHub
-            profile.
-          </p>
-        </header>
-      </div>
-      <div class="flex flex-col gap-y-8 pt-5 text-start">
+    <article>
+      <header>
+        <h2 class="body__section__title">Projects</h2>
+      </header>
+      <div class="flex flex-col gap-8 py-5">
         <ProjectCard
           v-for="project in projectsInfo"
           :key="project.title"
@@ -38,12 +24,8 @@
           :tags="project.tags"
         />
       </div>
-      <h2
-        className="dark:text-dtext1 text-ltext1 font-bold text-4xl text-center md:text-start mt-8"
-      >
-        Other Projects
-      </h2>
-      <div class="mt-8 grid grid-cols-1 gap-4 text-start md:grid-cols-2">
+      <h2 class="body__section__title">Other Projects</h2>
+      <div class="grid grid-cols-1 gap-4 py-5 md:grid-cols-2">
         <ProjectCardSmall
           v-for="project in projectsInfo2"
           :key="project.id"
@@ -61,14 +43,11 @@
 
 <script lang="ts" setup>
 import { useRouter } from 'vue-router';
-
 import sgip_image from '@/assets/img/projects/sgip-pan.webp';
 import fsm_image from '@/assets/img/projects/fsm-pan.webp';
 import ProjectCard from '@/components/ProjectCard.vue';
 import ProjectCardSmall from '@/components/ProjectCardSmall.vue';
-
 const router = useRouter();
-
 const projectsInfo = [
   {
     title: 'SGIP - Sistema de Gestión de Información de Personal',
