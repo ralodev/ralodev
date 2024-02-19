@@ -7,11 +7,9 @@ import Experience from './home/ExperienceSection.vue';
 </script>
 
 <template>
-  <div class="relative text-neutral-700 dark:text-neutral-300">
-    <HeroSection />
-    <Experience />
-    <Projects />
-    <About />
-    <Contact />
-  </div>
+  <HeroSection />
+  <Experience />
+  <Projects />
+  <About />
+  <Contact />
 </template>
