@@ -33,7 +33,7 @@
       <!-- Content -->
       <div class="flex flex-row">
         <!-- Desktop menu -->
-        <div className="hidden md:flex code text-lg pe-8">
+        <div class="code hidden pe-8 text-lg md:flex">
           <!-- TailwindCSS Dropdown HOME -->
           <div class="flex w-full flex-row">
             <ul class="flex gap-5 font-medium">
