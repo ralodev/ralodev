@@ -71,9 +71,9 @@ const router = useRouter();
 
 const projectsInfo = [
   {
-    title: 'SGIP (Personnel Information Management System)',
+    title: 'SGIP - Sistema de Gestión de Información de Personal',
     description:
-      'SGIP is an HRMS (Human Resources Management System) Full-Stack web application that allows you to manage the information of the personnel of a company/institution. It was developed for the Human Resources department of the Technological Institute of Oaxaca (ITO). The application is currently in production, hosted on a private server. The source code, however, is not available due to security reasons.',
+      'An HRMS web application that allows to manage the information of the personnel in a company. Developed for the Technological Institute of Oaxaca (ITO). The application is currently in production, hosted on a private server.',
     image: sgip_image,
     site: 'https://ralodev.github.io/HRMS-Demo/#/',
     read: 'SGIP',
@@ -82,15 +82,11 @@ const projectsInfo = [
       'Spring Security',
       'Vue.js',
       'PostgreSQL',
-      'TailwindCSS',
-      'JWT',
-      'JUnit',
-      'Mockito',
-      'Java Mail (SMTP)'
+      'TailwindCSS'
     ]
   },
   {
-    title: 'FSM-Generator',
+    title: 'FSM Generator - Generate Automata from Regular Expressions',
     description:
       'FSM Generator is a web application that allows you to generate finite state machines (FSM) / Deterministic Finite Automata (DFA) from regular expressions.',
     image: fsm_image,
