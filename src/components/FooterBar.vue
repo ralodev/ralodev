@@ -28,9 +28,7 @@
   <!-- ====== Footer Section End -->
 </template>
 
-<script lang="ts" setup>
-import { RouterLink } from 'vue-router';
-</script>
+<script lang="ts" setup></script>
 
 <style scoped>
 .custom-shape-divider-top-1704854337 {
