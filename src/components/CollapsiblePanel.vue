@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="panel rounded-2xl border-2 text-black dark:border-gray-600 dark:text-white"
-  >
+  <div class="panel rounded-2xl border-2 dark:border-gray-600">
     <div
       class="sticky top-20 z-[2] flex cursor-pointer rounded-t-2xl border-b-2 bg-bg px-2 py-2 dark:bg-bg_dark"
       :class="
