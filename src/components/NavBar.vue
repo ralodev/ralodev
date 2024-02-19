@@ -40,6 +40,20 @@
               <li class="">
                 <RouterLink
                   class="border-b-primary text-ltext1 hover:border-b-2 dark:border-b-primary_dark dark:text-dtext1"
+                  :to="{ name: 'Home' }"
+                  spy="{true}"
+                  smooth="{true}"
+                  offset="{0}"
+                  duration="{500}"
+                  isDynamic="{true}"
+                >
+                  Home
+                </RouterLink>
+              </li>
+
+              <li class="">
+                <RouterLink
+                  class="border-b-primary text-ltext1 hover:border-b-2 dark:border-b-primary_dark dark:text-dtext1"
                   :to="{ name: 'Home', hash: '#experience' }"
                   spy="{true}"
                   smooth="{true}"
