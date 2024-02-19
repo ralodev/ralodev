@@ -6,7 +6,7 @@
   >
     <!-- Section header -->
     <header class="">
-      <h2 className="font-semibold text-4xl text-center my-4">More about me</h2>
+      <h2 className="font-semibold text-4xl text-center my-4">About me</h2>
     </header>
     <!-- Introduction -->
     <section class="p-4">
