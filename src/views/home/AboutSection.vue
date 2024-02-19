@@ -2,14 +2,14 @@
   <section
     id="about"
     name="about"
-    className="w-full flex flex-col  py-[90px]"
+    class="body__section flex-col"
   >
     <!-- Section header -->
-    <header class="">
-      <h2 className="font-semibold text-4xl text-center my-4">About me</h2>
+    <header class="w-full text-start">
+      <h2 class="body__section__title">About me</h2>
     </header>
     <!-- Introduction -->
-    <section class="p-4">
+    <section>
       <div
         class="col-span-2 my-auto block items-center justify-center space-y-3 text-center text-base md:text-start md:text-lg"
       >
@@ -36,12 +36,11 @@
         </span>
       </div>
     </section>
-    <!-- END OF SECTION -->
     <!-- Education section -->
-    <!-- Education -->
     <CollapsiblePanel
       header="Education"
       toggleable
+      :collapsed="false"
     >
       <template #icon>
         <svg
@@ -62,57 +61,56 @@
           <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
         </svg>
       </template>
-      <!-- oracle -->
-      <div class="mt-4 flex">
-        <span class="w-[90px]">
-          <img
-            :src="one"
-            alt="National Technological Institute Of Mexico"
-            class="mx-auto my-auto h-[80px] w-[80px] rounded-full"
-          />
-        </span>
-        <span class="my-auto w-full px-2">
-          <!--date-->
-          <time class="time text-sm uppercase">Jan 2024 - Sep 2024 </time>
-          <!--title-->
-          <p class="text-xl font-semibold">AlumniONE, Oracle Next Education</p>
-          <!--site-->
-          <p class="text-lg font-medium">@ Alura</p>
-        </span>
-      </div>
-      <p class="inline-block dark:text-neutral-300">
-        I'm currently enrolled in the Oracle Next Education program, where I'm
-        learning about web development with a focus on Backend using Java and
-        Spring Boot.
-      </p>
       <!-- tecnm -->
-      <div class="mt-4 flex">
-        <span class="w-[90px]">
+      <div class="flex">
+        <a
+          class="relative hidden h-[90px] w-[90px] md:me-2 md:flex"
+          href="http://www.oaxaca.tecnm.mx/"
+          target="_blank"
+        >
           <img
             :src="tecnm"
-            alt="National Technological Institute Of Mexico"
-            class="mx-auto my-auto h-[80px] w-[80px]"
+            alt="Technological Institute Of Oaxaca"
+            class="m-auto h-[60px] w-[60px]"
           />
-        </span>
-        <span class="my-auto w-8/12 px-2">
-          <!--date-->
-          <time class="time text-sm uppercase">Aug 2018 - Jul 2023</time>
-          <!--title-->
-          <p class="text-xl font-semibold">
+        </a>
+        <span class="w-full">
+          <p class="experience__title">
             Bachelor's Degree in Computer Systems Engineering
           </p>
-          <!--site-->
-          <p class="text-lg font-medium">
-            @ National Technological Institute Of Mexico
-          </p>
+          <time class="experience__time">Aug 2018 - Jul 2023</time>
+          <p class="experience__company">@ Technological Institute Of Oaxaca</p>
         </span>
       </div>
-
-      <p class="mb-4 dark:text-neutral-300">
+      <p class="experience__description">
         I'm a graduate Computer Systems Engineer with a specialization in
         Emerging Technologies. In my career, I learned about the fundamentals of
         computer science, software development, and emerging technologies such
         as Artificial Intelligence, Augmented Reality, and Virtual Reality.
+      </p>
+      <!-- oracle -->
+      <div class="mt-5 flex">
+        <a
+          class="hidden h-[90px] w-[90px] md:me-2 md:flex"
+          href="https://oracle.com/lad/one"
+          target="_blank"
+        >
+          <img
+            :src="one"
+            alt="Oracle Next Education"
+            class="m-auto h-[60px] w-[60px] object-contain"
+          />
+        </a>
+        <span class="w-full">
+          <p class="experience__title">AlumniONE, Oracle Next Education</p>
+          <time class="experience__time">Jan 2024 - Sep 2024 </time>
+          <p class="experience__company">@ Alura</p>
+        </span>
+      </div>
+      <p class="experience__description">
+        I'm currently enrolled in the Oracle Next Education program, where I'm
+        learning about web development with a focus on Backend using Java and
+        Spring Boot.
       </p>
     </CollapsiblePanel>
     <!-- Awards section -->
@@ -350,12 +348,11 @@
 
 <script lang="ts" setup>
 import CollapsiblePanel from '@/components/CollapsiblePanel.vue';
-import tecnm from '/src/assets/img/tecnm.webp';
+import tecnm from '/src/assets/img/ito.webp';
 import one from '/src/assets/img/one.webp';
 import AwardCard from '@/components/AwardCard.vue';
 import tehuacan from '@/assets/img/awards/tehuacan.webp';
 import salle from '@/assets/img/awards/salle.webp';
 import ciencias from '@/assets/img/awards/ciencia-sas.webp';
 import omegaup from '@/assets/img/awards/omegaup.webp';
-import avatar from '@/assets/img/avatar.webp';
 </script>
