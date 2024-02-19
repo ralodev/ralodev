@@ -1,7 +1,7 @@
 <template>
   <section
-    id="introduction"
-    name="introduction"
+    id="hero"
+    name="hero"
     className="w-full min-h-screen h-auto flex items-center justify-center content-center -mt-[80px]"
   >
     <article
@@ -9,34 +9,56 @@
     >
       <div class="relative text-start dark:text-gray-300 md:gap-x-0">
         <!--card-->
-        <div class="relative grid grid-cols-5 justify-center py-4 duration-500">
+        <div class="relative grid grid-cols-5 justify-center duration-500">
           <span
-            class="group/x relative col-span-5 mx-auto h-[110px] w-[110px] sm:h-[210px] sm:w-[210px] lg:order-2 lg:col-span-2 lg:h-[300px] lg:w-[300px]"
+            class="relative col-span-5 mx-auto flex flex-col gap-2 lg:order-2 lg:col-span-2"
           >
-            <div class="absolute">
-              <div class="absolute inset-0 z-[-1]">
-                <img
-                  :src="avatar"
-                  alt="Ralodev's profile picture background"
-                  aria-hidden="true"
-                  class="absolute top-[-5px] z-0 mx-auto h-[110px] rounded-full object-contain opacity-0 blur-md duration-500 group-hover/x:opacity-100 sm:h-[210px] lg:h-[310px]"
-                />
-              </div>
-              <img
-                :src="avatar"
-                alt="Ralodev's profile picture"
-                class="z-[1] mx-auto h-[100px] rounded-full object-contain p-1 sm:h-[200px] lg:h-[300px]"
-              />
-            </div>
-            <div
-              class="absolute opacity-0 duration-300 group-hover/x:opacity-100"
+            <a
+              class="relative mx-auto h-[100px] w-[100px] overflow-hidden rounded-full sm:h-[200px] sm:w-[200px] lg:h-[200px] lg:w-[200px]"
+              href="https://www.linkedin.com/in/raul-lc/"
+              target="_blank"
             >
               <img
                 :src="avatar_b"
                 alt="Ralodev's profile picture"
-                class="z-[1] mx-auto h-[100px] rounded-full p-1 sm:h-[200px] lg:h-[300px]"
               />
-            </div>
+              <img
+                :src="frame"
+                alt="Ralodev's profile picture"
+                class="absolute inset-0 duration-500"
+              />
+            </a>
+            <a
+              class="self-center rounded-full bg-amber-600 bg-opacity-30 px-2 pb-0.5 pt-1 text-xs font-semibold text-amber-700 hover:cursor-pointer dark:bg-amber-300 dark:bg-opacity-20 dark:text-amber-500"
+              href="https://www.linkedin.com/in/raul-lc/overlay/top-voice-detail/?profileUrn=urn%3Ali%3Afsd_profile%3AACoAADeR5MkBVhq7q3uVeJHFy3ZIblQCO50vydA"
+              target="_blank"
+              title="LinkedIn Top Voice"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="my-auto inline h-5 w-5 pb-0.5"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  stroke="none"
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"
+                />
+                <path
+                  d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
+                />
+                <path d="M9.7 17l4.6 0" />
+              </svg>
+              Top Software Development Voice
+            </a>
           </span>
           <span
             class="col-span-5 my-auto block items-center justify-center text-center md:pt-10 lg:order-1 lg:col-span-3 lg:pt-0 lg:text-start"
@@ -100,7 +122,7 @@
 
 <script lang="ts" setup>
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue';
-import avatar from '@/assets/img/avatar.webp';
+import frame from '@/assets/img/open-to-work.webp';
 import avatar_b from '@/assets/img/avatar_blur.webp';
 import GitHub from '@/components/icons/GitHub.vue';
 import LinkedIn from '@/components/icons/LinkedIn.vue';

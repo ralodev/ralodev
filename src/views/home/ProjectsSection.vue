@@ -29,7 +29,6 @@
           :title="project.title"
           :description="project.description"
           :image="project.image"
-          :image2="project.image2"
           :source="!!project.source"
           @open-src="() => window.open(project.source)"
           :site="!!project.site"
@@ -50,7 +49,6 @@
           :key="project.id"
           :title="project.title"
           :description="project.description"
-          :image="project.image"
           :source="!!project.source"
           @open-src="() => window.open(project.source)"
           :tags="project.tags"
@@ -64,13 +62,8 @@
 <script lang="ts" setup>
 import { useRouter } from 'vue-router';
 
-import sgipdesktop from '@/assets/img/projects/sgip-desktop.webp';
-import sgipmobile from '@/assets/img/projects/sgip-mobile.webp';
-import fsmdesktop from '@/assets/img/projects/fsm-desktop.webp';
-import fsmmobile from '@/assets/img/projects/fsm-mobile.webp';
-import dinodesktop from '@/assets/img/projects/dino-desktop.webp';
-import crossydesktop from '@/assets/img/projects/crossy-desktop.webp';
-import asmdesktop from '@/assets/img/projects/asm-desktop.webp';
+import sgip_image from '@/assets/img/projects/sgip-pan.webp';
+import fsm_image from '@/assets/img/projects/fsm-pan.webp';
 import ProjectCard from '@/components/ProjectCard.vue';
 import ProjectCardSmall from '@/components/ProjectCardSmall.vue';
 
@@ -81,8 +74,7 @@ const projectsInfo = [
     title: 'SGIP (Personnel Information Management System)',
     description:
       'SGIP is an HRMS (Human Resources Management System) Full-Stack web application that allows you to manage the information of the personnel of a company/institution. It was developed for the Human Resources department of the Technological Institute of Oaxaca (ITO). The application is currently in production, hosted on a private server. The source code, however, is not available due to security reasons.',
-    image: sgipdesktop,
-    image2: sgipmobile,
+    image: sgip_image,
     site: 'https://ralodev.github.io/HRMS-Demo/#/',
     read: 'SGIP',
     tags: [
@@ -101,8 +93,7 @@ const projectsInfo = [
     title: 'FSM-Generator',
     description:
       'FSM Generator is a web application that allows you to generate finite state machines (FSM) / Deterministic Finite Automata (DFA) from regular expressions.',
-    image: fsmdesktop,
-    image2: fsmmobile,
+    image: fsm_image,
     source: 'https://github.com/ralodev/FSM-Generator',
     site: 'https://ralodev.github.io/FSM-Generator/',
     //info: '#',
@@ -115,7 +106,6 @@ const projectsInfo2 = [
     title: 'Spring Security + JWT + Java Mail',
     description:
       'Spring Boot template with prebuilt authentication and authorization using Spring Security and Json Web Tokens. It also includes a Java Mail service for sending emails.',
-    image: crossydesktop,
     source: 'https://github.com/ralodev/SpringSecurity-Jwt-JavaMail',
     tags: ['Spring', 'Spring Security', 'Json Web Tokens', 'Java Mail']
   },
@@ -124,7 +114,6 @@ const projectsInfo2 = [
     title: 'Crossy Road',
     description:
       'A 3D remake of the popular game Crossy Road. This version has a multiplayer mode, where you can play against a friend on the same computer.',
-    image: crossydesktop,
     source: 'https://github.com/ralodev/CrossyRoad',
     tags: ['C', 'C++', 'OpenGL', 'GLUT', 'Game Development']
   },
@@ -133,7 +122,6 @@ const projectsInfo2 = [
     title: 'DinoRun',
     description:
       'The classic DinoRun game, made with the Swing and AWT libraries and a custom-made graphic tool that implements the Bresenham algorithm for rendering.',
-    image: dinodesktop,
     source: 'https://github.com/ralodev/DinoRun-2D',
     tags: ['Java', 'Swing', 'AWT', 'Game Development', 'Rendering']
   },
@@ -142,8 +130,6 @@ const projectsInfo2 = [
     title: 'Assembly Language Interactive Menu',
     description:
       'An assembly program demonstrating interactive menu navigation, arithmetic operations, and mouse interaction in x86 assembly (MASM).',
-    image: asmdesktop,
-    //gif: asmgif,
     source: 'https://github.com/ralodev/ASM-Menu-Mouse',
     tags: ['Assembly', 'MASM', 'x86', 'Low-Level Programming']
   }
