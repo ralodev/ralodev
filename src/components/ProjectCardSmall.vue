@@ -44,9 +44,9 @@
 </template>
 
 <script lang="ts" setup>
-import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
+import PrimaryButton from '@/components/buttons/PrimaryButton.vue';
 
-const emits = defineEmits(['open-src', 'open-demo', 'open-live', 'open-read'])
+const emits = defineEmits(['open-src', 'open-demo', 'open-live', 'open-read']);
 
 const props = defineProps({
   title: {
@@ -54,10 +54,6 @@ const props = defineProps({
     required: true
   },
   description: {
-    type: String,
-    required: true
-  },
-  image: {
     type: String,
     required: true
   },
@@ -73,5 +69,5 @@ const props = defineProps({
     type: Array<String>,
     required: false
   }
-})
+});
 </script>
