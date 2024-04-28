@@ -59,10 +59,15 @@ I'm an experienced Full Stack Developer dedicated to simplifying processes and e
 
 ## 📖  What I am currently learning / improving on
 
+[<img src="https://img.shields.io/badge/Vue test utils-282C34?&color=282C34&logo=vue.js" alt="Jest logo" title="Jest" height="25" />][learning_now_anchor]
 &nbsp;
 [<img src="https://img.shields.io/badge/Jest-282C34?&color=282C34&logo=jest" alt="Jest logo" title="Jest" height="25" />][learning_now_anchor]
 &nbsp;
-[<img src="https://img.shields.io/badge/SSR-282C34?&color=282C34&logo=google-cloud" alt="Jest logo" title="Jest" height="25" />][learning_now_anchor]
+[<img src="https://img.shields.io/badge/Webpack-282C34?&color=282C34&logo=webpack" alt="Jest logo" title="Jest" height="25" />][learning_now_anchor]
+&nbsp;
+[<img src="https://img.shields.io/badge/SEO-282C34?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMmM2ZWYyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTcgOEg0YTEgMSAwIDAgMC0xIDF2MmExIDEgMCAwIDAgMSAxaDJhMSAxIDAgMCAxIDEgMXYyYTEgMSAwIDAgMS0xIDFIM20xMSAwaC00VjhoNG0tMyA0aDJtNC0zYTEgMSAwIDAgMSAxLTFoMmExIDEgMCAwIDEgMSAxdjZhMSAxIDAgMCAxLTEgMWgtMmExIDEgMCAwIDEtMS0xeiIgLz4KPC9zdmc+" alt="Java logo" title="Java" height="25" />][tech_tools_anchor]
+&nbsp;
+[<img src="https://img.shields.io/badge/SSR-282C34?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTYgMTYiPgoJPHBhdGggZmlsbD0iI2NhNzZkYiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNC4yNTUgNi4wNTJhMy43NSAzLjc1IDAgMCAxIDcuMzQ5LS44NDNsLjE1Mi41MjhsLjU1LjAxNGEyLjI1IDIuMjUgMCAwIDEgMS4yNTYgNC4wNzdhLjc1Ljc1IDAgMCAwIC44NzYgMS4yMThhMy43NSAzLjc1IDAgMCAwLTEuNTYxLTYuNzQ0YTUuMjUxIDUuMjUxIDAgMCAwLTEwLjAzNy45NzRhMy4yNSAzLjI1IDAgMCAwLTEuMjE2IDYuMDM5YS43NS43NSAwIDEgMCAuNzUyLTEuMjk5QTEuNzQ5IDEuNzQ5IDAgMCAxIDMuNDMgNi43NmwuNzg0LjA4bC4wNDEtLjc4N1pNOCA5LjgzOGwtMS43MzItLjk5TDggNy44NThsMS43MzIuOTl6bS43NSAxLjI5OWwxLjc1LTF2MS45OGwtMS43NSAxem0tMS41IDBsLTEuNzUtMXYxLjk4bDEuNzUgMXptLjI1NC00LjcyM2ExIDEgMCAwIDEgLjk5MiAwbDMgMS43MTRhMSAxIDAgMCAxIC41MDQuODY4djMuNDFhMSAxIDAgMCAxLS41MDQuODdsLTMgMS43MTNhMSAxIDAgMCAxLS45OTIgMGwtMy0xLjcxNEExIDEgMCAwIDEgNCAxMi40MDd2LTMuNDFhMSAxIDAgMCAxIC41MDQtLjg3eiIgY2xpcC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=" alt="Java logo" title="Java" height="25" />][tech_tools_anchor]
 
 ## 💯 Stats
 
