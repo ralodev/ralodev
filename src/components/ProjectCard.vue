@@ -132,7 +132,7 @@
         <img
           :src="image"
           :alt="title + ' main image'"
-          class="transform cursor-pointer rounded-xl object-cover object-center opacity-90 transition duration-500 ease-in-out group-hover:opacity-100"
+          class="transform cursor-pointer rounded-xl object-cover object-center transition duration-500 ease-in-out group-hover:scale-95"
           @click="emits('open-live')"
         />
       </div>

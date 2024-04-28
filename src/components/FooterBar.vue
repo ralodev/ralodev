@@ -27,23 +27,3 @@
   </footer>
   <!-- ====== Footer Section End -->
 </template>
-
-<script lang="ts" setup></script>
-
-<style scoped>
-.custom-shape-divider-top-1704854337 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1704854337 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 70px;
-}
-</style>

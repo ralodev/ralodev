@@ -2,19 +2,19 @@
   <section
     id="about"
     name="about"
-    class="w-full min-h-screen h-auto flex items-center justify-center content-center relative overflow-x-hidden"
+    class="body__section"
   >
     <article
-      class="xl:px-0 pt-10 max-w-[1200px] mx-auto justify-center h-full grid-cols-2 flex-col dark:text-dtext3 text-ltext3 text-xl"
+      class="text-xl"
     >
       <header>
         <h1
-          class="f-montserrat dark:text-dtext1 text-ltext1 font-bold text-7xl text-center md:text-start md:my-4"
+          class=" dark:text-dtext1 text-ltext1 font-bold text-7xl text-center md:text-start md:my-4"
         >
           SGIP
         </h1>
         <h2
-          class="dark:text-dtext1 font-bold text-ltext1 text-2xl text-center md:text-start md:my-4 f-montserrat"
+          class="dark:text-dtext1 font-bold text-ltext1 text-2xl text-center md:text-start md:my-4 "
         >
           Personnel Information Management System
           <span class="italic font-normal dark:text-dtext3 text-ltext3 text-lg f-lora">

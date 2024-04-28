@@ -1,9 +1,30 @@
 <template>
-  <section
-    id="skills"
-    name="skills"
-    class="relative mx-auto h-auto min-h-screen w-full max-w-[1200px] justify-center py-[90px] text-center"
+  <!-- Education section -->
+  <CollapsiblePanel
+    header="Education"
+    toggleable
+    :collapsed="false"
   >
+    <template #icon>
+      <svg
+        class="my-auto mr-2 h-8 w-8"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          stroke="none"
+          d="M0 0h24v24H0z"
+          fill="none"
+        />
+        <path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" />
+        <path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" />
+      </svg>
+    </template>
+    <!-- tecnm -->
     <h2 class="mb-5 block text-5xl font-bold dark:text-gray-300">Skills</h2>
     <div class="grid w-full divide-x px-0 md:grid-cols-3 [&>*]:px-3">
       <div class="mb-3 border-b-2 pb-3 md:mb-0 md:border-0 md:pb-0">
@@ -129,7 +150,11 @@
         </ul>
       </div>
     </div>
-  </section>
+  </CollapsiblePanel>
 </template>
 
-<script setup lang="ts"></script>
+<script lang="ts" setup>
+import CollapsiblePanel from '../CollapsiblePanel.vue';
+import tecnm from '/src/assets/img/ito.webp';
+import one from '/src/assets/img/one.webp';
+</script>

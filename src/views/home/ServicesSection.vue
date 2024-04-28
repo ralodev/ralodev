@@ -2,13 +2,13 @@
   <section
     id="services"
     name="services"
-    className="min-h-screen w-full flex items-center justify-center content-center pt-[90px]"
+    class="flex min-h-screen w-full content-center items-center justify-center pt-[90px]"
   >
-    <article className="relative xl:px-0 px-10  mx-auto h-full text-center ">
-      <h2 className="dark:text-dtext1 text-ltext1 font-semibold text-4xl ">
+    <article class="relative mx-auto h-full px-10 text-center xl:px-0">
+      <h2 class="text-4xl font-semibold text-ltext1 dark:text-dtext1">
         My services
       </h2>
-      <p className="dark:text-dtext2 pt-3 md:text-2xl text-xl text-ltext2 mb-5">
+      <p class="mb-5 pt-3 text-xl text-ltext2 dark:text-dtext2 md:text-2xl">
         I can provide you with a wide range of services, here are some of them:
       </p>
       <div
@@ -75,7 +75,10 @@
             </span>
             <p class="my-auto ms-3 inline text-2xl font-bold">UI/UX Design</p>
           </header>
-          <p class="text-pretty pro" style="text-wrap: pretty">
+          <p
+            class="pro text-pretty"
+            style="text-wrap: pretty"
+          >
             I take pride in creating interfaces that are not only visually
             appealing but also user-friendly and responsive, ensuring an optimal
             user experience across all devices
