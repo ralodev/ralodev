@@ -1,17 +1,19 @@
 # Hey, im ralodev 👋
 
-I'm an experienced Full Stack Developer dedicated to simplifying processes and enhancing user experiences through innovative solutions.
+I'm an experienced Frontend Developer dedicated to simplifying processes and enhancing user experiences through innovative solutions.
+
+![trophy](https://github-profile-trophy.vercel.app/?username=ralodev&rank=-B,-C,-?&theme=onedark)
 
 ## 🔍  Where to find me
 
 &nbsp;
-[<img src="https://img.shields.io/badge/LinkedIn-282C34?logo=linkedin&logoColor=0077B5" alt="LinkedIn logo" title="LinkedIn" height="25" />](https://www.linkedin.com/in/raul-lc)
+[<img src="https://custom-icon-badges.demolab.com/badge/LinkedIn-282C34?logo=linkedin-white&logoColor=blue" alt="LinkedIn logo" title="LinkedIn" height="25" />](https://www.linkedin.com/in/raul-lc)
 &nbsp;
 [<img src="https://img.shields.io/badge/ORCID-282C34?logo=orcid" alt="LinkedIn logo" title="LinkedIn" height="25" />](https://orcid.org/0009-0006-7605-1885)
 &nbsp;
 [<img src="https://img.shields.io/badge/Portfolio-282C34?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNjQgNjQiPgoJPHBhdGggZmlsbD0iIzdkNWMzZCIgZD0iTTMyLjg5NSA0Ljc1M2MtNy44ODQgMC0xNC4yNzMgOC40OTMtMTQuMjczIDE4Ljk3MmMwIDEwLjQ3NSA2LjM4OSAxOC45NyAxNC4yNzMgMTguOTdjNy44NzkgMCAxNC4yNzEtOC40OTUgMTQuMjcxLTE4Ljk3YzAtMTAuNDc5LTYuMzkyLTE4Ljk3Mi0xNC4yNzEtMTguOTcybTAgMzUuNzA2Yy02LjM0NiAwLTExLjQ4Ny02LjgzNy0xMS40ODctMTUuMjY2YzAtOC40MzMgNS4xNDEtMTUuMjY4IDExLjQ4Ny0xNS4yNjhjNi4zNDEgMCAxMS40ODUgNi44MzUgMTEuNDg1IDE1LjI2OGMwIDguNDI5LTUuMTQ0IDE1LjI2Ni0xMS40ODUgMTUuMjY2IiAvPgoJPHBhdGggZmlsbD0iIzk4NzU0ZiIgZD0iTTMwLjk4MiA0Ljc1M2MtNy44ODYgMC0xNC4yNzUgOC40OTMtMTQuMjc1IDE4Ljk3MmMwIDEwLjQ3NSA2LjM4OSAxOC45NyAxNC4yNzUgMTguOTdjNy44OCAwIDE0LjI3LTguNDk1IDE0LjI3LTE4Ljk3YzAtMTAuNDc5LTYuMzktMTguOTcyLTE0LjI3LTE4Ljk3Mm0wIDM1LjcwNmMtNi4zNSAwLTExLjQ4OC02LjgzNy0xMS40ODgtMTUuMjY2YzAtOC40MzMgNS4xMzktMTUuMjY4IDExLjQ4OC0xNS4yNjhjNi4zNCAwIDExLjQ4MiA2LjgzNSAxMS40ODIgMTUuMjY4YzAgOC40MjktNS4xNDIgMTUuMjY2LTExLjQ4MiAxNS4yNjYiIC8+Cgk8cGF0aCBmaWxsPSIjYzI5ODZiIiBkPSJNNjMuODc2IDU3LjY1NGMwIDMuMzg5LTEuNjY0IDYuMTM2LTMuNzE0IDYuMTM2SDMuNzEyYy0yLjA0NyAwLTMuNzExLTIuNzQ3LTMuNzExLTYuMTM2di0zMy4zMWMwLTMuMzkxIDEuNjY0LTYuMTQxIDMuNzExLTYuMTQxaDU2LjQ1YzIuMDUgMCAzLjcxNCAyLjc1IDMuNzE0IDYuMTQxeiIgLz4KCTxwYXRoIGZpbGw9IiM5ODc1NGYiIGQ9Ik0xNy4wOSA1Ny41MzJ2LTMzLjIxYzAtMy4zODEgMS42NjQtNi4xMjIgMy43MTQtNi4xMjJIMy43MTRjLTIuMDQ3IDAtMy43MTEgMi43NDEtMy43MTEgNi4xMjJ2MzMuMjFjMCAzLjM3OSAxLjY2NCA2LjExOCAzLjcxMSA2LjExOGgxNy4wOWMtMi4wNSAwLTMuNzE0LTIuNzM5LTMuNzE0LTYuMTE4IiAvPgoJPHBhdGggZmlsbD0iI2FjODU2MCIgZD0iTTYzLjg3NiAzMy45ODNjMCAxLjM1NS0xLjY2NCAyLjQ1My0zLjcxNCAyLjQ1M0gzLjcxMmMtMi4wNDcgMC0zLjcxMS0xLjA5OS0zLjcxMS0yLjQ1M1YyMC42NmMwLTEuMzU1IDEuNjY0LTIuNDU2IDMuNzExLTIuNDU2aDU2LjQ1YzIuMDUgMCAzLjcxNCAxLjEwMSAzLjcxNCAyLjQ1NnoiIC8+Cgk8cGF0aCBmaWxsPSIjZmZmIiBkPSJNMzYuNDI0IDM4Ljc4M2MwIC40NzctLjIzNC44NjMtLjUyMi44NjNoLTcuOTI5Yy0uMjg4IDAtLjUyLS4zODctLjUyLS44NjN2LTQuNjk5YzAtLjQ3Ny4yMzItLjg2Ni41Mi0uODY2aDcuOTI5Yy4yODggMCAuNTIyLjM4OS41MjIuODY2eiIgLz4KPC9zdmc+" alt="Java logo" title="ralo.dev" height="25" />](https://www.ralo.dev/)
 &nbsp;
-[<img src="https://img.shields.io/badge/CVFast-282C34?logo=data:image/svg%2bxml;base64,PHN2ZyBpZD0iZXptcmI1WDA5MWMxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIg0KICB2aWV3Qm94PSIwIDAgNTAwIDUwMCIgc2hhcGUtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iPg0KICA8ZyBpZD0iZXptcmI1WDA5MWM1X3RyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNTAsMjUwKSI+DQogICAgPHBhdGggaWQ9ImV6bXJiNVgwOTFjNSINCiAgICAgIGQ9Ik00MjYuNjYxNDUsMTIyLjIzMDQzYzAsMjUuNDA1MS0yMC41OTQ5LDQ2LTQ2LDQ2LTEwLjA3NTg3LDAtMTkuMzk1MTEtMy4yMzk1NC0yNi45NzI5Ny04LjczMzg4QzMyOC40NTk2LDEzMC42MTYxLDI5MS4zNjA0NSwxMTIuMzcxMzcsMjUwLDExMi4zNzEzN2MtNzYuMDEwMTksMC0xMzcuNjI4NjMsNjEuNjE4NDQtMTM3LjYyODYzLDEzNy42Mjg2M3M2MS42MTg0NCwxMzcuNjI4NjMsMTM3LjYyODYzLDEzNy42Mjg2M2M1Mi4yMDA5LDAsOTcuNjE0MDUtMjkuMDYxODMsMTIwLjk0MjQ1LTcxLjg4ODUxYzguNDMwMTEtOS41ODQyNywyMC43ODQ5MS0xNS42MzI0NCwzNC41NTIzNS0xNS42MzI0NGMyNS40MDUxLDAsNDYsMjAuNTk0OSw0Niw0NmMwLDUuMzY3ODQtLjkxOTQzLDEwLjUyMDkzLTIuNjA5MzgsMTUuMzEwMzktMzguOTk0MzEsNjkuNDU3MTMtMTEzLjMxOTg1LDExNi40MTIxMS0xOTguNjIwNzQsMTE2LjUwOTA1LS4wMDQ1LDAtLjAwOSwwLS4wMTM1LDAtODkuMTU4NiwwLTE2Ni4zODE5Mi01MS4xMDEwMy0yMDMuOTc5MjQtMTI1LjYxMjM5LTE1LjQ4MTg4LTMwLjc2NzAyLTI0LjE5OTIxLTY1LjUyMjg2LTI0LjE5OTIxLTEwMi4zMTQ3NGMwLTEyNS44ODA3NiwxMDIuMDQ2NTItMjI3LjkyNzI4LDIyNy45MjcyOC0yMjcuOTI3MjhjNjcuMzQ0NTEsMCwxMjcuODY3NCwyOS4yMDY3OSwxNjkuNTkyOTIsNzUuNjQ0NmM0LjQ3NzU3LDcuMDk2MzIsNy4wNjg1MywxNS41MDIxNCw3LjA2ODUzLDI0LjUxMzExbC0uMDAwMDEuMDAwMDFaIg0KICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI1MCwtMjUwKSIgb3BhY2l0eT0iMSIgZmlsbD0iI2Y1NzIzNyIgc3Ryb2tlLXdpZHRoPSIwIiAvPg0KICA8L2c+DQogIDxnIGlkPSJlem1yYjVYMDkxYzZfdHMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1MCwyNDkuNTkyMDcpIj4NCiAgICA8ZyBpZD0iZXptcmI1WDA5MWM2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjU1LjM0MTgyNSwtMjQ1Ljc2MjMwMykiIG9wYWNpdHk9IjEiPg0KICAgICAgPHBhdGgNCiAgICAgICAgZD0iTTQ2NC43OTQsMjguNDkyQzQzNC4zNDgsMzYuMTgyLDM3MS44OTEsOTAuNjAxLDI5Mi4wNTUsMTc5Yy0xOC41LDIwLjQ4NC0zNy4wMzcsNDEuNDkzLTQzLjIyMyw0OC45ODZsLTMuNjY4LDQuNDQzLTIzLjgzMi0xMS42MTljLTY0Ljc3My0zMS41ODEtOTYuMTk5LTMzLjE1LTk2LjMwNS00LjgxbC0uMDE3LDQuNWwxNy4xMDksMTdjMzcuNjI2LDM3LjM4Niw2MC4wMiw2Ny43MzYsOTYuNzUsMTMxLjExOGMxNC4wNTQsMjQuMjUxLDE5LjU3MSwyNC44NzQsMjguNTg5LDMuMjI4QzMxOC4zODQsMjQ5LjYxNiwzNjcuMjA2LDE3NS4yNzYsNDU0LjUzLDg3YzMzLjIyNS0zMy41ODcsMzUuMzkxLTM2LjAyOSwzNy4zNy00Mi4xMzNjMy44LTExLjcyMS0xMC43NDQtMjAuNTA3LTI3LjEwNi0xNi4zNzUiDQogICAgICAgIGZpbGw9IiMwMmFmYzIiIGZpbGwtcnVsZT0iZXZlbm9kZCIgLz4NCiAgICA8L2c+DQogIDwvZz4NCjwvc3ZnPg==" alt="Java logo" title="CVFast (pre-alpha)" height="25" />](https://www.cvfast.com/@/raul-lopez)
+[<img src="https://img.shields.io/badge/CVFast-282C34?logo=data:image/svg%2bxml;base64,PHN2ZyBpZD0iZXptcmI1WDA5MWMxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIg0KICB2aWV3Qm94PSIwIDAgNTAwIDUwMCIgc2hhcGUtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iIHRleHQtcmVuZGVyaW5nPSJnZW9tZXRyaWNQcmVjaXNpb24iPg0KICA8ZyBpZD0iZXptcmI1WDA5MWM1X3RyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNTAsMjUwKSI+DQogICAgPHBhdGggaWQ9ImV6bXJiNVgwOTFjNSINCiAgICAgIGQ9Ik00MjYuNjYxNDUsMTIyLjIzMDQzYzAsMjUuNDA1MS0yMC41OTQ5LDQ2LTQ2LDQ2LTEwLjA3NTg3LDAtMTkuMzk1MTEtMy4yMzk1NC0yNi45NzI5Ny04LjczMzg4QzMyOC40NTk2LDEzMC42MTYxLDI5MS4zNjA0NSwxMTIuMzcxMzcsMjUwLDExMi4zNzEzN2MtNzYuMDEwMTksMC0xMzcuNjI4NjMsNjEuNjE4NDQtMTM3LjYyODYzLDEzNy42Mjg2M3M2MS42MTg0NCwxMzcuNjI4NjMsMTM3LjYyODYzLDEzNy42Mjg2M2M1Mi4yMDA5LDAsOTcuNjE0MDUtMjkuMDYxODMsMTIwLjk0MjQ1LTcxLjg4ODUxYzguNDMwMTEtOS41ODQyNywyMC43ODQ5MS0xNS42MzI0NCwzNC41NTIzNS0xNS42MzI0NGMyNS40MDUxLDAsNDYsMjAuNTk0OSw0Niw0NmMwLDUuMzY3ODQtLjkxOTQzLDEwLjUyMDkzLTIuNjA5MzgsMTUuMzEwMzktMzguOTk0MzEsNjkuNDU3MTMtMTEzLjMxOTg1LDExNi40MTIxMS0xOTguNjIwNzQsMTE2LjUwOTA1LS4wMDQ1LDAtLjAwOSwwLS4wMTM1LDAtODkuMTU4NiwwLTE2Ni4zODE5Mi01MS4xMDEwMy0yMDMuOTc5MjQtMTI1LjYxMjM5LTE1LjQ4MTg4LTMwLjc2NzAyLTI0LjE5OTIxLTY1LjUyMjg2LTI0LjE5OTIxLTEwMi4zMTQ3NGMwLTEyNS44ODA3NiwxMDIuMDQ2NTItMjI3LjkyNzI4LDIyNy45MjcyOC0yMjcuOTI3MjhjNjcuMzQ0NTEsMCwxMjcuODY3NCwyOS4yMDY3OSwxNjkuNTkyOTIsNzUuNjQ0NmM0LjQ3NzU3LDcuMDk2MzIsNy4wNjg1MywxNS41MDIxNCw3LjA2ODUzLDI0LjUxMzExbC0uMDAwMDEuMDAwMDFaIg0KICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI1MCwtMjUwKSIgb3BhY2l0eT0iMSIgZmlsbD0iI2Y1NzIzNyIgc3Ryb2tlLXdpZHRoPSIwIiAvPg0KICA8L2c+DQogIDxnIGlkPSJlem1yYjVYMDkxYzZfdHMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI1MCwyNDkuNTkyMDcpIj4NCiAgICA8ZyBpZD0iZXptcmI1WDA5MWM2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjU1LjM0MTgyNSwtMjQ1Ljc2MjMwMykiIG9wYWNpdHk9IjEiPg0KICAgICAgPHBhdGgNCiAgICAgICAgZD0iTTQ2NC43OTQsMjguNDkyQzQzNC4zNDgsMzYuMTgyLDM3MS44OTEsOTAuNjAxLDI5Mi4wNTUsMTc5Yy0xOC41LDIwLjQ4NC0zNy4wMzcsNDEuNDkzLTQzLjIyMyw0OC45ODZsLTMuNjY4LDQuNDQzLTIzLjgzMi0xMS42MTljLTY0Ljc3My0zMS41ODEtOTYuMTk5LTMzLjE1LTk2LjMwNS00LjgxbC0uMDE3LDQuNWwxNy4xMDksMTdjMzcuNjI2LDM3LjM4Niw2MC4wMiw2Ny43MzYsOTYuNzUsMTMxLjExOGMxNC4wNTQsMjQuMjUxLDE5LjU3MSwyNC44NzQsMjguNTg5LDMuMjI4QzMxOC4zODQsMjQ5LjYxNiwzNjcuMjA2LDE3NS4yNzYsNDU0LjUzLDg3YzMzLjIyNS0zMy41ODcsMzUuMzkxLTM2LjAyOSwzNy4zNy00Mi4xMzNjMy44LTExLjcyMS0xMC43NDQtMjAuNTA3LTI3LjEwNi0xNi4zNzUiDQogICAgICAgIGZpbGw9IiMwMmFmYzIiIGZpbGwtcnVsZT0iZXZlbm9kZCIgLz4NCiAgICA8L2c+DQogIDwvZz4NCjwvc3ZnPg==" alt="Java logo" title="CVFast (Discontinued)" height="25" />](#)
 
 ## 🛠  Technologies and tools
 
@@ -25,6 +27,10 @@ I'm an experienced Full Stack Developer dedicated to simplifying processes and e
 &nbsp;
 [<img src="https://img.shields.io/badge/Vue-282C34?logo=vue.js&logoColor=3DDC84" alt="Vuejs logo" title="Vuejs" height="25" />][tech_tools_anchor]
 &nbsp;
+[<img src="https://img.shields.io/badge/Vue test utils-282C34?&color=282C34&logo=vue.js" alt="Vue test utils logo" title="Vue-test-utils" height="25" />][learning_now_anchor]
+&nbsp;
+[<img src="https://img.shields.io/badge/Jest-282C34?&color=282C34&logo=jest" alt="Jest logo" title="Jest" height="25" />][learning_now_anchor]
+&nbsp;
 [<img src="https://img.shields.io/badge/Nuxt-282C34?logo=nuxt.js" alt="Nuxt logo" title="Nuxt" height="25" />][tech_tools_anchor]
 &nbsp;
 [<img src="https://img.shields.io/badge/React-282C34?logo=react" alt="React logo" title="React" height="25" />][tech_tools_anchor]
@@ -34,8 +40,6 @@ I'm an experienced Full Stack Developer dedicated to simplifying processes and e
 [<img src="https://img.shields.io/badge/Git-282C34?logo=git&logoColor=F05032" alt="git logo" title="git" height="25" />][tech_tools_anchor]
 &nbsp;
 [<img src="https://img.shields.io/badge/GitHub-282C34?logo=github" alt="git logo" title="GitHub" height="25" />][tech_tools_anchor]
-&nbsp;
-[<img src="https://img.shields.io/badge/VS%20Code-282C34?logo=visual-studio-code&logoColor=007ACC" alt="Visual Studio Code logo" title="Visual Studio Code" height="25" />][tech_tools_anchor]
 &nbsp;
 [<img src="https://img.shields.io/badge/Cypress-282C34?logo=cypress" alt="Cypress logo" title="Cypress" height="25" />][tech_tools_anchor]
 &nbsp;
@@ -47,32 +51,22 @@ I'm an experienced Full Stack Developer dedicated to simplifying processes and e
 &nbsp;
 [<img src="https://img.shields.io/badge/Node.js-282C34?logo=node.js&logoColor=339933" alt="Node.js logo" title="Node.js" height="25" />][learning_next_anchor]
 &nbsp;
-[<img src="https://img.shields.io/badge/Next.js-282C34?logo=next.js&logoColor=FFFFFF" alt="Next.js logo" title="Next.js" height="25" />][learning_next_anchor]
-&nbsp;
 [<img src="https://img.shields.io/badge/Firebase-282C34?logo=firebase&logoColor=FFCA28" alt="Firebase logo" title="Firebase" height="25" />][learning_now_anchor]
 &nbsp;
 [<img src="https://img.shields.io/badge/MySQL-282C34?logo=mysql" alt="MySQL logo" title="MySQL" height="25" />][learning_now_anchor]
 &nbsp;
 [<img src="https://img.shields.io/badge/PostgreSQL-282C34?logo=postgresql" alt="Postgresql logo" title="Postgresql" height="25" />][learning_now_anchor]
-&nbsp;
-[<img src="https://img.shields.io/badge/Nestjs-282C34?logo=nestjs&logoColor=c71a1a" alt="Nestjs logo" title="Nestjs" height="25" />][learning_now_anchor]
 
 ## 📖  What I am currently learning / improving on
 
-[<img src="https://img.shields.io/badge/Vue test utils-282C34?&color=282C34&logo=vue.js" alt="Vue test utils logo" title="Vue-test-utils" height="25" />][learning_now_anchor]
+[<img src="https://img.shields.io/badge/Node.js-282C34?&color=282C34&logo=node.js" alt="Webpack logo" title="Webpack" height="25" />][learning_now_anchor]
 &nbsp;
-[<img src="https://img.shields.io/badge/Jest-282C34?&color=282C34&logo=jest" alt="Jest logo" title="Jest" height="25" />][learning_now_anchor]
+[<img src="https://img.shields.io/badge/Serverless-282C34?&color=282C34&logo=serverless" alt="Webpack logo" title="Webpack" height="25" />][learning_now_anchor]
 &nbsp;
-[<img src="https://img.shields.io/badge/Webpack-282C34?&color=282C34&logo=webpack" alt="Webpack logo" title="Webpack" height="25" />][learning_now_anchor]
-&nbsp;
-[<img src="https://img.shields.io/badge/SEO-282C34?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPgoJPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMmM2ZWYyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIgZD0iTTcgOEg0YTEgMSAwIDAgMC0xIDF2MmExIDEgMCAwIDAgMSAxaDJhMSAxIDAgMCAxIDEgMXYyYTEgMSAwIDAgMS0xIDFIM20xMSAwaC00VjhoNG0tMyA0aDJtNC0zYTEgMSAwIDAgMSAxLTFoMmExIDEgMCAwIDEgMSAxdjZhMSAxIDAgMCAxLTEgMWgtMmExIDEgMCAwIDEtMS0xeiIgLz4KPC9zdmc+" alt="Search Engine Optimization" title="Search Engine Optimization" height="25" />][tech_tools_anchor]
-&nbsp;
-[<img src="https://img.shields.io/badge/SSR-282C34?logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMTYgMTYiPgoJPHBhdGggZmlsbD0iI2NhNzZkYiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNC4yNTUgNi4wNTJhMy43NSAzLjc1IDAgMCAxIDcuMzQ5LS44NDNsLjE1Mi41MjhsLjU1LjAxNGEyLjI1IDIuMjUgMCAwIDEgMS4yNTYgNC4wNzdhLjc1Ljc1IDAgMCAwIC44NzYgMS4yMThhMy43NSAzLjc1IDAgMCAwLTEuNTYxLTYuNzQ0YTUuMjUxIDUuMjUxIDAgMCAwLTEwLjAzNy45NzRhMy4yNSAzLjI1IDAgMCAwLTEuMjE2IDYuMDM5YS43NS43NSAwIDEgMCAuNzUyLTEuMjk5QTEuNzQ5IDEuNzQ5IDAgMCAxIDMuNDMgNi43NmwuNzg0LjA4bC4wNDEtLjc4N1pNOCA5LjgzOGwtMS43MzItLjk5TDggNy44NThsMS43MzIuOTl6bS43NSAxLjI5OWwxLjc1LTF2MS45OGwtMS43NSAxem0tMS41IDBsLTEuNzUtMXYxLjk4bDEuNzUgMXptLjI1NC00LjcyM2ExIDEgMCAwIDEgLjk5MiAwbDMgMS43MTRhMSAxIDAgMCAxIC41MDQuODY4djMuNDFhMSAxIDAgMCAxLS41MDQuODdsLTMgMS43MTNhMSAxIDAgMCAxLS45OTIgMGwtMy0xLjcxNEExIDEgMCAwIDEgNCAxMi40MDd2LTMuNDFhMSAxIDAgMCAxIC41MDQtLjg3eiIgY2xpcC1ydWxlPSJldmVub2RkIiAvPgo8L3N2Zz4=" alt="Server Side Rendering" title="Server Side Rendering" height="25" />][tech_tools_anchor]
+[<img src="https://custom-icon-badges.demolab.com/badge/AWS-282C34?&color=282C34&logo=aws&logoColor=orange" alt="Webpack logo" title="Webpack" height="25" />][learning_now_anchor]
 
 ## 💯 Stats
 
-![trophy](https://github-profile-trophy.vercel.app/?username=ralodev&rank=-B,-C,-?&theme=onedark)
-![Ralodev's GitHub Repository Contribution stats](https://github-contributor-stats.vercel.app/api?username=ralodev&theme=onedark)
 ![GitHub Streak](https://streak-stats.demolab.com/?user=ralodev&theme=onedark)
 
 
